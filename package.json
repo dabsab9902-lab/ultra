@@ -1,0 +1,42 @@
+{
+  "name": "ultra-svet",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "ensure:env": "node scripts/ensure-env.mjs",
+    "predev": "npm run ensure:env && node scripts/clean-pwa-dev.mjs",
+    "dev": "next dev",
+    "prebuild": "npm run ensure:env",
+    "build": "next build",
+    "prestart": "npm run ensure:env",
+    "start": "next start",
+    "lint": "next lint",
+    "generate:products": "node scripts/generate-products.mjs",
+    "parse": "node scripts/parse.mjs",
+    "repair:categories": "node scripts/repair-categories.mjs",
+    "import:ultra-svet": "node scripts/import-ultra-svet.mjs",
+    "import:urls": "node scripts/import-from-audit-urls.mjs",
+    "count:products": "node scripts/audit-product-urls.mjs",
+    "audit:products": "node scripts/audit-product-urls.mjs",
+    "audit:categories": "node scripts/audit-catalog-categories.mjs"
+  },
+  "dependencies": {
+    "@ducanh2912/next-pwa": "^10.2.9",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "axios": "^1.16.1",
+    "cheerio": "^1.2.0",
+    "eslint": "^9.16.0",
+    "eslint-config-next": "^15.1.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2"
+  }
+}

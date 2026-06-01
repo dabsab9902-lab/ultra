@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "clients": [
+    {
+      "id": "client-298abd0a-5335-4ad7-a308-35f5ac68b7a9",
+      "name": "egwege",
+      "phone": "675476465",
+      "code": "4444",
+      "active": true,
+      "discounts": [
+        {
+          "brand": "Lemanso",
+          "percent": 3
+        },
+        {
+          "brand": "Polax",
+          "percent": 8
+        }
+      ],
+      "createdAt": "2026-05-25T16:22:47.492Z",
+      "updatedAt": "2026-05-25T18:57:14.196Z"
+    }
+  ]
+}

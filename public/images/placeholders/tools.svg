@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#f8fafc"/>
+  <path d="M140 200l80-80 30 30-80 80-30-30z" fill="#475569" opacity="0.3"/>
+  <circle cx="250" cy="90" r="25" stroke="#334155" stroke-width="6" fill="none"/>
+  <text x="200" y="250" text-anchor="middle" fill="#64748b" font-family="system-ui" font-size="14">=AB@C<5=B</text>
+</svg>

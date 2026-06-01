@@ -1,0 +1,368 @@
+{
+  "version": 1,
+  "generatedAt": "2026-05-23T18:33:44.408Z",
+  "source": "ultra-svet.com",
+  "total": 20,
+  "products": [
+    {
+      "id": "1",
+      "name": "Інтернет кабель FTP 4х2х0, 51 CCA зовнішній монтаж \"Electro House\" EH.LAN-24",
+      "sku": "EH.LAN-24",
+      "categoryId": "cables",
+      "price": 13.54,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/kabely-dlya-peredachi-informatsii/eh.lan-24-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/internet-kabel-ftp-4h2h051-cca-naruzhnyy-montazh-electro-house-ehlan-24",
+      "description": "Інтернет кабель FTP 4х2х0, 51 CCA зовнішній монтаж \"Electro House\" EH.LAN-24. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "EH.LAN-24",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": true
+    },
+    {
+      "id": "2",
+      "name": "Інтернет кабель FTP 4х2х0, 51 CCA ПВХ сірий \"Electro House\" EH.LAN-22",
+      "sku": "EH.LAN-22",
+      "categoryId": "cables",
+      "price": 10.6,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/kabely-dlya-peredachi-informatsii/eh.lan-22-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/internet-kabel-ftp-4h2h051-cca-pvh-seryy-electro-house-ehlan-22",
+      "description": "Інтернет кабель FTP 4х2х0, 51 CCA ПВХ сірий \"Electro House\" EH.LAN-22. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "EH.LAN-22",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": true
+    },
+    {
+      "id": "3",
+      "name": "Інтернет кабель FTP 4х2х0, 51 Cu зовнішній монтаж \"Electro House\" EH.LAN-30",
+      "sku": "EH.LAN-30",
+      "categoryId": "cables",
+      "price": 33.27,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/kabely-dlya-peredachi-informatsii/eh.lan-30-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/internet-kabel-ftp-4h2h051-cu-naruzhnyy-montazh-electro-house-ehlan-30",
+      "description": "Інтернет кабель FTP 4х2х0, 51 Cu зовнішній монтаж \"Electro House\" EH.LAN-30. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "EH.LAN-30",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": true
+    },
+    {
+      "id": "4",
+      "name": "Інтернет кабель FTP 4х2х0, 51 Cu ПВХ сірий \"Electro House\" EH.LAN-28",
+      "sku": "EH.LAN-28",
+      "categoryId": "cables",
+      "price": 20.46,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/kabely-dlya-peredachi-informatsii/eh.lan-28-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/internet-kabel-ftp-4h2h051-cu-pvh-seryy-electro-house-ehlan-28",
+      "description": "Інтернет кабель FTP 4х2х0, 51 Cu ПВХ сірий \"Electro House\" EH.LAN-28. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "EH.LAN-28",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": true
+    },
+    {
+      "id": "5",
+      "name": "Інтернет кабель UTP 4х2х0, 51 CCA зовнішній монтаж \"Electro House\" EH.LAN-23",
+      "sku": "EH.LAN-23",
+      "categoryId": "cables",
+      "price": 10.38,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/kabely-dlya-peredachi-informatsii/eh.lan-24-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/internet-kabel-utp-4h2h051-cca-naruzhnyy-montazh-electro-house-ehlan-23",
+      "description": "Інтернет кабель UTP 4х2х0, 51 CCA зовнішній монтаж \"Electro House\" EH.LAN-23. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "EH.LAN-23",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": true
+    },
+    {
+      "id": "6",
+      "name": "Інтернет кабель UTP 4х2х0, 51 CCA ПВХ сірий \"Electro House\" EH.LAN-21",
+      "sku": "EH.LAN-21",
+      "categoryId": "cables",
+      "price": 8.68,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/kabely-dlya-peredachi-informatsii/eh.lan-22-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/internet-kabel-utp-4h2h051-cca-pvh-seryy-electro-house-ehlan-21",
+      "description": "Інтернет кабель UTP 4х2х0, 51 CCA ПВХ сірий \"Electro House\" EH.LAN-21. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "EH.LAN-21",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": true
+    },
+    {
+      "id": "7",
+      "name": "Кабель ВВГнг-LS 3х1,5 (1кВ) Гал-Кат ГОСТ",
+      "sku": "ГК000020097",
+      "categoryId": "cables",
+      "price": 49.97,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/provoda-i-shnuri/gal-kat/vvgngls3_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-vvgng-ls-3kh1-5-1kv-gal-kat-gost",
+      "description": "Кабель ВВГнг-LS 3х1,5 (1кВ) Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000020097",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    },
+    {
+      "id": "8",
+      "name": "Кабель ВВГнг-LS 3х2,5 (1кВ) Гал-Кат ГОСТ",
+      "sku": "ГК000020096",
+      "categoryId": "cables",
+      "price": 77.9,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/provoda-i-shnuri/gal-kat/vvgngls3_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-vvgng-ls-3kh2-5-1kv-gal-kat-gost",
+      "description": "Кабель ВВГнг-LS 3х2,5 (1кВ) Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000020096",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    },
+    {
+      "id": "9",
+      "name": "Кабель ВВГнг-LS-П 2х1 Гал-Кат ГОСТ",
+      "sku": "ГК000031806",
+      "categoryId": "cables",
+      "price": 26.07,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/provoda-i-shnuri/gal-kat/vvgnglsp2_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-vvgng-ls-p-2h1-gal-kat-gost",
+      "description": "Кабель ВВГнг-LS-П 2х1 Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000031806",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    },
+    {
+      "id": "10",
+      "name": "Кабель ВВГНГ-LS-П 2х1,5 Гал-Кат ГОСТ",
+      "sku": "ГК000020769",
+      "categoryId": "cables",
+      "price": 33.07,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/provoda-i-shnuri/gal-kat/vvgnglsp2_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-vvgng-ls-p-2kh1-5-gal-kat-gost",
+      "description": "Кабель ВВГНГ-LS-П 2х1,5 Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000020769",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    },
+    {
+      "id": "11",
+      "name": "Кабель ВВГНГ-LS-П 2х2,5 Гал-Кат ГОСТ",
+      "sku": "ГК000020661",
+      "categoryId": "cables",
+      "price": 51.46,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/provoda-i-shnuri/gal-kat/vvgnglsp2_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-vvgng-ls-p-2kh2-5-gal-kat-gost",
+      "description": "Кабель ВВГНГ-LS-П 2х2,5 Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000020661",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    },
+    {
+      "id": "12",
+      "name": "Кабель ВВГнг-LS-П 2х4 Гал-Кат ГОСТ",
+      "sku": "ГК000021509",
+      "categoryId": "cables",
+      "price": 82.38,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/provoda-i-shnuri/gal-kat/vvgnglsp2_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-vvgng-ls-p-2kh4-gal-kat-gost",
+      "description": "Кабель ВВГнг-LS-П 2х4 Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000021509",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    },
+    {
+      "id": "13",
+      "name": "Кабель ВВГНГ-LS-П 2х6 Гал-Кат ГОСТ",
+      "sku": "ГК000022211",
+      "categoryId": "cables",
+      "price": 120.95,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/provoda-i-shnuri/gal-kat/vvgnglsp2_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-vvgng-ls-p-2kh6-gal-kat-gost",
+      "description": "Кабель ВВГНГ-LS-П 2х6 Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000022211",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    },
+    {
+      "id": "14",
+      "name": "Кабель ВВГНГ-LS-П 3х1,5 Гал-Кат ГОСТ",
+      "sku": "ГК000020629",
+      "categoryId": "cables",
+      "price": 49.71,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/provoda-i-shnuri/gal-kat/vvgnglsp3_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-vvgng-ls-p-3kh1-5-gal-kat-gost",
+      "description": "Кабель ВВГНГ-LS-П 3х1,5 Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000020629",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    },
+    {
+      "id": "15",
+      "name": "Кабель ВВГнг-LS-П 3х2,5 Гал-Кат ГОСТ",
+      "sku": "ГК000020789",
+      "categoryId": "cables",
+      "price": 77.5,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/provoda-i-shnuri/gal-kat/vvgnglsp3_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-vvgng-ls-p-3kh2-5-gal-kat-gost",
+      "description": "Кабель ВВГнг-LS-П 3х2,5 Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000020789",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    },
+    {
+      "id": "16",
+      "name": "Кабель ВВГНГ-LS-П 3х4 Гал-Кат ГОСТ",
+      "sku": "ГК000020895",
+      "categoryId": "cables",
+      "price": 120.85,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/provoda-i-shnuri/gal-kat/vvgnglsp3_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-vvgng-ls-p-3kh4-gal-kat-gost",
+      "description": "Кабель ВВГНГ-LS-П 3х4 Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000020895",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    },
+    {
+      "id": "17",
+      "name": "Кабель ВВГНГ-LS-П 3х6 Гал-Кат ГОСТ",
+      "sku": "ГК000021545",
+      "categoryId": "cables",
+      "price": 183.41,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/provoda-i-shnuri/gal-kat/vvgnglsp3_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-vvgng-ls-p-3kh6-gal-kat-gost",
+      "description": "Кабель ВВГНГ-LS-П 3х6 Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000021545",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    },
+    {
+      "id": "18",
+      "name": "Кабель КГНВ 1х10 Гал-Кат ГОСТ",
+      "sku": "ГК000024203",
+      "categoryId": "cables",
+      "price": 139.2,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/silovie-kabely/gal-kat/kgnv1_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-kgnv-1h10-gal-kat-gost",
+      "description": "Кабель КГНВ 1х10 Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000024203",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    },
+    {
+      "id": "19",
+      "name": "Кабель КГНВ 1х16 Гал-Кат ГОСТ",
+      "sku": "ГК000023726",
+      "categoryId": "cables",
+      "price": 182.15,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/silovie-kabely/gal-kat/kgnv1_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-kgnv-1h16-gal-kat-gost",
+      "description": "Кабель КГНВ 1х16 Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000023726",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    },
+    {
+      "id": "20",
+      "name": "Кабель КГНВ 1х25 Гал-Кат ГОСТ",
+      "sku": "ГК000024204",
+      "categoryId": "cables",
+      "price": 275.7,
+      "unit": "шт",
+      "minOrder": 10,
+      "stock": 100,
+      "image": "https://ultra-svet.com/image/cache/catalog/tovari/kabely-i-provod/silovie-kabely/gal-kat/kgnv1_galkat-800x800.jpg",
+      "sourceUrl": "https://ultra-svet.com/kabel-kgnv-1h25-gal-kat-gost",
+      "description": "Кабель КГНВ 1х25 Гал-Кат ГОСТ. Импорт с ultra-svet.com",
+      "specs": {
+        "Артикул": "ГК000024204",
+        "Источник": "ultra-svet.com"
+      },
+      "featured": false
+    }
+  ]
+}

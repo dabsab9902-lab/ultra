@@ -1,0 +1,2797 @@
+{
+  "generatedAt": "2026-05-31T15:42:13.983Z",
+  "total": 11194,
+  "withFullCategoryPath": 11194,
+  "withoutCategory": 0,
+  "withoutBreadcrumbs": 0,
+  "suspiciousCategories": {
+    "count": 0,
+    "examples": []
+  },
+  "suspiciousPlacements": {
+    "count": 0,
+    "byReason": {},
+    "examples": []
+  },
+  "duplicates": {
+    "url": {
+      "duplicateKeys": 0,
+      "duplicateItems": 0,
+      "examples": []
+    },
+    "siteArticle": {
+      "duplicateKeys": 0,
+      "duplicateItems": 0,
+      "examples": []
+    },
+    "article": {
+      "duplicateKeys": 899,
+      "duplicateItems": 3472,
+      "examples": [
+        {
+          "value": "c 6ka",
+          "count": 72,
+          "items": [
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.60.1.C16, 1р, 16А, C, 6кА \"E.NEXT\" s002108",
+              "article": "C 6KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand601c16-1r-16a-c-6ka-enext-s002108"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.60.1.C20, 1р, 20А, C, 6кА \"E.NEXT\" s002109",
+              "article": "C 6KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand601c20-1r-20a-c-6ka-enext-s002109"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.60.1.C25, 1р, 25А, C, 6кА \"E.NEXT\" s002110",
+              "article": "C 6KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand601c25-1r-25a-c-6ka-enext-s002110"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.60.1.C10, 1р, 10А, C, 6кА \"E.NEXT\" s002107",
+              "article": "C 6KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand601c10-1r-10a-c-6ka-enext-s002107"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.60.1.C32, 1р, 32А, C, 6кА \"E.NEXT\" s002111",
+              "article": "C 6KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand601c32-1r-32a-c-6ka-enext-s002111"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.60.1.C40, 1р, 40А, C, 6кА \"E.NEXT\" s002112",
+              "article": "C 6KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand601c40-1r-40a-c-6ka-enext-s002112"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.60.1.C50, 1р, 50А, C, 6кА \"E.NEXT\" s002113",
+              "article": "C 6KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand601c50-1r-50a-c-6ka-enext-s002113"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.60.1.C63, 1р, 63А, C, 6кА \"E.NEXT\" s002114",
+              "article": "C 6KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand601c63-1r-63a-c-6ka-enext-s002114"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.60.1.C6, 1р, 6А, C, 6кА \"E.NEXT\" s002106",
+              "article": "C 6KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand601c6-1r-6a-c-6ka-enext-s002106"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.60.2.C32, 2р, 32А, C, 6кА \"E.NEXT\" s002120",
+              "article": "C 6KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand602c32-2r-32a-c-6ka-enext-s002120"
+            }
+          ]
+        },
+        {
+          "value": "без артикула",
+          "count": 51,
+          "items": [
+            {
+              "title": "Труба гофрована із протяжкою 32 мм. \"Одеса\" чорна",
+              "article": "Без артикула",
+              "url": "https://ultra-svet.com/truba-gofrirovannaya-s-protyazhkoj-32-mm.-odessa-chernaya-50-m"
+            },
+            {
+              "title": "Труба гофрована з протяжкою 16 мм. \"Одеса\" чорна",
+              "article": "Без артикула",
+              "url": "https://ultra-svet.com/truba-gofrirovannaya-s-protyazhkoj-16-mm.-odessa-chernaya-100-m"
+            },
+            {
+              "title": "Труба гофрована з протяжкою 20 мм. \"Одеса\" чорна",
+              "article": "Без артикула",
+              "url": "https://ultra-svet.com/truba-gofrirovannaya-s-protyazhkoj-20-mm.-odessa-chernaya-100-m"
+            },
+            {
+              "title": "Труба гофрована з протяжкою 25 мм. \"Одеса\" чорна",
+              "article": "Без артикула",
+              "url": "https://ultra-svet.com/truba-gofrirovannaya-s-protyazhkoj-25-mm.-odessa-chernaya-100-m"
+            },
+            {
+              "title": "Індикатор e.industrial.i.blu, синій \"E.NEXT\"",
+              "article": "Без артикула",
+              "url": "https://ultra-svet.com/indikator-e.industrial.i.blu-sinij-e.next"
+            },
+            {
+              "title": "З'єднувач ТБ",
+              "article": "Без артикула",
+              "url": "https://ultra-svet.com/soedinitel-tv"
+            },
+            {
+              "title": "Клемні планки 10A/10мм \"LEMANSO\"",
+              "article": "Без артикула",
+              "url": "https://ultra-svet.com/klemnye-planki-lemanso-10a-10mm"
+            },
+            {
+              "title": "Клемні планки 15A/12мм \"LEMANSO\"",
+              "article": "Без артикула",
+              "url": "https://ultra-svet.com/klemnye-planki-lemanso-15a-12mm"
+            },
+            {
+              "title": "Клемні планки 20A/14мм \"LEMANSO\"",
+              "article": "Без артикула",
+              "url": "https://ultra-svet.com/klemnye-planki-lemanso-20a-14mm"
+            },
+            {
+              "title": "Клемні планки 3A/4мм \"LEMANSO\"",
+              "article": "Без артикула",
+              "url": "https://ultra-svet.com/klemnye-planki-lemanso-3a-4mm"
+            }
+          ]
+        },
+        {
+          "value": "c 4",
+          "count": 49,
+          "items": [
+            {
+              "title": "Автоматичний вимикач e.mcb.stand.45.2.C40, 2р, 40А, C, 4,5 кА \"E.NEXT\" s002021",
+              "article": "C 4",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbstand452c40-2r-40a-c-4-5-ka-enext-s002021"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.stand.45.2.C50, 2р,50А, C, 4,5 кА \"E.NEXT\" s002022",
+              "article": "C 4",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbstand452c50-2r-50a-c-4-5-ka-enext-s002022"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.stand.45.2.C63, 2р,63А, C, 4,5 кА \"E.NEXT\" s002023",
+              "article": "C 4",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbstand452c63-2r-63a-c-4-5-ka-enext-s002023"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.stand.45.2.C6, 2р, 6А, C, 4,5 кА \"E.NEXT\" s002015",
+              "article": "C 4",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-e.mcb.stand.45.2.c6-2r-6a-c-4-5-ka-e.next-s002015"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.stand.45.3.C10, 3р, 10А, C, 4,5 кА \"E.NEXT\" s002030",
+              "article": "C 4",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbstand453c10-3r-10a-c-4-5-ka-enext-s002030"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.stand.45.3.C16, 3р, 16А, C, 4,5 кА \"E.NEXT\" s002031",
+              "article": "C 4",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbstand453c16-3r-16a-c-4-5-ka-enext-s002031"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.stand.45.3.C20, 3р, 20А, C, 4,5 кА \"E.NEXT\" s002032",
+              "article": "C 4",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbstand453c20-3r-20a-c-4-5-ka-enext-s002032"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.stand.45.3.C25, 3р, 25А, C, 4,5 кА \"E.NEXT\" s002033",
+              "article": "C 4",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbstand453c25-3r-25a-c-4-5-ka-enext-s002033"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.stand.45.3.C32, 3р, 32А, C, 4,5 кА \"E.NEXT\" s002034",
+              "article": "C 4",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbstand453c32-3r-32a-c-4-5-ka-enext-s002034"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.stand.45.3.C50, 3р, 50А, C, 4,5 кА \"E.NEXT\" s002036",
+              "article": "C 4",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbstand453c50-3r-50a-c-4-5-ka-enext-s002036"
+            }
+          ]
+        },
+        {
+          "value": "c 10ka",
+          "count": 43,
+          "items": [
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.100.1.C100, 1р, 100А, C, 10кА \"E.NEXT\" s002206",
+              "article": "C 10KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand1001c100-1r-100a-c-10ka-enext-s002206"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.100.1.C80, 1р, 80А, C, 10кА \"E.NEXT\" s002205",
+              "article": "C 10KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand1001c80-1r-80a-c-10ka-enext-s002205"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.100.1.C63, 1р, 63А, C, 10кА \"E.NEXT\" s002204",
+              "article": "C 10KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand1001c63-1r-63a-c-10ka-enext-s002204"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.100.2.C125, 2р, 125А, C, 10кА \"E.NEXT\" s002211",
+              "article": "C 10KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand1002c125-2r-125a-c-10ka-enext-s002211"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.100.3.C83, 3р, 83А, C, 10кА \"E.NEXT\" s002203",
+              "article": "C 10KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand1003c83-3r-83a-c-10ka-enext-s002203"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.100.2.C80, 2р, 80А, C, 10кА \"E.NEXT\" s002209",
+              "article": "C 10KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand1002c80-2r-80a-c-10ka-enext-s002209"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.100.2.C100, 2р, 100А, C, 10кА \"E.NEXT\" s002210",
+              "article": "C 10KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand1002c100-2r-100a-c-10ka-enext-s002210"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.1.C16, 1 р, 16А, C, 10кА \"E.NEXT\" i0180003",
+              "article": "C 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1001c16-1-r-16a-c-10ka-enext-i0180003"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.1.C10, 1 р, 10А, C, 10кА \"E.NEXT\" i0180002",
+              "article": "C 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1001c10-1-r-10a-c-10ka-enext-i0180002"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.1.C20, 1 р, 20А, C, 10кА \"E.NEXT\" i0180004",
+              "article": "C 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1001c20-1-r-20a-c-10ka-enext-i0180004"
+            }
+          ]
+        },
+        {
+          "value": "v 4",
+          "count": 32,
+          "items": [
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.45.2.B50, 2р, 50А, В, 4,5 кА \"E.NEXT\" s001022",
+              "article": "V 4",
+              "url": "https://ultra-svet.com/modulnyj-avtomatychnyj-vymykach-e-mcb-stand-45-2-b50-2r-50a-v-4-5-ka-e-next-s001022"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.45.2.B63, 2р, 63А, В, 4,5 кА \"E.NEXT\" s001023",
+              "article": "V 4",
+              "url": "https://ultra-svet.com/modulnij-avtomatichnij-vimikach-emcbstand452b63-2r-63a-v-4-5-ka-enext-s001023"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.45.1.B63, 1р, 63А, В, 4,5 кА \"E.NEXT\" s001014",
+              "article": "V 4",
+              "url": "https://ultra-svet.com/modulnij-avtomatichnij-vimikach-emcbstand451b63-1r-63a-v-4-5-ka-enext-s001014"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.45.1.B1, 1р, 1А, 4,5 кА \"E.NEXT\" s001001",
+              "article": "V 4",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand451b1-1r-1a-v-4-5-ka-enext-s001001"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.45.1.B10, 1р, 10А, 4,5 кА \"E.NEXT\" s001007",
+              "article": "V 4",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand451b10-1r-10a-v-4-5-ka-enext-s001007"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.45.1.B16, 1р, 16А, 4,5 кА \"E.NEXT\" s001008",
+              "article": "V 4",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand451b16-1r-16a-v-4-5-ka-enext-s001008"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.45.1.B2, 1р, 2А, 4,5 кА \"E.NEXT\" s001002",
+              "article": "V 4",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand451b2-1r-2a-v-4-5-ka-enext-s001002"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.45.1.B20, 1р, 20А, 4,5 кА \"E.NEXT\" s001009",
+              "article": "V 4",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand451b20-1r-20a-v-4-5-ka-enext-s001009"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.45.1.B25, 1р, 25А, 4,5 кА \"E.NEXT\" s001010",
+              "article": "V 4",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand451b25-1r-25a-v-4-5-ka-enext-s001010"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.stand.45.1.B3, 1р, 3А, В, 4,5 кА \"E.NEXT",
+              "article": "V 4",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbstand451b3-1r-3a-v-4-5-ka-enexts001003"
+            }
+          ]
+        },
+        {
+          "value": "b 6ka",
+          "count": 32,
+          "items": [
+            {
+              "title": "Автоматичний вимикач e.mcb.pro.60.1.B10 new, 1р, 10А, B, 6кА new \"E.NEXT\" p041007",
+              "article": "B 6KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-e.mcb.pro.60.1.b10-new-1r-10a-b-6ka-new-e.next-p041007"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.pro.60.1.B1 new, 1р, 1А, B, 6кА new \"E.NEXT\" p041001",
+              "article": "B 6KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbpro601b1-new-1r-1a-b-6ka-new-enext-p041001"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.pro.60.1.B16 new, 1р, 16А, B, 6кА new \"E.NEXT\" p041008",
+              "article": "B 6KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbpro601b16-new-1r-16a-b-6ka-new-enext-p041008"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.pro.60.1.B2 new, 1р, 2А, B, 6кА new \"E.NEXT\" p041002",
+              "article": "B 6KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbpro601b2-new-1r-2a-b-6ka-new-enext-p041002"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.pro.60.1.B20 new, 1р, 20А, B, 6кА new \"E.NEXT\" p041009",
+              "article": "B 6KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbpro601b20-new-1r-20a-b-6ka-new-enext-p041009"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.pro.60.1.B25 new, 1р, 25А, B, 6кА new \"E.NEXT\" p041010",
+              "article": "B 6KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbpro601b25-new-1r-25a-b-6ka-new-enext-p041010"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.pro.60.1.B3 new, 1р, 3А, B, 6кА new \"E.NEXT\" p041003",
+              "article": "B 6KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbpro601b3-new-1r-3a-b-6ka-new-enext-p041003"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.pro.60.1.B4 new, 1р, 4А, B, 6кА new \"E.NEXT\" p041004",
+              "article": "B 6KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbpro601b4-new-1r-4a-b-6ka-new-enext-p041004"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.pro.60.1.B32 new, 1р, 32А, B, 6кА new \"E.NEXT\" p041011",
+              "article": "B 6KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbpro601b32-new-1r-32a-b-6ka-new-enext-p041011"
+            },
+            {
+              "title": "Автоматичний вимикач e.mcb.pro.60.1.B40 new, 1р, 40А, B, 6кА new \"E.NEXT\" p041012",
+              "article": "B 6KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-emcbpro601b40-new-1r-40a-b-6ka-new-enext-p041012"
+            }
+          ]
+        },
+        {
+          "value": "vykl 1led",
+          "count": 31,
+          "items": [
+            {
+              "title": "Світильник LED газон без вимк., 1LED RGB IP44 6міс. пластмаса \"LEMANSO\" CAB131",
+              "article": "VYKL 1LED",
+              "url": "https://ultra-svet.com/svetilnik-led-gazon-bez-vykl-1led-rgb-ip44-6mes-plastmassa-lemanso-cab131"
+            },
+            {
+              "title": "Світильник LED газон з вимк., 1LED RGB IP44 6міс. метал \"LEMANSO\" CAB117",
+              "article": "VYKL 1LED",
+              "url": "https://ultra-svet.com/svetilnik-led-gazon-s-vykl-1led-rgb-ip44-6mes-metall-lemanso-cab117"
+            },
+            {
+              "title": "Світильник LED газон з вимк., 1LED білий IP44 6міс \"LEMANSO\" CAB80",
+              "article": "VYKL 1LED",
+              "url": "https://ultra-svet.com/svetilnik-led-gazon-s-vykl-1led-belyj-ip44-6mes-lemanso-cab80"
+            },
+            {
+              "title": "Світильник LED газон з вимк., 1LED білий IP44 6міс. метелик \"LEMANSO\" CAB124",
+              "article": "VYKL 1LED",
+              "url": "https://ultra-svet.com/svetilnik-led-gazon-s-vykl-1led-belyj-ip44-6mes-babochka-lemanso-cab124"
+            },
+            {
+              "title": "Світильник LED газон з вимк., 1LED білий IP44 6міс. метал \"LEMANSO\" CAB115",
+              "article": "VYKL 1LED",
+              "url": "https://ultra-svet.com/svetilnik-led-gazon-s-vykl-1led-belyj-ip44-6mes-metall-lemanso-cab115"
+            },
+            {
+              "title": "Світильник LED газон з вимк., 1LED білий IP44 6міс. гном із квіткою \"LEMANSO\" CAB125",
+              "article": "VYKL 1LED",
+              "url": "https://ultra-svet.com/svetilnik-led-gazon-s-vykl-1led-belyj-ip44-6mes-gnom-s-tsvetkom-lemanso-cab125"
+            },
+            {
+              "title": "Світильник LED газон без вимк., 1LED 6500K IP44 1рік пластмаса \"LEMANSO\" CAB77",
+              "article": "VYKL 1LED",
+              "url": "https://ultra-svet.com/svetilnik-led-gazon-bez-vykl-1led-6500k-ip44-1god-plastmassa-lemanso-cab77-6sht-upak"
+            },
+            {
+              "title": "Світильник LED газон без вимк., 1LED 6500K IP44 6міс. пластмаса \"LEMANSO\" CAB119",
+              "article": "VYKL 1LED",
+              "url": "https://ultra-svet.com/svetilnik-led-gazon-bez-vykl-1led-6500k-ip44-6mes-plastmassa-lemanso-cab119"
+            },
+            {
+              "title": "Світильник LED газон без вимк., 1LED білий, IP44 1рік метал \"LEMANSO\" CAB78",
+              "article": "VYKL 1LED",
+              "url": "https://ultra-svet.com/svetilnik-led-gazon-bez-vykl-1led-belyj-ip44-1god-metall-lemanso-cab78"
+            },
+            {
+              "title": "Світильник LED газон без вимк., 1LED білий IP44 1год пластмаса \"LEMANSO\" CAB79",
+              "article": "VYKL 1LED",
+              "url": "https://ultra-svet.com/svetilnik-led-gazon-bez-vykl-1led-belyj-ip44-1god-plastmassa-lemanso-cab79"
+            }
+          ]
+        },
+        {
+          "value": "ip 67",
+          "count": 24,
+          "items": [
+            {
+              "title": "Силова розетка переносна e.socket.213.16.67, 3п., 230В, 16А, IP 67 \"E.NEXT\" i082013",
+              "article": "IP 67",
+              "url": "https://ultra-svet.com/silovaya-rozetka-perenosnaya-e.socket.213.16.67-3p.-230v-16a-ip-67-e.next-i082013"
+            },
+            {
+              "title": "Силова розетка переносна e.socket.214.16.67, 4п., 400В, 16А, IP 67 \"E.NEXT\" i082014",
+              "article": "IP 67",
+              "url": "https://ultra-svet.com/silovaya-rozetka-perenosnaya-e.socket.214.16.67-4p.-400v-16a-ip-67-e.next-i082014"
+            },
+            {
+              "title": "Силова розетка переносна e.socket.215.16.67, 5п., 400В, 16А, IP 67 \"E.NEXT\" i082015",
+              "article": "IP 67",
+              "url": "https://ultra-svet.com/silovaya-rozetka-perenosnaya-e.socket.215.16.67-5p.-400v-16a-ip-67-e.next-i082015"
+            },
+            {
+              "title": "Силова розетка переносна e.socket.223.32.67, 3п., 230В, 32А, IP 67 \"E.NEXT\" i082016",
+              "article": "IP 67",
+              "url": "https://ultra-svet.com/silovaya-rozetka-perenosnaya-e.socket.223.32.67-3p.-230v-32a-ip-67-e.next-i082016"
+            },
+            {
+              "title": "Силова розетка переносна e.socket.224.32.67, 4п., 400В, 32А, IP 67 \"E.NEXT\" i082017",
+              "article": "IP 67",
+              "url": "https://ultra-svet.com/silovaya-rozetka-perenosnaya-e.socket.224.32.67-4p.-400v-32a-ip-67-e.next-i082017"
+            },
+            {
+              "title": "Силова розетка переносна e.socket.225.32.67, 5п., 400В, 32А, IP 67 \"E.NEXT\" i082018",
+              "article": "IP 67",
+              "url": "https://ultra-svet.com/silovaya-rozetka-perenosnaya-e.socket.225.32.67-5p.-400v-32a-ip-67-e.next-i082018"
+            },
+            {
+              "title": "Силова розетка переносна e.socket.pro.4.125, 4п., 380В, IP 67, 125А (244) \"E.NEXT\" p012026",
+              "article": "IP 67",
+              "url": "https://ultra-svet.com/silovaya-rozetka-perenosnaya-e.socket.pro.4.125-4p.-380v-ip-67-125a-244-e.next-p012026"
+            },
+            {
+              "title": "Силова розетка переносна e.socket.pro.4.63, 4п., 380В, IP 67, 63А (234) \"E.NEXT\" p012024",
+              "article": "IP 67",
+              "url": "https://ultra-svet.com/silovaya-rozetka-perenosnaya-e.socket.pro.4.63-4p.-380v-ip-67-63a-234-e.next-p012024"
+            },
+            {
+              "title": "Силова розетка переносна e.socket.pro.5.125, 5п., 380В, IP 67, 125А (245) \"E.NEXT\" p012027",
+              "article": "IP 67",
+              "url": "https://ultra-svet.com/silovaya-rozetka-perenosnaya-e.socket.pro.5.125-5p.-380v-ip-67-125a-245-e.next-p012027"
+            },
+            {
+              "title": "Силова розетка переносна e.socket.pro.5.63, 5п., 380В, IP 67, 63А (235) \"E.NEXT\" p012025",
+              "article": "IP 67",
+              "url": "https://ultra-svet.com/silovaya-rozetka-perenosnaya-e.socket.pro.5.63-5p.-380v-ip-67-63a-235-e.next-p012025"
+            }
+          ]
+        },
+        {
+          "value": "1-1",
+          "count": 23,
+          "items": [
+            {
+              "title": "Введення металеве e.industrial.pipe.dir.collet.1-1/2\", цангове \"E.NEXT\" i0450005",
+              "article": "1-1",
+              "url": "https://ultra-svet.com/vvod-metallicheskij-eindustrialpipedircollet1-1-2-tsangovyj-enext-i0450005"
+            },
+            {
+              "title": "Введення металеве e.industrial.pipe.dir.collet.1-1/4\", цангове \"E.NEXT\" i0450004",
+              "article": "1-1",
+              "url": "https://ultra-svet.com/vvod-metallicheskij-eindustrialpipedircollet1-1-4-tsangovyj-enext-i0450004"
+            },
+            {
+              "title": "Введення металеве e.industrial.pipe.thread.dir.1-1/4\", різьбове \"E.NEXT\" i0580004",
+              "article": "1-1",
+              "url": "https://ultra-svet.com/vvod-metallicheskij-eindustrialpipethreaddir1-1-4-rezbovoj-enext-i0580004"
+            },
+            {
+              "title": "Введення металевий e.industrial.pipe.dir.screw.1-1/2\", гвинтовий \"E.NEXT\" i0460005",
+              "article": "1-1",
+              "url": "https://ultra-svet.com/vvod-metallicheskij-eindustrialpipedirscrew1-1-2-vintovoj-enext-i0460005"
+            },
+            {
+              "title": "Введення металевий e.industrial.pipe.dir.screw.1-1/4\", гвинтовий \"E.NEXT\" i0460004",
+              "article": "1-1",
+              "url": "https://ultra-svet.com/vvod-metallicheskij-eindustrialpipedirscrew1-1-4-vintovoj-enext-i0460004"
+            },
+            {
+              "title": "З'єднувач металевий e.industrial.pipe.connect.collet.1-1/2\", цанговий \"E.NEXT\" i0430005",
+              "article": "1-1",
+              "url": "https://ultra-svet.com/soedinitel-metallicheskij-e.industrial.pipe.connect.collet.1-12-cangovyj-e.next-i0430005"
+            },
+            {
+              "title": "З'єднувач металевий e.industrial.pipe.connect.collet.1-1/4\", цанговий \"E.NEXT\" i0430004",
+              "article": "1-1",
+              "url": "https://ultra-svet.com/soedinitel-metallicheskij-e.industrial.pipe.connect.collet.1-14-cangovyj-e.next-i0430004"
+            },
+            {
+              "title": "З'єднувач металевий e.industrial.pipe.connect.screw.1-1/2\", на гвинтах \"E.NEXT\" i0440005",
+              "article": "1-1",
+              "url": "https://ultra-svet.com/soedinitel-metallicheskij-e.industrial.pipe.connect.screw.1-12-na-vintah-e.next-i0440005"
+            },
+            {
+              "title": "З'єднувач металевий e.industrial.pipe.connect.screw.1-1/4\", на гвинтах \"E.NEXT\" i0440004",
+              "article": "1-1",
+              "url": "https://ultra-svet.com/soedinitel-metallicheskij-e.industrial.pipe.connect.screw.1-14-na-vintah-e.next-i0440004"
+            },
+            {
+              "title": "З'єднувач металевий e.industrial.pipe.thread.connect.1-1/2\", різьбовий \"E.NEXT\" i0420005",
+              "article": "1-1",
+              "url": "https://ultra-svet.com/soedinitel-metallicheskij-e.industrial.pipe.thread.connect.1-12-rezbovoj-e.next-i0420005"
+            }
+          ]
+        },
+        {
+          "value": "d 6ka",
+          "count": 23,
+          "items": [
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.pro.60.1.D.6 , 1р, 6А, D, 6кА \"E.NEXT\" p0710006",
+              "article": "D 6KA",
+              "url": "https://ultra-svet.com/modulnij-avtomatichnij-vimikach-emcbpro601d6-1r-6a-d-6ka-enext-p0710006"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.pro.60.1.D.25, 1р, 25А, D, 6кА \"E.NEXT\" p0710009",
+              "article": "D 6KA",
+              "url": "https://ultra-svet.com/modulnij-avtomatichnij-vimikach-emcbpro601d25-1r-25a-d-6ka-enext-p0710009"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.pro.60.1.D.3, 1р, 3А, D, 6кА \"E.NEXT\" p0710003",
+              "article": "D 6KA",
+              "url": "https://ultra-svet.com/modulnij-avtomatichnij-vimikach-emcbpro601d3-1r-3a-d-6ka-enext-p0710003"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.pro.60.1.D.4, 1р, 4А, D, 6кА \"E.NEXT\" p0710004",
+              "article": "D 6KA",
+              "url": "https://ultra-svet.com/modulnij-avtomatichnij-vimikach-emcbpro601d4-1r-4a-d-6ka-enext-p0710004"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.pro.60.1.D.5, 1р, 5А, D, 6кА \"E.NEXT\" p0710005",
+              "article": "D 6KA",
+              "url": "https://ultra-svet.com/modulnij-avtomatichnij-vimikach-emcbpro601d5-1r-5a-d-6ka-enext-p0710005"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.pro.60.1.D.63, 1р, 63А, D, 6кА \"E.NEXT\" p0710023",
+              "article": "D 6KA",
+              "url": "https://ultra-svet.com/modulnij-avtomatichnij-vimikach-emcbpro601d63-1r-63a-d-6ka-enext-p0710023"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.pro.60.3.D.20, 3р, 20А, D, 6кА \"E.NEXT\" p0710013",
+              "article": "D 6KA",
+              "url": "https://ultra-svet.com/modulnij-avtomatichnij-vimikach-emcbpro603d20-3r-20a-d-6ka-enext-p0710013"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.pro.60.3.D.32, 3р, 32А, D, 6кА \"E.NEXT\" p0710015",
+              "article": "D 6KA",
+              "url": "https://ultra-svet.com/modulnij-avtomatichnij-vimikach-emcbpro603d32-3r-32a-d-6ka-enext-p0710015"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.pro.60.1.D.1, 1р, 1А, D, 6кА \"E.NEXT\" p0710001",
+              "article": "D 6KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbpro601d1-1r-1a-d-6ka-enext-p0710001"
+            },
+            {
+              "title": "Модульний автоматичний вимикач e.mcb.pro.60.1.D.10, 1р, 10А, D, 6кА \"E.NEXT\" p0710007",
+              "article": "D 6KA",
+              "url": "https://ultra-svet.com/modulnyj-avtomaticheskij-vyklyuchatel-emcbpro601d10-1r-10a-d-6ka-enext-p0710007"
+            }
+          ]
+        },
+        {
+          "value": "pod 1",
+          "count": 22,
+          "items": [
+            {
+              "title": "Корпус e.mbox.stand.n.f1.0.z металевий, під 1-ф. лічильник, порожній, навісний, із замком \"E.NEXT\" s0100001",
+              "article": "POD 1",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f1.0.z-metallicheskij-pod-1-f.-schyotchik-pustoj-navesnoj-s-zamkom-e.next-s0100001"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f1.04.z металевий, під 1-ф. лічильник, 4 мод., навісний, із замком \"E.NEXT\" s0100003",
+              "article": "POD 1",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f1.04.z-metallicheskij-pod-1-f.-schyotchik-4-mod.-navesnoj-s-zamkom-e.next-s0100003"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f1.04.ze металевий, під 1-ф. електронний лічильник, 4 мод., навісний, із замком \"E.NEXT\" s0100063",
+              "article": "POD 1",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f1.04.z.e-metallicheskij-pod-1-f.-elektronnyj-schyotchik-4-mod.-navesnoj-s-zamkom-e.next-s0100063"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f1.08.z металевий, під 1-ф. лічильник, 8 мод., навісний, із замком \"E.NEXT\" s0100005",
+              "article": "POD 1",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f1.08.z-metallicheskij-pod-1-f.-schyotchik-8-mod.-navesnoj-s-zamkom-e.next-s0100005"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f1.08.z.е металевий, під 1-ф. електронний лічильник, 8 мод., навісний, із замком \"E.NEXT\" s0100049",
+              "article": "POD 1",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f1.08.z.e-metallicheskij-pod-1-f.-elektronnyj-schyotchik-8-mod.-navesnoj-s-zamkom-e.next-s0100049"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f1.10.z металевий, під 1-ф. лічильник, 10 мод., навісний, із замком \"E.NEXT\" s0100015",
+              "article": "POD 1",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f1.10.z-metallicheskij-pod-1-f.-schyotchik-10-mod.-navesnoj-s-zamkom-e.next-s0100015"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f1.10.ze металевий, під 1-ф. електронний лічильник, 10 мод., навісний, із замком \"E.NEXT\" s0100065",
+              "article": "POD 1",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f1.10.z.e-metallicheskij-pod-1-f.-elektronnyj-schyotchik-10-mod.-navesnoj-s-zamkom-e.next-s0100065"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f1.12.z металевий, під 1-ф. лічильник, 12 мод., навісний, із замком \"E.NEXT\" s0100007",
+              "article": "POD 1",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f1.12.z-metallicheskij-pod-1-f.-schyotchik-12-mod.-navesnoj-s-zamkom-e.next-s0100007"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f1.12.ze металевий, під 1-ф. електронний лічильник, 12 мод., навісний, із замком \"E.NEXT\" s0100067",
+              "article": "POD 1",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f1.12.z.e-metallicheskij-pod-1-f.-elektronnyj-schyotchik-12-mod.-navesnoj-s-zamkom-e.next-s0100067"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f1.16.z металевий, під 1-ф. лічильник, 16 мод., навісний, із замком \"E.NEXT\" s0100009",
+              "article": "POD 1",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f1.16.z-metallicheskij-pod-1-f.-schyotchik-16-mod.-navesnoj-s-zamkom-e.next-s0100009"
+            }
+          ]
+        },
+        {
+          "value": "na 3",
+          "count": 20,
+          "items": [
+            {
+              "title": "Перехідник металевий e.industrial.pipe.thread.bts.1\".3/4\", різьбовий, з 1\" на 3/4\" \"E.NEXT\" i0410003",
+              "article": "NA 3",
+              "url": "https://ultra-svet.com/perekhodnik-metallicheskij-eindustrialpipethreadbts13-4-rezbovoj-z-1-na-3-4-enext-i0410003"
+            },
+            {
+              "title": "Перехідник металевий e.industrial.pipe.thread.bts.2\".3/4\", різьбовий, з 2\" на 3/4\" \"E.NEXT\" i0410012",
+              "article": "NA 3",
+              "url": "https://ultra-svet.com/perekhodnik-metallicheskij-eindustrialpipethreadbts23-4-rezbovoj-s-2-na-3-4-enext-i0410012"
+            },
+            {
+              "title": "Перемикач e.mb.bd33 на 3 фіксовані положення \"1-0-2\" стандартна рукоятка, 2NO \"E.NEXT\" p0810134",
+              "article": "NA 3",
+              "url": "https://ultra-svet.com/pereklyuchatel-e.mb.bd33-na-3-fiksirovannyh-polozheniya-1-0-2-standartnaya-rukoyatka-2no-e.next-p0810134"
+            },
+            {
+              "title": "Перемикач e.mb.bj33 на 3 фіксовані положення \"1-0-2\" подовжена рукоятка, 2NO \"E.NEXT\" p0810136",
+              "article": "NA 3",
+              "url": "https://ultra-svet.com/pereklyuchatel-e.mb.bj33-na-3-fiksirovannyh-polozheniya-1-0-2-udlinennaya-rukoyatka-2no-e.next-p0810136"
+            },
+            {
+              "title": "Роз'єм модульний e.control.p103s для проміжного реле 10А на 3 групи контактів \"E.NEXT\" i.ptf.11a",
+              "article": "NA 3",
+              "url": "https://ultra-svet.com/razem-modulnyj-e.control.p103s-dlya-promezhutochnogo-rele-10a-na-3-gruppy-kontaktov-e.next-i.ptf.11a"
+            },
+            {
+              "title": "Роз'єм модульний e.control.p53s для проміжного реле 5А на 3 групи контактів \"E.NEXT\" i.pif.11a",
+              "article": "NA 3",
+              "url": "https://ultra-svet.com/razem-modulnyj-e.control.p53s-dlya-promezhutochnogo-rele-5a-na-3-gruppy-kontaktov-e.next-i.pif.11a"
+            },
+            {
+              "title": "Реле проміжне e.control.p1031, 10А, 12В DC, на 3 групи контактів \"E.NEXT\" i.ly3.12dc",
+              "article": "NA 3",
+              "url": "https://ultra-svet.com/rele-promezhutochnoe-e.control.p1031-10a-12v-dc-na-3-gruppy-kontaktov-e.next-i.ly3.12dc"
+            },
+            {
+              "title": "Реле проміжне e.control.p1032, 10А, 12В AC, на 3 групи контактів \"E.NEXT\" i.ly3.12ac",
+              "article": "NA 3",
+              "url": "https://ultra-svet.com/rele-promezhutochnoe-e.control.p1032-10a-12v-ac-na-3-gruppy-kontaktov-e.next-i.ly3.12ac"
+            },
+            {
+              "title": "Реле проміжне e.control.p1033, 10А, 24В DC, на 3 групи контактів \"E.NEXT\" i.ly3.24dc",
+              "article": "NA 3",
+              "url": "https://ultra-svet.com/rele-promezhutochnoe-e.control.p1033-10a-24v-dc-na-3-gruppy-kontaktov-e.next-i.ly3.24dc"
+            },
+            {
+              "title": "Реле проміжне e.control.p1034, 10А, 24В AC, на 3 групи контактів \"E.NEXT\" i.ly3.24ac",
+              "article": "NA 3",
+              "url": "https://ultra-svet.com/rele-promezhutochnoe-e.control.p1034-10a-24v-ac-na-3-gruppy-kontaktov-e.next-i.ly3.24ac"
+            }
+          ]
+        },
+        {
+          "value": "vvgp ngd 1",
+          "count": 20,
+          "items": [
+            {
+              "title": "Провід ВВГп НГД-1 2х1,0 помаранчевий \"Одеса\" ГОСТ синя бирка",
+              "article": "VVGP NGD 1",
+              "url": "https://ultra-svet.com/provod-vvgp-ngd-1-2h1-0-oranzhevyj-odessa-gost-sinyaya-birka"
+            },
+            {
+              "title": "Провід ВВГп НГД-1 2х1,5 чорний \"Одеса\" ГОСТ синя бирка",
+              "article": "VVGP NGD 1",
+              "url": "https://ultra-svet.com/provod-vvgp-ngd-1-2h1-5-chernyj-odessa-gost-sinyaya-birka"
+            },
+            {
+              "title": "Провід ВВГп НГД-1 2х1,5 чорний \"Одеса\" ТУ зелена бирка",
+              "article": "VVGP NGD 1",
+              "url": "https://ultra-svet.com/provod-vvgp-ngd-1-2h1-5-chernyj-odessa-tu-zelenaya-birka"
+            },
+            {
+              "title": "Провід ВВГп НГД-1 2х1,5 помаранчевий \"Одеса\" ГОСТ синя бирка",
+              "article": "VVGP NGD 1",
+              "url": "https://ultra-svet.com/provod-vvgp-ngd-1-2h1-5-oranzhevyj-odessa-gost-sinyaya-birka"
+            },
+            {
+              "title": "Провід ВВГп НГД-1 2х2,5 чорний \"Одеса\" ГОСТ синя бирка",
+              "article": "VVGP NGD 1",
+              "url": "https://ultra-svet.com/provod-vvgp-ngd-1-2h2-5-chernyj-odessa-gost-sinyaya-birka"
+            },
+            {
+              "title": "Провід ВВГп НГД-1 2х2,5 чорний \"Одеса\" ТУ зелена бирка",
+              "article": "VVGP NGD 1",
+              "url": "https://ultra-svet.com/provod-vvgp-ngd-1-2h2-5-chernyj-odessa-tu-zelenaya-birka"
+            },
+            {
+              "title": "Провід ВВГп НГД-1 2х2,5 помаранчевий \"Одеса\" ГОСТ синя бирка",
+              "article": "VVGP NGD 1",
+              "url": "https://ultra-svet.com/provod-vvgp-ngd-1-2h2-5-oranzhevyj-odessa-gost-sinyaya-birka"
+            },
+            {
+              "title": "Провід ВВГп НГД-1 2х4,0 чорний \"Одеса\" ГОСТ синя бирка",
+              "article": "VVGP NGD 1",
+              "url": "https://ultra-svet.com/provod-vvgp-ngd-1-2h4-0-chernyj-odessa-gost-sinyaya-birka"
+            },
+            {
+              "title": "Провід ВВГп НГД-1 2х4,0 помаранчевий \"Одеса\" ГОСТ синя бирка",
+              "article": "VVGP NGD 1",
+              "url": "https://ultra-svet.com/provod-vvgp-ngd-1-2h4-0-oranzhevyj-odessa-gost-sinyaya-birka"
+            },
+            {
+              "title": "Провід ВВГп НГД-1 3х1,5 чорний \"Одеса\" ГОСТ синя бирка",
+              "article": "VVGP NGD 1",
+              "url": "https://ultra-svet.com/provod-vvgp-ngd-1-3h1-5-chernyj-odessa-gost-sinyaya-birka"
+            }
+          ]
+        },
+        {
+          "value": "kobalt 3",
+          "count": 20,
+          "items": [
+            {
+              "title": "Свердло по металу Р18 (кобальт) 3,0 мм \"LEVTOOLS\" 107-030",
+              "article": "KOBALT 3",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-3-0-mm-levtools-107-030"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 3,1 мм. \"LEVTOOLS\" 107-031",
+              "article": "KOBALT 3",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-3-1-mm-levtools-107-031"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 3,2 мм \"LEVTOOLS\" 107-032",
+              "article": "KOBALT 3",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-3-2-mm-levtools-107-032"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 3,3 мм. \"LEVTOOLS\" 107-033",
+              "article": "KOBALT 3",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-3-3-mm-levtools-107-033"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 3,4 мм. \"LEVTOOLS\" 107-034",
+              "article": "KOBALT 3",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-3-4-mm-levtools-107-034"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 3,5 мм \"LEVTOOLS\" 107-035",
+              "article": "KOBALT 3",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-3-5-mm-levtools-107-035"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 3,6 мм \"LEVTOOLS\" 107-036",
+              "article": "KOBALT 3",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-3-6-mm-levtools-107-036"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 3,7 мм \"LEVTOOLS\" 107-037",
+              "article": "KOBALT 3",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-3-7-mm-levtools-107-037"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 3,8 мм. \"LEVTOOLS\" 107-038",
+              "article": "KOBALT 3",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-3-8-mm-levtools-107-038"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 3,9 мм \"LEVTOOLS\" 107-039",
+              "article": "KOBALT 3",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-3-9-mm-levtools-107-039"
+            }
+          ]
+        },
+        {
+          "value": "s 10ka",
+          "count": 18,
+          "items": [
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.1N.C16, 1р+N, 16А, С, 10кА \"E.NEXT\" i0190003",
+              "article": "S 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1001nc16-1r-n-16a-s-10ka-enext-i0190003"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.1N.C10, 1р+N, 10А, С, 10кА \"E.NEXT\" i0190002",
+              "article": "S 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1001nc10-1r-n-10a-s-10ka-enext-i0190002"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.1N.C20, 1р+N, 20А, С, 10кА \"E.NEXT\" i0190004",
+              "article": "S 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1001nc20-1r-n-20a-s-10ka-enext-i0190004"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.1N.C25, 1р+N, 25А, С, 10кА \"E.NEXT\" i0190005",
+              "article": "S 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1001nc25-1r-n-25a-s-10ka-enext-i0190005"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.1N.C40, 1р+N, 40А, С, 10кА \"E.NEXT\" i0190007",
+              "article": "S 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1001nc40-1r-n-40a-s-10ka-enext-i0190007"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.1N.C32, 1р+N, 32А, С, 10кА \"E.NEXT\" i0190006",
+              "article": "S 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1001nc32-1r-n-32a-s-10ka-enext-i0190006"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.1N.C50, 1р+N, 50А, С, 10кА \"E.NEXT\" i0190008",
+              "article": "S 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1001nc50-1r-n-50a-s-10ka-enext-i0190008"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.1N.C6, 1р+N, 6А, С, 10кА \"E.NEXT\" i0190001",
+              "article": "S 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1001nc6-1r-n-6a-s-10ka-enext-i0190001"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.1N.C63, 1р+N, 63А, С, 10кА \"E.NEXT\" i0190009",
+              "article": "S 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1001nc63-1r-n-63a-s-10ka-enext-i0190009"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.3N.C10, 3р+N, 10А, С, 10кА \"E.NEXT\" i0190011",
+              "article": "S 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1003nc10-3r-n-10a-s-10ka-enext-i0190011"
+            }
+          ]
+        },
+        {
+          "value": "kobalt 2",
+          "count": 18,
+          "items": [
+            {
+              "title": "Свердло по металу Р18 (кобальт) 2,0 мм \"LEVTOOLS\" 107-020",
+              "article": "KOBALT 2",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-2-0-mm-levtools-107-020"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 2,3 мм. \"LEVTOOLS\" 107-023",
+              "article": "KOBALT 2",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-2-3-mm-levtools-107-023"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 2,2 мм. \"LEVTOOLS\" 107-022",
+              "article": "KOBALT 2",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-2-2-mm-levtools-107-022"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 2,4 мм \"LEVTOOLS\" 107-024",
+              "article": "KOBALT 2",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-2-4-mm-levtools-107-024"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 2,5 мм \"LEVTOOLS\" 107-025",
+              "article": "KOBALT 2",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-2-5-mm-levtools-107-025"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 2,6 мм \"LEVTOOLS\" 107-026",
+              "article": "KOBALT 2",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-2-6-mm-levtools-107-026"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 2,7 мм \"LEVTOOLS\" 107-027",
+              "article": "KOBALT 2",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-2-7-mm-levtools-107-027"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 2,8 мм. \"LEVTOOLS\" 107-028",
+              "article": "KOBALT 2",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-2-8-mm-levtools-107-028"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 2,9 мм \"LEVTOOLS\" 107-029",
+              "article": "KOBALT 2",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-2-9-mm-levtools-107-029"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 2,0 мм \"LEVTOOLS\" 105-020",
+              "article": "KOBALT 2",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-2-0-mm-levtools-105-020"
+            }
+          ]
+        },
+        {
+          "value": "a 30ma",
+          "count": 17,
+          "items": [
+            {
+              "title": "Вимикач диференціального струму з функцією захисту від надструмів e.rcbo.pro.2.B06.30, 1P+N, 6А, B, тип А, 30мА \"E.NEXT\" p0720004",
+              "article": "A 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-s-funktsiej-zaschity-ot-sverkhtokov-ercbopro2b0630-1p-n-6a-b-tip-a-30ma-enext-p0720004"
+            },
+            {
+              "title": "Вимикач диференціального струму з функцією захисту від надструмів e.rcbo.pro.2.B10.30, 1P+N, 10А, B, тип А, 30мА \"E.NEXT\" p0720005",
+              "article": "A 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-s-funktsiej-zaschity-ot-sverkhtokov-ercbopro2b1030-1p-n-10a-b-tip-a-30ma-enext-p0720005"
+            },
+            {
+              "title": "Вимикач диференціального струму з функцією захисту від надструмів e.rcbo.pro.2.B16.30, 1P+N, 16А, B, тип А, 30мА \"E.NEXT\" p0720006",
+              "article": "A 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-s-funktsiej-zaschity-ot-sverkhtokov-ercbopro2b1630-1p-n-16a-b-tip-a-30ma-enext-p0720006"
+            },
+            {
+              "title": "Вимикач диференціального струму з функцією захисту від надструмів e.rcbo.pro.2.С06.30, 1P+N, 6А, С, тип А, 30мА \"E.NEXT\" p0720007",
+              "article": "A 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-s-funktsiej-zaschity-ot-sverkhtokov-ercbopro2s0630-1p-n-6a-s-tip-a-30ma-enext-p0720007"
+            },
+            {
+              "title": "Вимикач диференціального струму з функцією захисту від надструмів e.rcbo.pro.2.С10.30, 1P+N, 10А, С, тип А, 30мА \"E.NEXT\" p0720008",
+              "article": "A 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-s-funktsiej-zaschity-ot-sverkhtokov-ercbopro2s1030-1p-n-10a-s-tip-a-30ma-enext-p0720008"
+            },
+            {
+              "title": "Вимикач диференціального струму з функцією захисту від надструмів e.rcbo.pro.2.С16.30, 1P+N, 16А, С, тип А, 30мА \"E.NEXT\" p0720009",
+              "article": "A 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-s-funktsiej-zaschity-ot-sverkhtokov-ercbopro2s1630-1p-n-16a-s-tip-a-30ma-enext-p0720009"
+            },
+            {
+              "title": "Вимикач диференціального струму з функцією захисту від надструмів e.rcbo.pro.2.С25.30, 1P+N, 25А, С, тип А, 30мА \"E.NEXT\" p0720010",
+              "article": "A 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-s-funktsiej-zaschity-ot-sverkhtokov-ercbopro2s2530-1p-n-25a-s-tip-a-30ma-enext-p0720010"
+            },
+            {
+              "title": "Вимикач диференціального струму з функцією захисту від надструмів e.rcbo.pro.2.С32.30, 1P+N, 32А, С, тип А, 30мА \"E.NEXT\" p0720011",
+              "article": "A 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-s-funktsiej-zaschity-ot-sverkhtokov-ercbopro2s3230-1p-n-32a-s-tip-a-30ma-enext-p0720011"
+            },
+            {
+              "title": "Вимикач диференціального струму з функцією захисту від надструмів e.rcbo.pro.2.С40.30, 1P+N, 40А, С, тип А, 30мА \"E.NEXT\" p0720012",
+              "article": "A 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-s-funktsiej-zaschity-ot-sverkhtokov-ercbopro2s4030-1p-n-40a-s-tip-a-30ma-enext-p0720012"
+            },
+            {
+              "title": "Вимикач диференціального струму з функцією захисту від надструмів e.rcbo.pro.2.С50.30, 1P+N, 50А, С, тип А, 30мА \"E.NEXT\" p0720013",
+              "article": "A 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-s-funktsiej-zaschity-ot-sverkhtokov-ercbopro2s5030-1p-n-50a-s-tip-a-30ma-enext-p0720013"
+            }
+          ]
+        },
+        {
+          "value": "d 10ka",
+          "count": 16,
+          "items": [
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.3.D.10, 3р, 10А, D, 10кА \"E.NEXT\" i0200002",
+              "article": "D 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1003d10-3r-10a-d-10ka-enext-i0200002"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.3.D.16, 3р, 16А, D, 10кА \"E.NEXT\" i0200003",
+              "article": "D 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1003d16-3r-16a-d-10ka-enext-i0200003"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.3.D.20, 3р, 20А, D, 10кА \"E.NEXT\" i0200004",
+              "article": "D 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1003d20-3r-20a-d-10ka-enext-i0200004"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.3.D.25, 3р, 25А, D, 10кА \"E.NEXT\" i0200005",
+              "article": "D 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1003d25-3r-25a-d-10ka-enext-i0200005"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.3.D.32, 3р, 32А, D, 10кА \"E.NEXT\" i0200006",
+              "article": "D 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1003d32-3r-32a-d-10ka-enext-i0200006"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.3.D.50, 3р, 50А, D, 10кА \"E.NEXT\" i0200008",
+              "article": "D 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1003d50-3r-50a-d-10ka-enext-i0200008"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.3.D.40, 3р, 40А, D, 10кА \"E.NEXT\" i0200007",
+              "article": "D 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1003d40-3r-40a-d-10ka-enext-i0200007"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.3.D.6, 3р, 6А, D, 10кА \"E.NEXT\" i0200001",
+              "article": "D 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1003d6-3r-6a-d-10ka-enext-i0200001"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.3.D.63, 3р, 63А, D, 10кА \"E.NEXT\" i0200009",
+              "article": "D 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1003d63-3r-63a-d-10ka-enext-i0200009"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.100.3N.D20, 3р+N, 20А, D, 10кА \"E.NEXT\" i.0210004",
+              "article": "D 10KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1003nd20-3r-n-20a-d-10ka-enext-i0210004"
+            }
+          ]
+        },
+        {
+          "value": "na 4",
+          "count": 16,
+          "items": [
+            {
+              "title": "Роз'єм модульний e.control.p104s для проміжного реле 10А на 4 групи контактів \"E.NEXT\" i.ptf.14a",
+              "article": "NA 4",
+              "url": "https://ultra-svet.com/razem-modulnyj-e.control.p104s-dlya-promezhutochnogo-rele-10a-na-4-gruppy-kontaktov-e.next-i.ptf.14a"
+            },
+            {
+              "title": "Роз'єм модульний e.control.p34s для проміжного реле 3А на 4 групи контактів \"E.NEXT\" i.pif.14a",
+              "article": "NA 4",
+              "url": "https://ultra-svet.com/razem-modulnyj-e.control.p34s-dlya-promezhutochnogo-rele-3a-na-4-gruppy-kontaktov-e.next-i.pif.14a"
+            },
+            {
+              "title": "Реле проміжне e.control.p1041, 10А, 12В DC, на 4 групи контактів \"E.NEXT\" i.ly4.12dc",
+              "article": "NA 4",
+              "url": "https://ultra-svet.com/rele-promezhutochnoe-e.control.p1041-10a-12v-dc-na-4-gruppy-kontaktov-e.next-i.ly4.12dc"
+            },
+            {
+              "title": "Реле проміжне e.control.p1042, 10А, 12В AC, на 4 групи контактів \"E.NEXT\" i.ly4.12ac",
+              "article": "NA 4",
+              "url": "https://ultra-svet.com/rele-promezhutochnoe-e.control.p1042-10a-12v-ac-na-4-gruppy-kontaktov-e.next-i.ly4.12ac"
+            },
+            {
+              "title": "Реле проміжне e.control.p1043, 10А, 24В DC, на 4 групи контактів \"E.NEXT\" i.ly4.24dc",
+              "article": "NA 4",
+              "url": "https://ultra-svet.com/rele-promezhutochnoe-e.control.p1043-10a-24v-dc-na-4-gruppy-kontaktov-e.next-i.ly4.24dc"
+            },
+            {
+              "title": "Реле проміжне e.control.p1044, 10А, 24В AC, на 4 групи контактів \"E.NEXT\" i.ly4.24ac",
+              "article": "NA 4",
+              "url": "https://ultra-svet.com/rele-promezhutochnoe-e.control.p1044-10a-24v-ac-na-4-gruppy-kontaktov-e.next-i.ly4.24ac"
+            },
+            {
+              "title": "Реле проміжне e.control.p1045, 10А, 110В AC, на 4 групи контактів \"E.NEXT\" i.ly4.110ac",
+              "article": "NA 4",
+              "url": "https://ultra-svet.com/rele-promezhutochnoe-e.control.p1045-10a-110v-ac-na-4-gruppy-kontaktov-e.next-i.ly4.110ac"
+            },
+            {
+              "title": "Реле проміжне e.control.p1046, 10А, 220В AC, на 4 групи контактів \"E.NEXT\" i.ly4.230ac",
+              "article": "NA 4",
+              "url": "https://ultra-svet.com/rele-promezhutochnoe-e.control.p1046-10a-220v-ac-na-4-gruppy-kontaktov-e.next-i.ly4.230ac"
+            },
+            {
+              "title": "Реле проміжне e.control.p341, 3А, 12В DC, на 4 групи контактів \"E.NEXT\" i.my4.12dc",
+              "article": "NA 4",
+              "url": "https://ultra-svet.com/rele-promezhutochnoe-e.control.p341-3a-12v-dc-na-4-gruppy-kontaktov-e.next-i.my4.12dc"
+            },
+            {
+              "title": "Реле проміжне e.control.p342, 3А, 12В AC, на 4 групи контактів \"E.NEXT\" i.my4.12ac",
+              "article": "NA 4",
+              "url": "https://ultra-svet.com/rele-promezhutochnoe-e.control.p342-3a-12v-ac-na-4-gruppy-kontaktov-e.next-i.my4.12ac"
+            }
+          ]
+        },
+        {
+          "value": "pol 63a",
+          "count": 15,
+          "items": [
+            {
+              "title": "Диференціальне реле (ПЗВ) 2 пол. 63А 30mA AC \"SCHNEIDER Resi9\" R9R51263",
+              "article": "POL 63A",
+              "url": "https://ultra-svet.com/differentsialnoe-rele-uzo-2-pol-63a-30ma-ac-schneider-resi9-r9r51263"
+            },
+            {
+              "title": "Автоматичний вимикач 1 підлога. 63А C \"SCHNEIDER\" EZ9F34163",
+              "article": "POL 63A",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-1-pol-63a-c-schneider-ez9f34163"
+            },
+            {
+              "title": "Автоматичний вимикач 1 підлога. 63А З \"SCHNEIDER\" Домовик 11209",
+              "article": "POL 63A",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-1-pol-63a-s-schneider-domovoj-11210"
+            },
+            {
+              "title": "Автоматичний вимикач 2 пол. 63А C \"SCHNEIDER\" EZ9F34263",
+              "article": "POL 63A",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-2-pol-63a-c-schneider-ez9f34263"
+            },
+            {
+              "title": "Автоматичний вимикач 2 пол. 63А З \"SCHNEIDER\" Домовик 11219",
+              "article": "POL 63A",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-2-pol-63a-s-schneider-domovoj-11219"
+            },
+            {
+              "title": "Автоматичний вимикач 4 пол. 63А З \"SCHNEIDER\" EZ9F34463",
+              "article": "POL 63A",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-4-pol-63a-s-schneider-ez9f34463"
+            },
+            {
+              "title": "Автоматичний вимикач 3 підлога. 63А C \"SCHNEIDER\" EZ9F34363",
+              "article": "POL 63A",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-3-pol-63a-c-schneider-ez9f34363-1"
+            },
+            {
+              "title": "Автоматичний вимикач 3 підлога. 63А З \"SCHNEIDER\" Домовик 11229",
+              "article": "POL 63A",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-3-pol-63a-s-schneider-domovoj-11229"
+            },
+            {
+              "title": "Диференціальне реле (ПЗВ) 2 пол. 63А 100mA AC \"SCHNEIDER Resi9\" R9R52263",
+              "article": "POL 63A",
+              "url": "https://ultra-svet.com/differentsialnoe-rele-uzo-2-pol-63a-100ma-ac-schneider-resi9-r9r52263"
+            },
+            {
+              "title": "Диференціальне реле (ПЗВ) 2 пол. 63А 300mA AC \"SCHNEIDER Resi9\" R9R54263",
+              "article": "POL 63A",
+              "url": "https://ultra-svet.com/differentsialnoe-rele-uzo-2-pol-63a-300ma-ac-schneider-resi9-r9r54263"
+            }
+          ]
+        },
+        {
+          "value": "ek 1",
+          "count": 15,
+          "items": [
+            {
+              "title": "Корпус обліку ЯУР-1Н-10 ек., 1-ф. лічильник, 10 мод., IP31, навісний, 220*355*140 \"E.NEXT\"",
+              "article": "EK 1",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-1n-10-ek-1-f-schetchik-10-mod-ip31-navesnoj-220355140-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-1Н-10Е ек., 1-ф. лічильник, 10 мод., IP31, навісний, 220*355*100 \"E.NEXT\"",
+              "article": "EK 1",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-1n-10e-ek-1-f-schetchik-10-mod-ip31-navesnoj-220355100-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-1Н-12 ек., 1-ф. лічильник, 12 мод., IP31, навісний, 260 * 355 * 140 \"E.NEXT\"",
+              "article": "EK 1",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-1n-12-ek-1-f-schetchik-12-mod-ip31-navesnoj-260355140-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-1Н-12Е ек., 1-ф. лічильник, 12 мод., IP31, навісний, 260*355*100 \"E.NEXT\"",
+              "article": "EK 1",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-1n-12e-ek-1-f-schetchik-12-mod-ip31-navesnoj-260355100-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-1Н-4 ек., 1-ф. лічильник, 4 мод., IP31, навісний, 260*245*140 \"E.NEXT\"",
+              "article": "EK 1",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-1n-4-ek-1-f-schetchik-4-mod-ip31-navesnoj-260245140-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-1Н-4Е ек., 1-ф. лічильник, 4 мод., IP31, навісний, 260*245*100 \"E.NEXT\"",
+              "article": "EK 1",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-1n-4e-ek-1-f-schetchik-4-mod-ip31-navesnoj-260245100-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-1Н-8 ек., 1-ф. лічильник, 8 мод., IP31, навісний, 190 * 355 * 140 \"E.NEXT\"",
+              "article": "EK 1",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-1n-8-ek-1-f-schetchik-8-mod-ip31-navesnoj-190355140-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-1Н-8Е ек., 1-ф. лічильник, 8 мод., IP31, навісний, 190 * 355 * 100 \"E.NEXT\"",
+              "article": "EK 1",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-1n-8e-ek-1-f-schetchik-8-mod-ip31-navesnoj-190355100-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-1В-10Е ек., 1-ф. лічильник 10 мод., IP31, що вбудовується, 212*355*100 \"E.NEXT\"",
+              "article": "EK 1",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-1v-10e-ek-1-f-schetchik-10-mod-ip31-vstraivaemyj-212355100-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-1В-12 ек., 1-ф. лічильник, 12 мод., IP31, що вбудовується, 250*355*135 \"E.NEXT\"",
+              "article": "EK 1",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-1v-12-ek-1-f-schetchik-12-mod-ip31-vstraivaemyj-250355135-enext"
+            }
+          ]
+        },
+        {
+          "value": "txlp 2r",
+          "count": 15,
+          "items": [
+            {
+              "title": "Нагрівальний кабель двожильний TXLP/2R 1000W/17 \"NEXANS\" 719",
+              "article": "TXLP 2R",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-dvukhzhilnyj-txlp-2r-1000w-17-nexans-719"
+            },
+            {
+              "title": "Нагрівальний кабель двожильний TXLP/2R 1250W/17 \"NEXANS\" 720",
+              "article": "TXLP 2R",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-dvukhzhilnyj-txlp-2r-1250w-17-nexans-720"
+            },
+            {
+              "title": "Нагрівальний кабель двожильний TXLP/2R 1370W/17 \"NEXANS\" 721",
+              "article": "TXLP 2R",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-dvukhzhilnyj-txlp-2r-1370w-17-nexans-721"
+            },
+            {
+              "title": "Нагрівальний кабель двожильний TXLP/2R 1500W/17 \"NEXANS\" 18553",
+              "article": "TXLP 2R",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-dvukhzhilnyj-txlp-2r-1500w-17-nexans-18553"
+            },
+            {
+              "title": "Нагрівальний кабель двожильний TXLP/2R 1700W/17 \"NEXANS\" 722",
+              "article": "TXLP 2R",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-dvukhzhilnyj-txlp-2r-1700w-17-nexans-722"
+            },
+            {
+              "title": "Нагрівальний кабель двожильний TXLP/2R 200W/17 \"NEXANS\" 7078",
+              "article": "TXLP 2R",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-dvukhzhilnyj-txlp-2r-200w-17-nexans-7078"
+            },
+            {
+              "title": "Нагрівальний кабель двожильний TXLP/2R 2100W/17 \"NEXANS\" 723",
+              "article": "TXLP 2R",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-dvukhzhilnyj-txlp-2r-2100w-17-nexans-723"
+            },
+            {
+              "title": "Нагрівальний кабель двожильний TXLP/2R 2600W/17 \"NEXANS\" 724",
+              "article": "TXLP 2R",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-dvukhzhilnyj-txlp-2r-2600w-17-nexans-724"
+            },
+            {
+              "title": "Нагрівальний кабель двожильний TXLP/2R 300W/17 \"NEXANS\" 713",
+              "article": "TXLP 2R",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-dvukhzhilnyj-txlp-2r-300w-17-nexans-713"
+            },
+            {
+              "title": "Нагрівальний кабель двожильний TXLP/2R 3300W/17 \"NEXANS\" 712",
+              "article": "TXLP 2R",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-dvukhzhilnyj-txlp-2r-3300w-17-nexans-712"
+            }
+          ]
+        },
+        {
+          "value": "c 30ma",
+          "count": 14,
+          "items": [
+            {
+              "title": "Вимикач диференціального струму (дифавтомат) e.elcb.pro.2.C32.30, 2р, 32А, C, 30мА з розділеною рукояткою \"E.NEXT\" p0620004",
+              "article": "C 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-difavtomat-eelcbpro2c3230-2r-32a-c-30ma-s-razdelennoj-rukoyatkoj-enext-p0620004"
+            },
+            {
+              "title": "Вимикач диференціального струму (дифавтомат) e.elcb.stand.2.C10.30, 2р, 10А, C, 30мА з розділеною рукояткою \"E.NEXT\" p0620005",
+              "article": "C 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-difavtomat-eelcbstand2c1030-2r-10a-c-30ma-s-razdelennoj-rukoyatkoj-enext-p0620005"
+            },
+            {
+              "title": "Вимикач диференціального струму (дифавтомат) e.elcb.pro.2.C10.30, 2р, 10А, C, 30мА з розділеною рукояткою \"E.NEXT\" p0620001",
+              "article": "C 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-difavtomat-eelcbpro2c1030-2r-10a-c-30ma-s-razdelennoj-rukoyatkoj-enext-p0620001"
+            },
+            {
+              "title": "Вимикач диференціального струму (дифавтомат) e.elcb.pro.2.C16.30, 2р, 16А, C, 30мА з розділеною рукояткою \"E.NEXT\" p0620002",
+              "article": "C 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-difavtomat-eelcbpro2c1630-2r-16a-c-30ma-s-razdelennoj-rukoyatkoj-enext-p0620002"
+            },
+            {
+              "title": "Вимикач диференціального струму (дифавтомат) e.elcb.pro.2.C25.30, 2р, 25А, C, 30мА з розділеною рукояткою \"E.NEXT\" p0620003",
+              "article": "C 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-difavtomat-eelcbpro2c2530-2r-25a-c-30ma-s-razdelennoj-rukoyatkoj-enext-p0620003"
+            },
+            {
+              "title": "Вимикач диференціального струму (дифавтомат) e.elcb.stand.2.C16.30, 2р, 16А, C, 30мА з розділеною рукояткою \"E.NEXT\" p0620006",
+              "article": "C 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-difavtomat-eelcbstand2c1630-2r-16a-c-30ma-s-razdelennoj-rukoyatkoj-enext-p0620006"
+            },
+            {
+              "title": "Вимикач диференціального струму (дифавтомат) e.elcb.stand.2.C25.30, 2р, 25А, C, 30мА з розділеною рукояткою \"E.NEXT\" p0620007",
+              "article": "C 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-difavtomat-eelcbstand2c2530-2r-25a-c-30ma-s-razdelennoj-rukoyatkoj-enext-p0620007"
+            },
+            {
+              "title": "Вимикач диференціального струму (дифавтомат) e.elcb.stand.2.C32.30, 2р, 32А, C, 30мА з розділеною рукояткою \"E.NEXT\" p0620008",
+              "article": "C 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-difavtomat-eelcbstand2c3230-2r-32a-c-30ma-s-razdelennoj-rukoyatkoj-enext-p0620008"
+            },
+            {
+              "title": "Вимикач диференціального струму (дифавтомат) e.industrial.elcb.2.C06.30, 2р, 6А, C, 30мА \"E.NEXT\" i0230001",
+              "article": "C 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-difavtomat-eindustrialelcb2c0630-2r-6a-c-30ma-enext-i0230001"
+            },
+            {
+              "title": "Вимикач диференціального струму (дифавтомат) e.industrial.elcb.2.C10.30, 2р, 10А, C, 30мА \"E.NEXT\" i0230002",
+              "article": "C 30MA",
+              "url": "https://ultra-svet.com/vyklyuchatel-differentsialnogo-toka-difavtomat-eindustrialelcb2c1030-2r-10a-c-30ma-enext-i0230002"
+            }
+          ]
+        },
+        {
+          "value": "pol 40a",
+          "count": 14,
+          "items": [
+            {
+              "title": "Диференціальне реле (ПЗВ) 2 пол. 40А 30mA AC \"SCHNEIDER Resi9\" R9R51240",
+              "article": "POL 40A",
+              "url": "https://ultra-svet.com/differentsialnoe-rele-uzo-2-pol-40a-30ma-ac-schneider-resi9-r9r51240"
+            },
+            {
+              "title": "Автоматичний вимикач 1 підлога. 40А З \"SCHNEIDER\" EZ9F34140",
+              "article": "POL 40A",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-1-pol-40a-s-schneider-ez9f34140-1"
+            },
+            {
+              "title": "Автоматичний вимикач 1 підлога. 40А З \"SCHNEIDER\" Домовик 11207",
+              "article": "POL 40A",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-1-pol-40a-s-schneider-domovoj-11207"
+            },
+            {
+              "title": "Автоматичний вимикач 2 пол. 40А C \"SCHNEIDER\" EZ9F34240",
+              "article": "POL 40A",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-2-pol-40a-c-schneider-ez9f34240"
+            },
+            {
+              "title": "Автоматичний вимикач 4 пол. 40А З \"SCHNEIDER\" EZ9F34440",
+              "article": "POL 40A",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-4-pol-40a-s-schneider-ez9f34440"
+            },
+            {
+              "title": "Автоматичний вимикач 2 пол. 40А З \"SCHNEIDER\" Домовик 11217",
+              "article": "POL 40A",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-2-pol-40a-s-schneider-domovoj-11217"
+            },
+            {
+              "title": "Автоматичний вимикач 3 підлога. 40А З \"SCHNEIDER\" EZ9F34340",
+              "article": "POL 40A",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-3-pol-40a-s-schneider-ez9f34340"
+            },
+            {
+              "title": "Диференціальне реле (ПЗВ) 2 пол. 40А 100mA AC \"SCHNEIDER Resi9\" R9R52240",
+              "article": "POL 40A",
+              "url": "https://ultra-svet.com/differentsialnoe-rele-uzo-2-pol-40a-100ma-ac-schneider-resi9-r9r52240"
+            },
+            {
+              "title": "Диференціальне реле (ПЗВ) 2 пол. 40А 300mA AC \"SCHNEIDER Resi9\" R9R54240",
+              "article": "POL 40A",
+              "url": "https://ultra-svet.com/differentsialnoe-rele-uzo-2-pol-40a-300ma-ac-schneider-resi9-r9r54240"
+            },
+            {
+              "title": "Диференціальне реле (ПЗВ) 2 пол. 40А 30mA AC \"SCHNEIDER\" EZ9R34240",
+              "article": "POL 40A",
+              "url": "https://ultra-svet.com/differentsialnoe-rele-uzo-2-pol-40a-30ma-ac-schneider-ez9r34240"
+            }
+          ]
+        },
+        {
+          "value": "next 81",
+          "count": 14,
+          "items": [
+            {
+              "title": "Комбінований УЗДП e.POmI.1+1 LCF 50/25, клас I+II+III, 1 полюс + N-PE, моноблок \"E.NEXT\" 81.150",
+              "article": "NEXT 81",
+              "url": "https://ultra-svet.com/kombinirovannyj-uzip-epomi1-1-lcf-50-25-klass-i-ii-iii-1-polyus-n-pe-monoblok-enext-81150"
+            },
+            {
+              "title": "Комбінований УЗДП e.POmI.3+1 LCF 100/25, клас I+II+III, 3 полюси + N-PE, моноблок \"E.NEXT\" 81.142",
+              "article": "NEXT 81",
+              "url": "https://ultra-svet.com/kombinirovannyj-uzip-epomi3-1-lcf-100-25-klass-i-ii-iii-3-polyusa-n-pe-monoblok-enext-81142"
+            },
+            {
+              "title": "Комбінований УЗДП e.POmI.3 LCF 90 клас I+II+III, 3 полюси, моноблок \"E.NEXT\" 81.132",
+              "article": "NEXT 81",
+              "url": "https://ultra-svet.com/kombinirovannyj-uzip-epomi3-lcf-90-klass-i-ii-iii-3-polyusa-monoblok-enext-81132"
+            },
+            {
+              "title": "Комбінований УЗІП e.POmI.4 LCF 100 клас I+II+III, 4 полюси, моноблок \"E.NEXT\" 81.128",
+              "article": "NEXT 81",
+              "url": "https://ultra-svet.com/kombinirovannyj-uzip-epomi4-lcf-100-klass-i-ii-iii-4-polyusa-monoblok-enext-81128"
+            },
+            {
+              "title": "УЗДП e.PO I 1+1 e 280V/7kA клас I+II+III, 1 полюс + N-PE, моноблок \"E.NEXT\" 81.204/05",
+              "article": "NEXT 81",
+              "url": "https://ultra-svet.com/uzip-e.po-i-11-e-280v7ka-klass-iiiiii-1-polyus-n-pe-monoblok-e.next-81.20405"
+            },
+            {
+              "title": "УЗІП e.PO I 1 e 280V/7kA клас I+II+III, 1 полюс \"E.NEXT\" 81.200/05",
+              "article": "NEXT 81",
+              "url": "https://ultra-svet.com/uzip-epo-i-1-e-280v-7ka-klass-i-ii-iii-1-polyus-enext-81200-05"
+            },
+            {
+              "title": "УЗІП e.PO I 3+1 e 280V/7kA клас I+II+III, 3 полюси + N-PE, моноблок \"E.NEXT\" 81.206/05",
+              "article": "NEXT 81",
+              "url": "https://ultra-svet.com/uzip-epo-i-3-1-e-280v-7ka-klass-i-ii-iii-3-polyusa-n-pe-monoblok-enext-81206-05"
+            },
+            {
+              "title": "УЗІП e.PO I 3 e 280V/7kA клас I+II+III, 3 полюси \"E.NEXT\" 81.201/05",
+              "article": "NEXT 81",
+              "url": "https://ultra-svet.com/uzip-epo-i-3-e-280v-7ka-klass-i-ii-iii-3-polyusa-enext-81201-05"
+            },
+            {
+              "title": "УЗІП e.PO I 4 e 280V/7kA клас I+II+III, 4 полюси \"E.NEXT\" 81.210/05",
+              "article": "NEXT 81",
+              "url": "https://ultra-svet.com/uzip-epo-i-4-e-280v-7ka-klass-i-ii-iii-4-polyusa-enext-81210-05"
+            },
+            {
+              "title": "УЗДП e.POI.1+1m 280V/12,5kA клас I+II+III, 1 полюс + N-PE, моноблок \"E.NEXT\" 81.031",
+              "article": "NEXT 81",
+              "url": "https://ultra-svet.com/uzip-epoi1-1m-280v-12-5ka-klass-i-ii-iii-1-polyus-n-pe-monoblok-enext-81031"
+            }
+          ]
+        },
+        {
+          "value": "pod 3",
+          "count": 14,
+          "items": [
+            {
+              "title": "Корпус e.mbox.stand.n.f3.12.z металевий, під 3-ф. лічильник, 12 мод., навісний, із замком \"E.NEXT\" s0100011",
+              "article": "POD 3",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f3.12.z-metallicheskij-pod-3-f.-schyotchik-12-mod.-navesnoj-s-zamkom-e.next-s0100011"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f3.12.ze металевий, під 3-ф. електронний лічильник, 12 мод., навісний, із замком \"E.NEXT\" s0100071",
+              "article": "POD 3",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f3.12.z.e-metallicheskij-pod-3-f.-elektronnyj-schyotchik-12-mod.-navesnoj-s-zamkom-e.next-s0100071"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f3.22.z.str металевий, під 3-ф. лічильник, навісний, 22 мод., із замком, вуличний \"E.NEXT\" s0100147",
+              "article": "POD 3",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f3.22.z.str-metallicheskij-pod-3-f.-schyotchik-navesnoj-22-mod.-s-zamkom-ulichnyj-e.next-s0100147"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f3.24.z металевий, під 3-ф. лічильник, 24 мод., навісний, із замком \"E.NEXT\" s0100013",
+              "article": "POD 3",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f3.24.z-metallicheskij-pod-3-f.-schyotchik-24-mod.-navesnoj-s-zamkom-e.next-s0100013"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f3.24.z.е металевий, під 3-ф. електронний лічильник, 24 мод., навісний, із замком. \"E.NEXT\" s0100052",
+              "article": "POD 3",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f3.24.z.e-metallicheskij-pod-3-f.-elektronnyj-schyotchik-24-mod.-navesnoj-s-zamkom.-e.next-s0100052"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f3.36.z металевий, під 3-ф. лічильник, 36 мод., навісний, із замком \"E.NEXT\" s0100031",
+              "article": "POD 3",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f3.36.z-metallicheskij-pod-3-f.-schyotchik-36-mod.-navesnoj-s-zamkom-e.next-s0100031"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f3.36.ze металевий, під 3-ф. електронний лічильник, 36 мод., навісний, із замком \"E.NEXT\" s0100073",
+              "article": "POD 3",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f3.36.z.e-metallicheskij-pod-3-f.-elektronnyj-schyotchik-36-mod.-navesnoj-s-zamkom-e.next-s0100073"
+            },
+            {
+              "title": "Корпус e.mbox.stand.n.f3.6.z.str металевий, під 3-ф. лічильник, порожній, навісний, 6 мод., із замком, вуличний \"E.NEXT\" s0100126",
+              "article": "POD 3",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.n.f3.6.z.str-metallicheskij-pod-3-f.-schyotchik-pustoj-navesnoj-6-mod.-s-zamkom-ulichnyj-e.next-s0100126"
+            },
+            {
+              "title": "Корпус e.mbox.stand.w.f3.12.z металевий, під 3-ф. лічильник, 12 мод., що вбудовується, із замком \"E.NEXT\" s0100010",
+              "article": "POD 3",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.w.f3.12.z-metallicheskij-pod-3-f.-schyotchik-12-mod.-vstraivaemyj-s-zamkom-e.next-s0100010"
+            },
+            {
+              "title": "Корпус e.mbox.stand.w.f3.12.ze металевий, під 3-ф. електронний лічильник, 12 мод., що вбудовується, із замком \"E.NEXT\" s0100072",
+              "article": "POD 3",
+              "url": "https://ultra-svet.com/korpus-e.mbox.stand.w.f3.12.z.e-metallicheskij-pod-3-f.-elektronnyj-schyotchik-12-mod.-vstraivaemyj-s-zamkom-e.next-s0100072"
+            }
+          ]
+        },
+        {
+          "value": "lma006",
+          "count": 13,
+          "items": [
+            {
+              "title": "Ізолента 30 метрів чорна \"LEMANSO\" LMA006",
+              "article": "LMA006",
+              "url": "https://ultra-svet.com/izolenta-30-metrov-chernaya-lemanso-lma006"
+            },
+            {
+              "title": "Ізолента Стандарт 30 метрів синя \"LEMANSO\" LMA006",
+              "article": "LMA006",
+              "url": "https://ultra-svet.com/izolenta-standart-30-metrov-sinyaya-lemanso-lma006-1"
+            },
+            {
+              "title": "Ізолента 10 метрів чорна \"LEMANSO\" LMA006",
+              "article": "LMA006",
+              "url": "https://ultra-svet.com/izolenta-10-metrov-chernaya-lemanso-lma006"
+            },
+            {
+              "title": "Ізолента 10 метрів синя \"LEMANSO\" LMA006",
+              "article": "LMA006",
+              "url": "https://ultra-svet.com/izolenta-10-metrov-sinyaya-lemanso-lma006"
+            },
+            {
+              "title": "Ізолента 10 метрів жовта+2 зелені смужки \"LEMANSO\" LMA006",
+              "article": "LMA006",
+              "url": "https://ultra-svet.com/izolenta-10-metrov-zheltaya-2-zelenykh-poloski-lemanso-lma006"
+            },
+            {
+              "title": "Ізолента 20 метрів чорна \"LEMANSO\" LMA006",
+              "article": "LMA006",
+              "url": "https://ultra-svet.com/izolenta-20-metrov-chernaya-lemanso-lma006"
+            },
+            {
+              "title": "Ізолента Стандарт 10 метрів біла \"LEMANSO\" LMA006",
+              "article": "LMA006",
+              "url": "https://ultra-svet.com/izolenta-standart-10-metrov-belaya-lemanso-lma006-1"
+            },
+            {
+              "title": "Ізолента Стандарт 10 метрів червона \"LEMANSO\" LMA006",
+              "article": "LMA006",
+              "url": "https://ultra-svet.com/izolenta-standart-10-metrov-krasnaya-lemanso-lma006-1"
+            },
+            {
+              "title": "Ізолента Стандарт 10 метрів зелена \"LEMANSO\" LMA006",
+              "article": "LMA006",
+              "url": "https://ultra-svet.com/izolenta-standart-10-metrov-zelyonaya-lemanso-lma006-1"
+            },
+            {
+              "title": "Ізолента Стандарт 10 метрів жовта \"LEMANSO\" LMA006",
+              "article": "LMA006",
+              "url": "https://ultra-svet.com/izolenta-standart-10-metrov-zhyoltaya-lemanso-lma006-1"
+            }
+          ]
+        },
+        {
+          "value": "m 2",
+          "count": 13,
+          "items": [
+            {
+              "title": "Нагрівальний мат MILLIMAT/150 1050W 7,0 m 2 \"NEXANS\" 949",
+              "article": "M 2",
+              "url": "https://ultra-svet.com/nagrevatelnyj-mat-millimat-150-1050w-7-0-m-2-nexans-949"
+            },
+            {
+              "title": "Нагрівальний мат MILLIMAT/150 1500W 10,0 m 2 \"NEXANS\" 950",
+              "article": "M 2",
+              "url": "https://ultra-svet.com/nagrevatelnyj-mat-millimat-150-1500w-10-0-m-2-nexans-950"
+            },
+            {
+              "title": "Нагрівальний мат MILLIMAT/150 1200W 8,0 m 2 \"NEXANS\" 965",
+              "article": "M 2",
+              "url": "https://ultra-svet.com/nagrevatelnyj-mat-millimat-150-1200w-8-0-m-2-nexans-965"
+            },
+            {
+              "title": "Нагрівальний мат MILLIMAT/150 150W 1.0 m 2 \"NEXANS\" 955",
+              "article": "M 2",
+              "url": "https://ultra-svet.com/nagrevatelnyj-mat-millimat-150-150w-10-m-2-nexans-955"
+            },
+            {
+              "title": "Нагрівальний мат MILLIMAT/150 1800W 12,0 m 2 \"NEXANS\" 964",
+              "article": "M 2",
+              "url": "https://ultra-svet.com/nagrevatelnyj-mat-millimat-150-1800w-12-0-m-2-nexans-964"
+            },
+            {
+              "title": "Нагрівальний мат MILLIMAT/150 225W 1.5 m 2 \"NEXANS\" 956",
+              "article": "M 2",
+              "url": "https://ultra-svet.com/nagrevatelnyj-mat-millimat-150-225w-15-m-2-nexans-956"
+            },
+            {
+              "title": "Нагрівальний мат MILLIMAT/150 300W 2,0 m 2 \"NEXANS\" 951",
+              "article": "M 2",
+              "url": "https://ultra-svet.com/nagrevatelnyj-mat-millimat-150-300w-2-0-m-2-nexans-951"
+            },
+            {
+              "title": "Нагрівальний мат MILLIMAT/150 375W 2,5 m 2 \"NEXANS\" 957",
+              "article": "M 2",
+              "url": "https://ultra-svet.com/nagrevatelnyj-mat-millimat-150-375w-2-5-m-2-nexans-957"
+            },
+            {
+              "title": "Нагрівальний мат MILLIMAT/150 450W 3,0 m 2 \"NEXANS\" 958",
+              "article": "M 2",
+              "url": "https://ultra-svet.com/nagrevatelnyj-mat-millimat-150-450w-3-0-m-2-nexans-958"
+            },
+            {
+              "title": "Нагрівальний мат MILLIMAT/150 750W 5,0 m 2 \"NEXANS\" 948",
+              "article": "M 2",
+              "url": "https://ultra-svet.com/nagrevatelnyj-mat-millimat-150-750w-5-0-m-2-nexans-948"
+            }
+          ]
+        },
+        {
+          "value": "yatp 0",
+          "count": 13,
+          "items": [
+            {
+              "title": "Ящик із понижувальним трансформатором ЯТП-0,25 220/12В-A IP31 \"E.NEXT\" s0102019",
+              "article": "YATP 0",
+              "url": "https://ultra-svet.com/yaschik-s-ponizhayuschim-transformatorom-yatp-0-25-220-12v-a-ip31-enext-s0102019"
+            },
+            {
+              "title": "Ящик з понижувальним трансформатором ЯТП-0,25 220 12В IP31 \"E.NEXT\" s0102001",
+              "article": "YATP 0",
+              "url": "https://ultra-svet.com/yaschik-s-ponizhayuschim-transformatorom-yatp-0-25-220-12v-ip31-enext-s0102001"
+            },
+            {
+              "title": "Ящик із понижувальним трансформатором ЯТП-0,25 220 12В IP54 \"E.NEXT\" s0102002",
+              "article": "YATP 0",
+              "url": "https://ultra-svet.com/yaschik-s-ponizhayuschim-transformatorom-yatp-0-25-220-12v-ip54-enext-s0102002"
+            },
+            {
+              "title": "Ящик із понижувальним трансформатором ЯТП-0,25 220/24В-A IP31 \"E.NEXT\" s0102014",
+              "article": "YATP 0",
+              "url": "https://ultra-svet.com/yaschik-s-ponizhayuschim-transformatorom-yatp-0-25-220-24v-a-ip31-enext-s0102014"
+            },
+            {
+              "title": "Ящик з понижувальним трансформатором ЯТП-0,25 220 24В IP31 \"E.NEXT\" s0102003",
+              "article": "YATP 0",
+              "url": "https://ultra-svet.com/yaschik-s-ponizhayuschim-transformatorom-yatp-0-25-220-24v-ip31-enext-s0102003"
+            },
+            {
+              "title": "Ящик з понижувальним трансформатором ЯТП-0,25 220 24В IP54 \"E.NEXT\" s0102004",
+              "article": "YATP 0",
+              "url": "https://ultra-svet.com/yaschik-s-ponizhayuschim-transformatorom-yatp-0-25-220-24v-ip54-enext-s0102004"
+            },
+            {
+              "title": "Ящик із понижувальним трансформатором ЯТП-0,25 220/36В-A IP31 \"E.NEXT\" s0102020",
+              "article": "YATP 0",
+              "url": "https://ultra-svet.com/yaschik-s-ponizhayuschim-transformatorom-yatp-0-25-220-36v-a-ip31-enext-s0102020"
+            },
+            {
+              "title": "Ящик із понижувальним трансформатором ЯТП-0,25 220 36В IP31 \"E.NEXT\" s0102005",
+              "article": "YATP 0",
+              "url": "https://ultra-svet.com/yaschik-s-ponizhayuschim-transformatorom-yatp-0-25-220-36v-ip31-enext-s0102005"
+            },
+            {
+              "title": "Ящик з понижувальним трансформатором ЯТП-0,25 220 36В IP54 \"E.NEXT\" s0102006",
+              "article": "YATP 0",
+              "url": "https://ultra-svet.com/yaschik-s-ponizhayuschim-transformatorom-yatp-0-25-220-36v-ip54-enext-s0102006"
+            },
+            {
+              "title": "Ящик із понижувальним трансформатором ЯТП-0,25 220/42В-A IP31 \"E.NEXT\" s0102021",
+              "article": "YATP 0",
+              "url": "https://ultra-svet.com/yaschik-s-ponizhayuschim-transformatorom-yatp-0-25-220-42v-a-ip31-enext-s0102021"
+            }
+          ]
+        },
+        {
+          "value": "0-1",
+          "count": 12,
+          "items": [
+            {
+              "title": "Кнопковий пост e.cs.stand.xal.d.134, секторний перемикач 0-1 \"E.NEXT\" s006019",
+              "article": "0-1",
+              "url": "https://ultra-svet.com/knopochnyj-post-e.cs.stand.xal.d.134-sektornyj-pereklyuchatel-0-1-e.next-s006019"
+            },
+            {
+              "title": "Кнопковий пост e.cs.stand.xal.d.144секторний перемикач 0-1 з ключем \"E.NEXT\" s006020",
+              "article": "0-1",
+              "url": "https://ultra-svet.com/knopochnyj-post-e.cs.stand.xal.d.144sektornyj-pereklyuchatel-0-1-s-klyuchom-e.next-s006020"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0.3.100, 3р, 100А (0-1) \"E.NEXT\" i0360004",
+              "article": "0-1",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0.3.100-3r-100a-0-1-e.next-i0360004"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0.3.20, 3р, 20А (0-1) \"E.NEXT\" i0360001",
+              "article": "0-1",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0.3.20-3r-20a-0-1-e.next-i0360001"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0.3.32, 3р, 32А (0-1) \"E.NEXT\" i0360002",
+              "article": "0-1",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0.3.32-3r-32a-0-1-e.next-i0360002"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0.3.63, 3р, 63А (0-1) \"E.NEXT\" i0360003",
+              "article": "0-1",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0.3.63-3r-63a-0-1-e.next-i0360003"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0.4.100, 3р+N, 100А (0-1) \"E.NEXT\" i0360011",
+              "article": "0-1",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0.4.100-3rn-100a-0-1-e.next-i0360011"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0.4.20, 3р+N, 20А (0-1) \"E.NEXT\" i0360008",
+              "article": "0-1",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0.4.20-3rn-20a-0-1-e.next-i0360008"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0.4.32, 3р+N, 32А (0-1) \"E.NEXT\" i0360009",
+              "article": "0-1",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0.4.32-3rn-32a-0-1-e.next-i0360009"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0.4.40, 3p+N, 40А (0-1) \"E.NEXT\" i0360020",
+              "article": "0-1",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0.4.40-3pn-40a-0-1-e.next-i0360020"
+            }
+          ]
+        },
+        {
+          "value": "d 15ka",
+          "count": 12,
+          "items": [
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.150.1.D63, 1р, 63А, D, 15кА \"E.NEXT\" i0630001",
+              "article": "D 15KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1501d63-1r-63a-d-15ka-enext-i0630001"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.150.1.D125, 1р, 125А, D, 15кА \"E.NEXT\" i0630004",
+              "article": "D 15KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1501d125-1r-125a-d-15ka-enext-i0630004"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.150.2.D100, 2р, 100А, D, 15кА \"E.NEXT\" i0630007",
+              "article": "D 15KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1502d100-2r-100a-d-15ka-enext-i0630007"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.150.1.D80, 1р, 80А, D, 15кА \"E.NEXT\" i0630002",
+              "article": "D 15KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1501d80-1r-80a-d-15ka-enext-i0630002"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.150.1.D100, 1р, 100А, D, 15кА \"E.NEXT\" i0630003",
+              "article": "D 15KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1501d100-1r-100a-d-15ka-enext-i0630003"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.150.2.D80, 2р, 80А, D, 15кА \"E.NEXT\" i0630006",
+              "article": "D 15KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1502d80-2r-80a-d-15ka-enext-i0630006"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.150.2.D125, 2р, 125А, D, 15кА \"E.NEXT\" i0630008",
+              "article": "D 15KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1502d125-2r-125a-d-15ka-enext-i0630008"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.150.2.D63, 2р, 63А, D, 15кА \"E.NEXT\" i0630005",
+              "article": "D 15KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1502d63-2r-63a-d-15ka-enext-i0630005"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.150.3.D100, 3р, 100А, D, 15кА \"E.NEXT\" i0630011",
+              "article": "D 15KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1503d100-3r-100a-d-15ka-enext-i0630011"
+            },
+            {
+              "title": "Автоматичний вимикач e.industrial.mcb.150.3.D80, 3р, 80А, D, 15кА \"E.NEXT\" i0630010",
+              "article": "D 15KA",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-eindustrialmcb1503d80-3r-80a-d-15ka-enext-i0630010"
+            }
+          ]
+        },
+        {
+          "value": "ek 3",
+          "count": 12,
+          "items": [
+            {
+              "title": "Корпус обліку ЯУР-3Н-12Е ек., 3-ф. лічильник, 12 мод., IP31, навісний, 260*428*120 \"E.NEXT\"",
+              "article": "EK 3",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-3n-12e-ek-3-f-schetchik-12-mod-ip31-navesnoj-260428120-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-3Н-24 ек., 3-ф. лічильник, 24 мод., IP31, навісний, 330 * 428 * 150 \"E.NEXT\"",
+              "article": "EK 3",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-3n-24-ek-3-f-schetchik-24-mod-ip31-navesnoj-330428150-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-3Н-24Е ек., 3-ф. лічильник, 24 мод., IP31, навісний, 330 * 428 * 120 \"E.NEXT\"",
+              "article": "EK 3",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-3n-24e-ek-3-f-schetchik-24-mod-ip31-navesnoj-330428120-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-3Н-36 ек., 3-ф. лічильник, 36 мод., IP31, навісний, 315*544*150 \"E.NEXT\"",
+              "article": "EK 3",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-3n-36-ek-3-f-schetchik-36-mod-ip31-navesnoj-315544150-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-3Н-36Е ек., 3-ф. лічильник, 36 мод., IP31, навісний, 315*544*120 \"E.NEXT\"",
+              "article": "EK 3",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-3n-36e-ek-3-f-schetchik-36-mod-ip31-navesnoj-315544120-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-3В-12 ек., 3-ф. лічильник, 12 мод., IP31, вбудований, 255 * 425 * 145 \"E.NEXT\"",
+              "article": "EK 3",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-3v-12-ek-3-f-schetchik-12-mod-ip31-vstraivaemyj-255425145-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-3В-12Е ек., 3-ф. лічильник, 12 мод., IP31, що вбудовується, 255*425*100 \"E.NEXT\"",
+              "article": "EK 3",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-3v-12e-ek-3-f-schetchik-12-mod-ip31-vstraivaemyj-255425100-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-3В-24 ек., 3-ф. лічильник, 24 мод., IP31, що вбудовується, 310*425*145 \"E.NEXT\"",
+              "article": "EK 3",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-3v-24-ek-3-f-schetchik-24-mod-ip31-vstraivaemyj-310425145-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-3В-24Е ек., 3-ф. лічильник, 24 мод., IP31, що вбудовується, 310*425*100 \"E.NEXT\"",
+              "article": "EK 3",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-3v-24e-ek-3-f-schetchik-24-mod-ip31-vstraivaemyj-310425100-enext"
+            },
+            {
+              "title": "Корпус обліку ЯУР-3В-36 ек., 3-ф. лічильник, 36 мод., IP31, що вбудовується, 310*540*145 \"E.NEXT\"",
+              "article": "EK 3",
+              "url": "https://ultra-svet.com/korpus-ucheta-yaur-3v-36-ek-3-f-schetchik-36-mod-ip31-vstraivaemyj-310540145-enext"
+            }
+          ]
+        },
+        {
+          "value": "txlp 1",
+          "count": 12,
+          "items": [
+            {
+              "title": "Нагрівальний кабель одножильний TXLP/1 1000W/17 \"NEXANS\" 283",
+              "article": "TXLP 1",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-odnozhilnyj-txlp-1-1000w-17-nexans-283"
+            },
+            {
+              "title": "Нагрівальний кабель одножильний TXLP/1 1250W/17 \"NEXANS\" 284",
+              "article": "TXLP 1",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-odnozhilnyj-txlp-1-1250w-17-nexans-284"
+            },
+            {
+              "title": "Нагрівальний кабель одножильний TXLP/1 1400W/17 \"NEXANS\" 285",
+              "article": "TXLP 1",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-odnozhilnyj-txlp-1-1400w-17-nexans-285"
+            },
+            {
+              "title": "Нагрівальний кабель одножильний TXLP/1 1750W/17 \"NEXANS\" 286",
+              "article": "TXLP 1",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-odnozhilnyj-txlp-1-1750w-17-nexans-286"
+            },
+            {
+              "title": "Нагрівальний кабель одножильний TXLP/1 2200W/17 \"NEXANS\" 287",
+              "article": "TXLP 1",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-odnozhilnyj-txlp-1-2200w-17-nexans-287"
+            },
+            {
+              "title": "Нагрівальний кабель одножильний TXLP/1 2600W/17 \"NEXANS\" 288",
+              "article": "TXLP 1",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-odnozhilnyj-txlp-1-2600w-17-nexans-288"
+            },
+            {
+              "title": "Нагрівальний кабель одножильний TXLP/1 300W/17 \"NEXANS\" 277",
+              "article": "TXLP 1",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-odnozhilnyj-txlp-1-300w-17-nexans-277"
+            },
+            {
+              "title": "Нагрівальний кабель одножильний TXLP/1 3100W/17 \"NEXANS\" 447",
+              "article": "TXLP 1",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-odnozhilnyj-txlp-1-3100w-17-nexans-447"
+            },
+            {
+              "title": "Нагрівальний кабель одножильний TXLP/1 400W/17 \"NEXANS\" 278",
+              "article": "TXLP 1",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-odnozhilnyj-txlp-1-400w-17-nexans-278"
+            },
+            {
+              "title": "Нагрівальний кабель одножильний TXLP/1 500W/17 \"NEXANS\" 279",
+              "article": "TXLP 1",
+              "url": "https://ultra-svet.com/nagrevatelnyj-kabel-odnozhilnyj-txlp-1-500w-17-nexans-279"
+            }
+          ]
+        },
+        {
+          "value": "lma074",
+          "count": 11,
+          "items": [
+            {
+              "title": "Підвіс пластиковий \"T-подібний\" + E27 білий 1м для LED ламп \"LEMANSO\" LMA074",
+              "article": "LMA074",
+              "url": "https://ultra-svet.com/podves-plastikovyj-t-obraznyj-e27-belyj-1m-dlya-led-lamp-lemanso-lma074"
+            },
+            {
+              "title": "Підвіс пластиковий \"T-подібний\" + E27 чорний 1м для LED ламп \"LEMANSO\" LMA074",
+              "article": "LMA074",
+              "url": "https://ultra-svet.com/podves-plastikovyj-t-obraznyj-e27-chernyj-1m-dlya-led-lamp-lemanso-lma074"
+            },
+            {
+              "title": "Підвіс пластиковий \"T-подібний\" + E27 фіолетовий 1м для LED ламп \"LEMANSO\" LMA074",
+              "article": "LMA074",
+              "url": "https://ultra-svet.com/podves-plastikovyj-t-obraznyj-e27-fioletovyj-1m-dlya-led-lamp-lemanso-lma074"
+            },
+            {
+              "title": "Підвіс пластиковий \"T-подібний\" + E27 червоний 1м для LED ламп \"LEMANSO\" LMA074",
+              "article": "LMA074",
+              "url": "https://ultra-svet.com/podves-plastikovyj-t-obraznyj-e27-krasnyj-1m-dlya-led-lamp-lemanso-lma074"
+            },
+            {
+              "title": "Підвіс пластиковий \"T-подібний\" + E27 помаранчевий 1м для LED ламп \"LEMANSO\" LMA074",
+              "article": "LMA074",
+              "url": "https://ultra-svet.com/podves-plastikovyj-t-obraznyj-e27-oranzhevyj-1m-dlya-led-lamp-lemanso-lma074"
+            },
+            {
+              "title": "Підвіс пластиковий \"T-подібний\" + E27 рожевий 1м для LED ламп \"LEMANSO\" LMA074",
+              "article": "LMA074",
+              "url": "https://ultra-svet.com/podves-plastikovyj-t-obraznyj-e27-rozovyj-1m-dlya-led-lamp-lemanso-lma074"
+            },
+            {
+              "title": "Підвіс пластиковий \"T-подібний\" + E27 салатовий 1м для LED ламп \"LEMANSO\" LMA074",
+              "article": "LMA074",
+              "url": "https://ultra-svet.com/podves-plastikovyj-t-obraznyj-e27-salatovyj-1m-dlya-led-lamp-lemanso-lma074"
+            },
+            {
+              "title": "Підвіс пластиковий \"T-подібний\" + E27 сірий 1м для LED ламп \"LEMANSO\" LMA074",
+              "article": "LMA074",
+              "url": "https://ultra-svet.com/podves-plastikovyj-t-obraznyj-e27-seryj-1m-dlya-led-lamp-lemanso-lma074"
+            },
+            {
+              "title": "Підвіс пластиковий \"T-подібний\" + E27 синій 1м для LED ламп \"LEMANSO\" LMA074",
+              "article": "LMA074",
+              "url": "https://ultra-svet.com/podves-plastikovyj-t-obraznyj-e27-sinij-1m-dlya-led-lamp-lemanso-lma074"
+            },
+            {
+              "title": "Підвіс пластиковий \"T-подібний\" + E27 зелений 1м для LED ламп \"LEMANSO\" LMA074",
+              "article": "LMA074",
+              "url": "https://ultra-svet.com/podves-plastikovyj-t-obraznyj-e27-zelenyj-1m-dlya-led-lamp-lemanso-lma074"
+            }
+          ]
+        },
+        {
+          "value": "lma072",
+          "count": 11,
+          "items": [
+            {
+              "title": "Підвіс пластиковий \"V-подібний\" + E27 білий 1м для LED ламп \"LEMANSO\" LMA072",
+              "article": "LMA072",
+              "url": "https://ultra-svet.com/podves-plastikovyj-v-obraznyj-e27-belyj-1m-dlya-led-lamp-lemanso-lma072"
+            },
+            {
+              "title": "Підвіс пластиковий \"V-подібний\" + E27 чорний 1м для LED ламп \"LEMANSO\" LMA072",
+              "article": "LMA072",
+              "url": "https://ultra-svet.com/podves-plastikovyj-v-obraznyj-e27-chernyj-1m-dlya-led-lamp-lemanso-lma072"
+            },
+            {
+              "title": "Підвіс пластиковий \"V-подібний\" + E27 фіолетовий 1м для LED ламп \"LEMANSO\" LMA072",
+              "article": "LMA072",
+              "url": "https://ultra-svet.com/podves-plastikovyj-v-obraznyj-e27-fioletovyj-1m-dlya-led-lamp-lemanso-lma072"
+            },
+            {
+              "title": "Підвіс пластиковий \"V-подібний\" + E27 червоний 1м для LED ламп \"LEMANSO\" LMA072",
+              "article": "LMA072",
+              "url": "https://ultra-svet.com/podves-plastikovyj-v-obraznyj-e27-krasnyj-1m-dlya-led-lamp-lemanso-lma072"
+            },
+            {
+              "title": "Підвіс пластиковий \"V-подібний\" + E27 помаранчевий 1м для LED ламп \"LEMANSO\" LMA072",
+              "article": "LMA072",
+              "url": "https://ultra-svet.com/podves-plastikovyj-v-obraznyj-e27-oranzhevyj-1m-dlya-led-lamp-lemanso-lma072"
+            },
+            {
+              "title": "Підвіс пластиковий \"V-подібний\" + E27 рожевий 1м для LED ламп \"LEMANSO\" LMA072",
+              "article": "LMA072",
+              "url": "https://ultra-svet.com/podves-plastikovyj-v-obraznyj-e27-rozovyj-1m-dlya-led-lamp-lemanso-lma072"
+            },
+            {
+              "title": "Підвіс пластиковий \"V-подібний\" + E27 салатовий 1м для LED ламп \"LEMANSO\" LMA072",
+              "article": "LMA072",
+              "url": "https://ultra-svet.com/podves-plastikovyj-v-obraznyj-e27-salatovyj-1m-dlya-led-lamp-lemanso-lma072"
+            },
+            {
+              "title": "Підвіс пластиковий \"V-подібний\" + E27 сірий 1м для LED ламп \"LEMANSO\" LMA072",
+              "article": "LMA072",
+              "url": "https://ultra-svet.com/podves-plastikovyj-v-obraznyj-e27-seryj-1m-dlya-led-lamp-lemanso-lma072"
+            },
+            {
+              "title": "Підвіс пластиковий \"V-подібний\" + E27 синій 1м для LED ламп \"LEMANSO\" LMA072",
+              "article": "LMA072",
+              "url": "https://ultra-svet.com/podves-plastikovyj-v-obraznyj-e27-sinij-1m-dlya-led-lamp-lemanso-lma072"
+            },
+            {
+              "title": "Підвіс пластиковий \"V-подібний\" + E27 зелений 1м для LED ламп \"LEMANSO\" LMA072",
+              "article": "LMA072",
+              "url": "https://ultra-svet.com/podves-plastikovyj-v-obraznyj-e27-zelenyj-1m-dlya-led-lamp-lemanso-lma072"
+            }
+          ]
+        },
+        {
+          "value": "пв3 6",
+          "count": 10,
+          "items": [
+            {
+              "title": "Провід ПВ3 6 оранжевий Гал-Кат ГОСТ",
+              "article": "ПВ3 6",
+              "url": "https://ultra-svet.com/provid-pv3-6-oranzhevij-gal-kat-gost"
+            },
+            {
+              "title": "Провід ПВ3 6 зелений Гал-Кат ГОСТ",
+              "article": "ПВ3 6",
+              "url": "https://ultra-svet.com/provid-pv3-6-zelenij-gal-kat-gost-31777"
+            },
+            {
+              "title": "Провід ПВ3 6 жовто-зелений Гал-Кат ГОСТ",
+              "article": "ПВ3 6",
+              "url": "https://ultra-svet.com/provid-pv3-6-zhovto-zelenij-gal-kat-gost-31775"
+            },
+            {
+              "title": "Провід ПВ3 6 синій Гал-Кат ГОСТ",
+              "article": "ПВ3 6",
+              "url": "https://ultra-svet.com/provid-pv3-6-sinij-gal-kat-gost-31779"
+            },
+            {
+              "title": "Провід ПВ3 6 коричневий Гал-Кат ГОСТ",
+              "article": "ПВ3 6",
+              "url": "https://ultra-svet.com/provid-pv3-6-korichnevij-gal-kat-gost-31778"
+            },
+            {
+              "title": "Провід ПВ3 6 сірий Гал-Кат ГОСТ",
+              "article": "ПВ3 6",
+              "url": "https://ultra-svet.com/provid-pv3-6-sirij-gal-kat-gost-32801"
+            },
+            {
+              "title": "Провід ПВ3 6 білий Гал-Кат ГОСТ",
+              "article": "ПВ3 6",
+              "url": "https://ultra-svet.com/provid-pv3-6-bilij-gal-kat-gost-31774"
+            },
+            {
+              "title": "Провід ПВ3 6 чорний Гал-Кат ГОСТ",
+              "article": "ПВ3 6",
+              "url": "https://ultra-svet.com/provid-pv3-6-chornij-gal-kat-gost-31781"
+            },
+            {
+              "title": "Провід ПВ3 6 жовтий Гал-Кат ГОСТ",
+              "article": "ПВ3 6",
+              "url": "https://ultra-svet.com/provid-pv3-6-zhovtij-gal-kat-gost-31776"
+            },
+            {
+              "title": "Провід ПВ3 6 червоний Гал-Кат ГОСТ",
+              "article": "ПВ3 6",
+              "url": "https://ultra-svet.com/provod-pv3-6-krasnyj-gal-kat-gost"
+            }
+          ]
+        },
+        {
+          "value": "пв3 1,5",
+          "count": 10,
+          "items": [
+            {
+              "title": "Провід ПВ3 1,5 зелений Гал-Кат ГОСТ",
+              "article": "ПВ3 1,5",
+              "url": "https://ultra-svet.com/provid-pv3-1-5-zelenij-gal-kat-gost-31715"
+            },
+            {
+              "title": "Провід ПВ3 1,5 коричневий Гал-Кат ГОСТ",
+              "article": "ПВ3 1,5",
+              "url": "https://ultra-svet.com/provid-pv3-1-5-korichnevij-gal-kat-gost-31716"
+            },
+            {
+              "title": "Провід ПВ3 1,5 білий Гал-Кат ГОСТ",
+              "article": "ПВ3 1,5",
+              "url": "https://ultra-svet.com/provid-pv3-1-5-bilij-gal-kat-gost-31712"
+            },
+            {
+              "title": "Провід ПВ3 1,5 чорний Гал-Кат ГОСТ",
+              "article": "ПВ3 1,5",
+              "url": "https://ultra-svet.com/provid-pv3-1-5-chornij-gal-kat-gost-28012"
+            },
+            {
+              "title": "Провід ПВ3 1,5 рожевий Гал-Кат ГОСТ",
+              "article": "ПВ3 1,5",
+              "url": "https://ultra-svet.com/provid-pv3-1-5-rozhevij-gal-kat-gost-31717"
+            },
+            {
+              "title": "Провід ПВ3 1,5 жовтий Гал-Кат ГОСТ",
+              "article": "ПВ3 1,5",
+              "url": "https://ultra-svet.com/provid-pv3-1-5-zhovtij-gal-kat-gost-31714"
+            },
+            {
+              "title": "Провід ПВ3 1,5 жовто-зелений Гал-Кат ГОСТ",
+              "article": "ПВ3 1,5",
+              "url": "https://ultra-svet.com/provid-pv3-1-5-zhovto-zelenij-gal-kat-gost-31713"
+            },
+            {
+              "title": "Провід ПВ3 1,5 червоний Гал-Кат ГОСТ",
+              "article": "ПВ3 1,5",
+              "url": "https://ultra-svet.com/provod-pv3-1-5-krasnyj-gal-kat-gost"
+            },
+            {
+              "title": "Провід ПВ3 1,5 сірий Гал-Кат ГОСТ",
+              "article": "ПВ3 1,5",
+              "url": "https://ultra-svet.com/provod-pv3-1-5-seryj-gal-kat-gost"
+            },
+            {
+              "title": "Провід ПВ3 1,5 синій Гал-Кат ГОСТ",
+              "article": "ПВ3 1,5",
+              "url": "https://ultra-svet.com/provod-pv3-1-5-sinij-gal-kat-gost"
+            }
+          ]
+        },
+        {
+          "value": "st141",
+          "count": 10,
+          "items": [
+            {
+              "title": "Світильник точковий MR16 рожевий - хром \"LEMANSO\" ST141",
+              "article": "ST141",
+              "url": "https://ultra-svet.com/spot-lemanso-cd4141-rozovyy-hrom-st141"
+            },
+            {
+              "title": "Світильник точковий MR16 чорний - хром \"LEMANSO\" ST141",
+              "article": "ST141",
+              "url": "https://ultra-svet.com/spot-lemanso-cd4141-chernyy-hrom-st141"
+            },
+            {
+              "title": "Світильник точковий MR16 чорний – золото \"LEMANSO\" ST141",
+              "article": "ST141",
+              "url": "https://ultra-svet.com/spot-lemanso-cd4141-chernyy-zoloto-st141"
+            },
+            {
+              "title": "Світильник точковий MR16 коричневий - хром \"LEMANSO\" ST141",
+              "article": "ST141",
+              "url": "https://ultra-svet.com/spot-lemanso-cd4141-korichnevyy-hrom-st141"
+            },
+            {
+              "title": "Світильник точковий MR16 прозорий - хром \"LEMANSO\" ST141",
+              "article": "ST141",
+              "url": "https://ultra-svet.com/spot-lemanso-cd4141-prozrachnyy-hrom-st141"
+            },
+            {
+              "title": "Світильник точковий MR16 рожевий - золото \"LEMANSO\" ST141",
+              "article": "ST141",
+              "url": "https://ultra-svet.com/spot-lemanso-cd4141-rozovyy-zoloto-st141"
+            },
+            {
+              "title": "Світильник точковий MR16 бузковий - хром \"LEMANSO\" ST141",
+              "article": "ST141",
+              "url": "https://ultra-svet.com/spot-lemanso-cd4141-sirenevyy-hrom-st141"
+            },
+            {
+              "title": "Світильник точковий MR16 бузковий - золото \"LEMANSO\" ST141",
+              "article": "ST141",
+              "url": "https://ultra-svet.com/spot-lemanso-cd4141-sirenevyy-zoloto-st141"
+            },
+            {
+              "title": "Світильник точковий MR16 коричневий - золото \"LEMANSO\" ST141",
+              "article": "ST141",
+              "url": "https://ultra-svet.com/svetilnik-tochechnyy-mr16-korichnevyy-zoloto-lemanso-st141"
+            },
+            {
+              "title": "Світильник точковий MR16 прозорий - золото \"LEMANSO\" ST141",
+              "article": "ST141",
+              "url": "https://ultra-svet.com/svetilnik-tochechnyy-mr16-prozrachnyy-zoloto-lemanso-st141"
+            }
+          ]
+        },
+        {
+          "value": "1-0-2",
+          "count": 10,
+          "items": [
+            {
+              "title": "Перемикач секторний панельний e.pb.la.stand.32.x.2.2.0.1, 1-0-2 \"E.NEXT\" s037003",
+              "article": "1-0-2",
+              "url": "https://ultra-svet.com/peremikach-sektornij-panelnij-epblastand32x2201-1-0-2-enext-s037003"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0-2.3.100, 3р, 100А (1-0-2) \"E.NEXT\" i0360007",
+              "article": "1-0-2",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0-2.3.100-3r-100a-1-0-2-e.next-i0360007"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0-2.3.20, 3р, 20А (1-0-2) \"E.NEXT\" i0360005",
+              "article": "1-0-2",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0-2.3.20-3r-20a-1-0-2-e.next-i0360005"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0-2.3.32, 3р, 32А (1-0-2) \"E.NEXT\" i0360017",
+              "article": "1-0-2",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0-2.3.32-3r-32a-1-0-2-e.next-i0360017"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0-2.3.40, 3р, 40А (1-0-2) \"E.NEXT\" i0360006",
+              "article": "1-0-2",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0-2.3.40-3r-40a-1-0-2-e.next-i0360006"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0-2.3.63, 3р, 63А (1-0-2) \"E.NEXT\" i0360019",
+              "article": "1-0-2",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0-2.3.63-3r-63a-1-0-2-e.next-i0360019"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0-2.4.100, 3р+N, 100А (1-0-2) \"E.NEXT\" i0360014",
+              "article": "1-0-2",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0-2.4.100-3rn-100a-1-0-2-e.next-i0360014"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0-2.4.20, 3р+N, 20А (1-0-2) \"E.NEXT\" i0360012",
+              "article": "1-0-2",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0-2.4.20-3rn-20a-1-0-2-e.next-i0360012"
+            },
+            {
+              "title": "Пакетний перемикач у корпусі e.industrial.sb.1-0-2.4.40, 3р+N, 40А (1-0-2) \"E.NEXT\" i0360013",
+              "article": "1-0-2",
+              "url": "https://ultra-svet.com/paketnyj-pereklyuchatel-v-korpuse-e.industrial.sb.1-0-2.4.40-3rn-40a-1-0-2-e.next-i0360013"
+            },
+            {
+              "title": "Перемикач секторний панельний e.pb.la.stand.32.xl.3.2.0.1, 1-0-2 \"E.NEXT\" s037005",
+              "article": "1-0-2",
+              "url": "https://ultra-svet.com/pereklyuchatel-sektornyj-panelnyj-e.pb.la.stand.32.xl.3.2.0.1-1-0-2-e.next-s037005"
+            }
+          ]
+        },
+        {
+          "value": "mm 6",
+          "count": 10,
+          "items": [
+            {
+              "title": "Свердло для дерева пір'яне 10 мм 6-гранний хвостовик 1/4\" GRANITE 2-12-010",
+              "article": "MM 6",
+              "url": "https://ultra-svet.com/sverdlo-dlia-dereva-perove-10-mm-6-hrannyi-khvostovyk-14-granite-2-12-010-21636-httpsexamplecomukproduct"
+            },
+            {
+              "title": "Свердло для дерева пір'яне 12 мм 6-гранний хвостовик 1/4\" GRANITE 2-12-012",
+              "article": "MM 6",
+              "url": "https://ultra-svet.com/sverdlo-dlia-dereva-perove-12-mm-6-hrannyi-khvostovyk-14-granite-2-12-012-21637-httpsexamplecomukproduct"
+            },
+            {
+              "title": "Свердло для дерева пір'яне 16 мм 6-гранний хвостовик 1/4\" GRANITE 2-12-016",
+              "article": "MM 6",
+              "url": "https://ultra-svet.com/sverdlo-dlia-dereva-perove-16-mm-6-hrannyi-khvostovyk-14-granite-2-12-016-21639-httpsexamplecomukproduct"
+            },
+            {
+              "title": "Свердло для дерева пір'яне 20 мм 6-гранний хвостовик 1/4\" GRANITE 2-12-020",
+              "article": "MM 6",
+              "url": "https://ultra-svet.com/sverdlo-dlia-dereva-perove-20-mm-6-hrannyi-khvostovyk-14-granite-2-12-020-21640-httpsexamplecomukproduct"
+            },
+            {
+              "title": "Свердло для дерева пір'яне 22 мм 6-гранний хвостовик 1/4\" GRANITE 2-12-022",
+              "article": "MM 6",
+              "url": "https://ultra-svet.com/sverdlo-dlia-dereva-perove-22-mm-6-hrannyi-khvostovyk-14-granite-2-12-022-21641-httpsexamplecomukproduct"
+            },
+            {
+              "title": "Свердло для дерева пір'яне 25 мм 6-гранний хвостовик 1/4\" GRANITE 2-12-025",
+              "article": "MM 6",
+              "url": "https://ultra-svet.com/sverdlo-dlia-dereva-perove-25-mm-6-hrannyi-khvostovyk-14-granite-2-12-025-21642-httpsexamplecomukproduct"
+            },
+            {
+              "title": "Свердло для дерева пір'яне 30 мм 6-гранний хвостовик 1/4\" GRANITE 2-12-030",
+              "article": "MM 6",
+              "url": "https://ultra-svet.com/sverdlo-dlia-dereva-perove-30-mm-6-hrannyi-khvostovyk-14-granite-2-12-030-21643-httpsexamplecomukproduct"
+            },
+            {
+              "title": "Свердло для дерева пір'яне 35 мм 6-гранний хвостовик 1/4\" GRANITE 2-12-035",
+              "article": "MM 6",
+              "url": "https://ultra-svet.com/sverdlo-dlia-dereva-perove-35-mm-6-hrannyi-khvostovyk-14-granite-2-12-035-21645-httpsexamplecomukproduct"
+            },
+            {
+              "title": "Свердло для дерева пір'яне 8 мм 6-гранний хвостовик 1/4\" GRANITE 2-12-008",
+              "article": "MM 6",
+              "url": "https://ultra-svet.com/sverdlo-dlia-dereva-perove-8-mm-6-hrannyi-khvostovyk-14-granite-2-12-008-21635-httpsexamplecomukproduct"
+            },
+            {
+              "title": "Свердло для дерева пір'яне 32 мм 6-гранний хвостовик 1/4\" GRANITE 2-12-032",
+              "article": "MM 6",
+              "url": "https://ultra-svet.com/sverdlo-dlia-dereva-pukhove-32-mm-6-hrannyi-khvostovyk-14-granite-2-12-032-21644-httpsexamplecomukproduct"
+            }
+          ]
+        },
+        {
+          "value": "kobalt 1",
+          "count": 10,
+          "items": [
+            {
+              "title": "Свердло по металу Р18 (кобальт) 1,0 мм \"LEVTOOLS\" 107-010",
+              "article": "KOBALT 1",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-1-0-mm-levtools-107-010"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 1,2 мм \"LEVTOOLS\" 107-012",
+              "article": "KOBALT 1",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-1-2-mm-levtools-107-012"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 1,3 мм. \"LEVTOOLS\" 107-013",
+              "article": "KOBALT 1",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-1-3-mm-levtools-107-013"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 1,5 мм \"LEVTOOLS\" 107-015",
+              "article": "KOBALT 1",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-1-5-mm-levtools-107-015"
+            },
+            {
+              "title": "Свердло по металу Р18 (кобальт) 1,8 мм. \"LEVTOOLS\" 107-018",
+              "article": "KOBALT 1",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r18-kobalt-1-8-mm-levtools-107-018"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 1,0 мм \"LEVTOOLS\" 105-010",
+              "article": "KOBALT 1",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-1-0-mm-levtools-105-010"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 1,2 мм \"LEVTOOLS\" 105-012",
+              "article": "KOBALT 1",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-1-2-mm-levtools-105-012"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 1,3 мм. \"LEVTOOLS\" 105-013",
+              "article": "KOBALT 1",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-1-3-mm-levtools-105-013"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 1,5 мм. \"LEVTOOLS\" 105-015",
+              "article": "KOBALT 1",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-1-5-mm-levtools-105-015"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 1,8 мм. \"LEVTOOLS\" 105-018",
+              "article": "KOBALT 1",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-1-8-mm-levtools-105-018"
+            }
+          ]
+        },
+        {
+          "value": "kobalt 4",
+          "count": 10,
+          "items": [
+            {
+              "title": "Свердло по металу Р9 (кобальт) 4,0 мм \"LEVTOOLS\" 105-040",
+              "article": "KOBALT 4",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-4-0-mm-levtools-105-040-10sht"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 4,1 мм \"LEVTOOLS\" 105-041",
+              "article": "KOBALT 4",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-4-1-mm-levtools-105-041"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 4,2 мм \"LEVTOOLS\" 105-042",
+              "article": "KOBALT 4",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-4-2-mm-levtools-105-042"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 4,3 мм. \"LEVTOOLS\" 105-043",
+              "article": "KOBALT 4",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-4-3-mm-levtools-105-043"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 4,4 мм \"LEVTOOLS\" 105-044",
+              "article": "KOBALT 4",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-4-4-mm-levtools-105-044"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 4,5 мм \"LEVTOOLS\" 105-045",
+              "article": "KOBALT 4",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-4-5-mm-levtools-105-045"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 4,6 мм \"LEVTOOLS\" 105-046",
+              "article": "KOBALT 4",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-4-6-mm-levtools-105-046"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 4,7 мм \"LEVTOOLS\" 105-047",
+              "article": "KOBALT 4",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-4-7-mm-levtools-105-047"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 4,8 мм. \"LEVTOOLS\" 105-048",
+              "article": "KOBALT 4",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-4-8-mm-levtools-105-048"
+            },
+            {
+              "title": "Свердло по металу Р9 (кобальт) 4,9 мм \"LEVTOOLS\" 105-049",
+              "article": "KOBALT 4",
+              "url": "https://ultra-svet.com/sverlo-po-metallu-r9-kobalt-4-9-mm-levtools-105-049"
+            }
+          ]
+        },
+        {
+          "value": "green 1",
+          "count": 9,
+          "items": [
+            {
+              "title": "Ізольований втулковий наконечник 1008.green 1,0 кв.мм, зелений \"E.NEXT\" s3036019",
+              "article": "GREEN 1",
+              "url": "https://ultra-svet.com/izolirovannyj-nakonechnik-vtulochnyj-1008green-1-0-kvmm-zelyonyj-enext-s3036019"
+            },
+            {
+              "title": "Ізольований втулковий наконечник 1508.green 1,5 кв.мм, зелений \"E.NEXT\" s3036026",
+              "article": "GREEN 1",
+              "url": "https://ultra-svet.com/izolirovannyj-nakonechnik-vtulochnyj-1508green-1-5-kvmm-zelyonyj-enext-s3036026"
+            },
+            {
+              "title": "Ізольований наконечник втулковий 1012.green 1,0 кв.мм, зелений \"E.NEXT\" s3036050",
+              "article": "GREEN 1",
+              "url": "https://ultra-svet.com/izolovanyj-nakonechnyk-vtulkovyj-1012-green-1-0-kv-mm-zelenyj-e-next-s3036050"
+            },
+            {
+              "title": "Ізольований кільцевий наконечник 2.2.5.green 1.5-2.5 кв.мм, зелений \"E.NEXT\" s1036026",
+              "article": "GREEN 1",
+              "url": "https://ultra-svet.com/izolirovannyj-nakonechnik-koltsevoj-225green-15-25-kvmm-zelyonyj-enext-s1036026"
+            },
+            {
+              "title": "Ізольований кільцевий наконечник 2.2.6.green 1.5-2.5 кв.мм, зелений \"E.NEXT\" s1036033",
+              "article": "GREEN 1",
+              "url": "https://ultra-svet.com/izolirovannyj-nakonechnik-koltsevoj-226green-15-25-kvmm-zelyonyj-enext-s1036033"
+            },
+            {
+              "title": "Ізольований кільцевий наконечник 2.2.8.green 1.5-2.5 кв.мм, зелений \"E.NEXT\" s1036040",
+              "article": "GREEN 1",
+              "url": "https://ultra-svet.com/izolirovannyj-nakonechnik-koltsevoj-228green-15-25-kvmm-zelyonyj-enext-s1036040"
+            },
+            {
+              "title": "Ізольований наконечник вилковий 2.3,2.green 1.5-2.5 кв.мм, зелений \"E.NEXT\" s2036019",
+              "article": "GREEN 1",
+              "url": "https://ultra-svet.com/izolirovannyj-nakonechnik-vilochnyj-23-2green-15-25-kvmm-zelyonyj-enext-s2036019"
+            },
+            {
+              "title": "Ізольований наконечник вилковий 2.5.green 1.5-2.5 кв.мм, зелений \"E.NEXT\" s2036026",
+              "article": "GREEN 1",
+              "url": "https://ultra-svet.com/izolirovannyj-nakonechnik-vilochnyj-25green-15-25-kvmm-zelyonyj-enext-s2036026"
+            },
+            {
+              "title": "Трубка термозбіжна e.termo.stand.1,5.0,75.green, 1,5/0,75, 1м, зелена \"E.NEXT\" s024105",
+              "article": "GREEN 1",
+              "url": "https://ultra-svet.com/trubka-termousadochnaya-e.termo.stand.1-5.0-75.green-1-50-75-1m-zelenaya-e.next-s024105"
+            }
+          ]
+        },
+        {
+          "value": "пв3 0,5",
+          "count": 9,
+          "items": [
+            {
+              "title": "Провід ПВ3 0,5 сірий Гал-Кат ГОСТ",
+              "article": "ПВ3 0,5",
+              "url": "https://ultra-svet.com/provid-pv3-0-5-sirij-gal-kat-gost-31693"
+            },
+            {
+              "title": "Провід ПВ3 0,5 зелений Гал-Кат ГОСТ",
+              "article": "ПВ3 0,5",
+              "url": "https://ultra-svet.com/provid-pv3-0-5-zelenij-gal-kat-gost-31690"
+            },
+            {
+              "title": "Провід ПВ3 0,5 жовто-зелений Гал-Кат ГОСТ",
+              "article": "ПВ3 0,5",
+              "url": "https://ultra-svet.com/provid-pv3-0-5-zhovto-zelenij-gal-kat-gost-31689"
+            },
+            {
+              "title": "Провід ПВ3 0,5 білий Гал-Кат ГОСТ",
+              "article": "ПВ3 0,5",
+              "url": "https://ultra-svet.com/provid-pv3-0-5-bilij-gal-kat-gost-31688"
+            },
+            {
+              "title": "Провід ПВ3 0,5 червоний Гал-Кат ГОСТ",
+              "article": "ПВ3 0,5",
+              "url": "https://ultra-svet.com/provid-pv3-0-5-chervonij-gal-kat-gost-31694"
+            },
+            {
+              "title": "Провід ПВ3 0,5 чорний Гал-Кат ГОСТ",
+              "article": "ПВ3 0,5",
+              "url": "https://ultra-svet.com/provid-pv3-0-5-chornij-gal-kat-gost-31695"
+            },
+            {
+              "title": "Провід ПВ3 0,5 коричневий Гал-Кат ГОСТ",
+              "article": "ПВ3 0,5",
+              "url": "https://ultra-svet.com/provid-pv3-0-5-korichnevij-gal-kat-gost-31691"
+            },
+            {
+              "title": "Провід ПВ3 0,5 синій Гал-Кат ГОСТ",
+              "article": "ПВ3 0,5",
+              "url": "https://ultra-svet.com/provid-pv3-0-5-sinij-gal-kat-gost-31692"
+            },
+            {
+              "title": "Провід ПВ3 0,5 жовтий Гал-Кат ГОСТ",
+              "article": "ПВ3 0,5",
+              "url": "https://ultra-svet.com/provid-pv3-0-5-zhovtyj-gal-kat-gost"
+            }
+          ]
+        },
+        {
+          "value": "пв3 2,5",
+          "count": 9,
+          "items": [
+            {
+              "title": "Провід ПВ3 2,5 білий Гал-Кат ГОСТ",
+              "article": "ПВ3 2,5",
+              "url": "https://ultra-svet.com/provid-pv3-2-5-bilij-gal-kat-gost-31738"
+            },
+            {
+              "title": "Провід ПВ3 2,5 жовтий Гал-Кат ГОСТ",
+              "article": "ПВ3 2,5",
+              "url": "https://ultra-svet.com/provid-pv3-2-5-zhovtij-gal-kat-gost-31740"
+            },
+            {
+              "title": "Провід ПВ3 2,5 зелений Гал-Кат ГОСТ",
+              "article": "ПВ3 2,5",
+              "url": "https://ultra-svet.com/provid-pv3-2-5-zelenij-gal-kat-gost-31741"
+            },
+            {
+              "title": "Провід ПВ3 2,5 чорний Гал-Кат ГОСТ",
+              "article": "ПВ3 2,5",
+              "url": "https://ultra-svet.com/provid-pv3-2-5-chornij-gal-kat-gost-31746"
+            },
+            {
+              "title": "Провід ПВ3 2,5 жовто/зелений Гал-Кат ГОСТ",
+              "article": "ПВ3 2,5",
+              "url": "https://ultra-svet.com/provid-pv3-2-5-zhovto-zelenij-gal-kat-gost-31739"
+            },
+            {
+              "title": "Провід ПВ3 2,5 коричневий Гал-Кат ГОСТ",
+              "article": "ПВ3 2,5",
+              "url": "https://ultra-svet.com/provod-pv3-2-5-korichnevyj-gal-kat-gost"
+            },
+            {
+              "title": "Провід ПВ3 2,5 червоний Гал-Кат ГОСТ",
+              "article": "ПВ3 2,5",
+              "url": "https://ultra-svet.com/provod-pv3-2-5-krasnyj-gal-kat-gost"
+            },
+            {
+              "title": "Провід ПВ3 2,5 сірий Гал-Кат ГОСТ",
+              "article": "ПВ3 2,5",
+              "url": "https://ultra-svet.com/provod-pv3-2-5-seryj-gal-kat-gost"
+            },
+            {
+              "title": "Провід ПВ3 2,5 синій Гал-Кат ГОСТ",
+              "article": "ПВ3 2,5",
+              "url": "https://ultra-svet.com/provod-pv3-2-5-sinij-gal-kat-gost"
+            }
+          ]
+        },
+        {
+          "value": "пв3 4",
+          "count": 9,
+          "items": [
+            {
+              "title": "Провід ПВ3 4 жовто-зелений Гал-Кат ГОСТ",
+              "article": "ПВ3 4",
+              "url": "https://ultra-svet.com/provid-pv3-4-zhovto-zelenij-gal-kat-gost-31762"
+            },
+            {
+              "title": "Провід ПВ3 4 синій (3-й клас) Гал-Кат ГОСТ",
+              "article": "ПВ3 4",
+              "url": "https://ultra-svet.com/provid-pv3-4-sinij-3-j-klas-gal-kat-gost-31766"
+            },
+            {
+              "title": "Провід ПВ3 4 сірий Гал-Кат ГОСТ",
+              "article": "ПВ3 4",
+              "url": "https://ultra-svet.com/provid-pv3-4-sirij-gal-kat-gost-31767"
+            },
+            {
+              "title": "Провід ПВ3 4 жовтий Гал-Кат ГОСТ",
+              "article": "ПВ3 4",
+              "url": "https://ultra-svet.com/provid-pv3-4-zhovtij-gal-kat-gost-31763"
+            },
+            {
+              "title": "Провід ПВ3 4 білий Гал-Кат ГОСТ",
+              "article": "ПВ3 4",
+              "url": "https://ultra-svet.com/provid-pv3-4-bilij-gal-kat-gost-31761"
+            },
+            {
+              "title": "Провід ПВ3 4 чорний Гал-Кат ГОСТ",
+              "article": "ПВ3 4",
+              "url": "https://ultra-svet.com/provid-pv3-4-chornij-gal-kat-gost-31769"
+            },
+            {
+              "title": "Провід ПВ3 4 коричневий Гал-Кат ГОСТ",
+              "article": "ПВ3 4",
+              "url": "https://ultra-svet.com/provid-pv3-4-korichnevij-gal-kat-gost-31765"
+            },
+            {
+              "title": "Провід ПВ3 4 зелений Гал-Кат ГОСТ",
+              "article": "ПВ3 4",
+              "url": "https://ultra-svet.com/provid-pv3-4-zelenij-gal-kat-gost-31764"
+            },
+            {
+              "title": "Провід ПВ3 4 червоний Гал-Кат ГОСТ",
+              "article": "ПВ3 4",
+              "url": "https://ultra-svet.com/provod-pv3-4-krasnyj-gal-kat-gost"
+            }
+          ]
+        },
+        {
+          "value": "sh 202-b",
+          "count": 9,
+          "items": [
+            {
+              "title": "Автоматичний вимикач 2 пол. 50A \"ABB ELECTRIK\" SH 202-B",
+              "article": "SH 202-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-2-pol-50a-abb-electrik-sh-202-b"
+            },
+            {
+              "title": "Автоматичний вимикач 2 пол. 10A \"ABB ELECTRIK\" SH 202-B",
+              "article": "SH 202-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-2-pol-10a-abb-electrik-sh-202-b"
+            },
+            {
+              "title": "Автоматичний вимикач 2 пол. 16A \"ABB ELECTRIK\" SH 202-B",
+              "article": "SH 202-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-2-pol-16a-abb-electrik-sh-202-b"
+            },
+            {
+              "title": "Автоматичний вимикач 2 пол. 20A \"ABB ELECTRIK\" SH 202-B",
+              "article": "SH 202-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-2-pol-20a-abb-electrik-sh-202-b"
+            },
+            {
+              "title": "Автоматичний вимикач 2 пол. 25A \"ABB ELECTRIK\" SH 202-B",
+              "article": "SH 202-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-2-pol-25a-abb-electrik-sh-202-b"
+            },
+            {
+              "title": "Автоматичний вимикач 2 пол. 32A \"ABB ELECTRIK\" SH 202-B",
+              "article": "SH 202-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-2-pol-32a-abb-electrik-sh-202-b"
+            },
+            {
+              "title": "Автоматичний вимикач 2 пол. 40A \"ABB ELECTRIK\" SH 202-B",
+              "article": "SH 202-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-2-pol-40a-abb-electrik-sh-202-b"
+            },
+            {
+              "title": "Автоматичний вимикач 2 пол. 63A \"ABB ELECTRIK\" SH 202-B",
+              "article": "SH 202-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-2-pol-63a-abb-electrik-sh-202-b"
+            },
+            {
+              "title": "Автоматичний вимикач 2 пол. 6A \"ABB ELECTRIK\" SH 202-B",
+              "article": "SH 202-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-2-pol-6a-abb-electrik-sh-202-b"
+            }
+          ]
+        },
+        {
+          "value": "sh 201-b",
+          "count": 9,
+          "items": [
+            {
+              "title": "Автоматичний вимикач 1 підлога. 25A \"ABB ELECTRIK\" SH 201-B",
+              "article": "SH 201-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-1-pol-25a-abb-electrik-sh-201-b"
+            },
+            {
+              "title": "Автоматичний вимикач 1 підлога. 32A \"ABB ELECTRIK\" SH 201-B",
+              "article": "SH 201-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-1-pol-32a-abb-electrik-sh-201-b"
+            },
+            {
+              "title": "Автоматичний вимикач 1 підлога. 16A \"ABB ELECTRIK\" SH 201-B",
+              "article": "SH 201-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-1-pol-16a-abb-electrik-sh-201-b"
+            },
+            {
+              "title": "Автоматичний вимикач 1 підлога. 20A \"ABB ELECTRIK\" SH 201-B",
+              "article": "SH 201-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-1-pol-20a-abb-electrik-sh-201-b"
+            },
+            {
+              "title": "Автоматичний вимикач 1 підлога. 50A \"ABB ELECTRIK\" SH 201-B",
+              "article": "SH 201-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-1-pol-50a-abb-electrik-sh-201-b"
+            },
+            {
+              "title": "Автоматичний вимикач 1 підлога. 63A \"ABB ELECTRIK\" SH 201-B",
+              "article": "SH 201-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-1-pol-63a-abb-electrik-sh-201-b"
+            },
+            {
+              "title": "Автоматичний вимикач 1 підлога. 40A \"ABB ELECTRIK\" SH 201-B",
+              "article": "SH 201-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-1-pol-40a-abb-electrik-sh-201-b"
+            },
+            {
+              "title": "Автоматичний вимикач 1 підлога. 6A \"ABB ELECTRIK\" SH 201-B",
+              "article": "SH 201-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-1-pol-6a-abb-electrik-sh-201-b"
+            },
+            {
+              "title": "Автоматичний вимикач 1 підлога. 10A \"ABB ELECTRIK\" SH 201-B",
+              "article": "SH 201-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-1-pol-10a-abb-electrik-sh-201-b"
+            }
+          ]
+        },
+        {
+          "value": "sh 203-b",
+          "count": 9,
+          "items": [
+            {
+              "title": "Автоматичний вимикач 3 підлога. 10A \"ABB ELECTRIK\" SH 203-B",
+              "article": "SH 203-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-3-pol-10a-abb-electrik-sh-203-b"
+            },
+            {
+              "title": "Автоматичний вимикач 3 підлога. 16A \"ABB ELECTRIK\" SH 203-B",
+              "article": "SH 203-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-3-pol-16a-abb-electrik-sh-203-b"
+            },
+            {
+              "title": "Автоматичний вимикач 3 підлога. 20A \"ABB ELECTRIK\" SH 203-B",
+              "article": "SH 203-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-3-pol-20a-abb-electrik-sh-203-b"
+            },
+            {
+              "title": "Автоматичний вимикач 3 підлога. 32A \"ABB ELECTRIK\" SH 203-B",
+              "article": "SH 203-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-3-pol-32a-abb-electrik-sh-203-b"
+            },
+            {
+              "title": "Автоматичний вимикач 3 підлога. 40A \"ABB ELECTRIK\" SH 203-B",
+              "article": "SH 203-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-3-pol-40a-abb-electrik-sh-203-b"
+            },
+            {
+              "title": "Автоматичний вимикач 3 підлога. 25A \"ABB ELECTRIK\" SH 203-B",
+              "article": "SH 203-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-3-pol-25a-abb-electrik-sh-203-b"
+            },
+            {
+              "title": "Автоматичний вимикач 3 підлога. 6A \"ABB ELECTRIK\" SH 203-B",
+              "article": "SH 203-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-3-pol-6a-abb-electrik-sh-203-b"
+            },
+            {
+              "title": "Автоматичний вимикач 3 підлога. 50A \"ABB ELECTRIK\" SH 203-B",
+              "article": "SH 203-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-3-pol-50a-abb-electrik-sh-203-b"
+            },
+            {
+              "title": "Автоматичний вимикач 3 підлога. 63A \"ABB ELECTRIK\" SH 203-B",
+              "article": "SH 203-B",
+              "url": "https://ultra-svet.com/avtomaticheskij-vyklyuchatel-3-pol-63a-abb-electrik-sh-203-b"
+            }
+          ]
+        },
+        {
+          "value": "lm705",
+          "count": 9,
+          "items": [
+            {
+              "title": "Лампа світлодіодна G45 1,2W E27 230V помаранчева кулька \"LEMANSO\" LM705",
+              "article": "LM705",
+              "url": "https://ultra-svet.com/lampa-svetodiodnaya-g45-1-2w-e27-230v-oranzhevyj-sharik-lemanso-lm705"
+            },
+            {
+              "title": "Лампа світлодіодна G45 1,2W E27 біла кулька \"LEMANSO\" LM705",
+              "article": "LM705",
+              "url": "https://ultra-svet.com/lampa-svetodiodnaya-g45-e27-12w-belyy-shar-lemanso-lm705"
+            },
+            {
+              "title": "Лампа світлодіодна G45 1,2W E27 230V 2700К біла кулька \"LEMANSO\" LM705",
+              "article": "LM705",
+              "url": "https://ultra-svet.com/lampa-svetodiodnaya-g45-1-2w-e27-230v-2700k-belyj-sharik-lemanso-lm705"
+            },
+            {
+              "title": "Лампа світлодіодна G45 1,2W E27 рожева кулька \"LEMANSO\" LM705",
+              "article": "LM705",
+              "url": "https://ultra-svet.com/lampa-svetodiodnaya-g45-e27-12w-rozovyy-shar-lemanso-lm705"
+            },
+            {
+              "title": "Лампа світлодіодна G45 1,2W E27 синя кулька \"LEMANSO\" LM705",
+              "article": "LM705",
+              "url": "https://ultra-svet.com/lampa-svetodiodnaya-g45-e27-12w-ciniy-shar-lemanso-lm705"
+            },
+            {
+              "title": "Лампа світлодіодна G45 1,2W E27 зелена кулька \"LEMANSO\" LM705",
+              "article": "LM705",
+              "url": "https://ultra-svet.com/lampa-svetodiodnaya-g45-e27-12w-zelenyy-shar-lemanso-lm705"
+            },
+            {
+              "title": "Лампа світлодіодна G45 1,2W E27 жовта кулька \"LEMANSO\" LM705",
+              "article": "LM705",
+              "url": "https://ultra-svet.com/lampa-svetodiodnaya-g45-e27-12w-zheltyy-shar-lemanso-lm705"
+            },
+            {
+              "title": "Лампа світлодіодна G45 1,2W E27 фіолетова кулька \"LEMANSO\" LM705",
+              "article": "LM705",
+              "url": "https://ultra-svet.com/lampa-svetodiodnaya-g45-e27-12w-fioletovyy-shar-lemanso-lm705"
+            },
+            {
+              "title": "Лампа світлодіодна G45 1,2W E27 червона кулька \"LEMANSO\" LM705",
+              "article": "LM705",
+              "url": "https://ultra-svet.com/lampa-svetodiodnaya-g45-e27-12w-krasnyy-shar-lemanso-lm705"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "withoutPhoto": 0,
+  "withoutPrice": 0,
+  "withoutArticle": 0
+}
