@@ -10,8 +10,9 @@ import {
 } from "react";
 import {
   getLastOrderedDatesByProduct,
-  ORDER_HISTORY_KEYS,
+  isOrderHistoryStorageKey,
 } from "@/lib/order-history";
+import { CLIENT_PRICING_EVENT } from "@/lib/client-pricing-session";
 
 const FAVORITES_KEY = "ultra-svet-favorites";
 const RECENT_KEY = "ultra-svet-recent-products";
@@ -102,10 +103,10 @@ export function CustomerCabinetProvider({
           RECENT_KEY,
           NOTES_KEY,
           PRODUCT_NOTES_KEY,
-          ...ORDER_HISTORY_KEYS,
         ].includes(
           event.key
-        )
+        ) &&
+        !isOrderHistoryStorageKey(event.key)
       ) {
         return;
       }
@@ -113,9 +114,11 @@ export function CustomerCabinetProvider({
     };
     window.addEventListener("storage", onStorage);
     window.addEventListener(ORDER_HISTORY_EVENT, refresh);
+    window.addEventListener(CLIENT_PRICING_EVENT, refresh);
     return () => {
       window.removeEventListener("storage", onStorage);
       window.removeEventListener(ORDER_HISTORY_EVENT, refresh);
+      window.removeEventListener(CLIENT_PRICING_EVENT, refresh);
     };
   }, [refresh]);
 

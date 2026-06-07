@@ -95,6 +95,16 @@ const nextConfig: NextConfig = {
         hostname: "www.ultra-svet.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "tdp.com.ua",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.27.ua",
+        pathname: "/**",
+      },
     ],
   },
 };

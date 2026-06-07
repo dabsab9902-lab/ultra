@@ -53,7 +53,6 @@ export function saveCatalogViewState(
 ) {
   if (typeof window === "undefined") return;
 
-  const existing = readRawState();
   const items = nextState.items.slice(0, MAX_CACHED_ITEMS);
   const page = Math.max(
     1,
@@ -63,10 +62,7 @@ export function saveCatalogViewState(
     ...nextState,
     items,
     page,
-    scrollY:
-      existing?.queryKey === nextState.queryKey
-        ? existing.scrollY
-        : nextState.scrollY,
+    scrollY: Math.max(0, Math.floor(nextState.scrollY)),
     savedAt: Date.now(),
   };
 

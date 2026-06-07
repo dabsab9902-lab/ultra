@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import type { Product } from "@/lib/types";
-import { formatPrice, formatStock } from "@/lib/format";
+import { formatPrice } from "@/lib/format";
 import { getProductExplanation } from "@/lib/product-explanations";
 import { ProductImage } from "./ProductImage";
 import { AddToCartButton } from "./AddToCartButton";
 import { FavoriteButton } from "./FavoriteButton";
+import { StockBadge } from "./StockBadge";
 import { OrderedProductBadge, useLastOrderedDate } from "./OrderedProductBadge";
 
 interface ProductCardProps {
@@ -15,7 +16,6 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, compact = false }: ProductCardProps) {
-  const inStock = product.stock > 0;
   const lastOrderedAt = useLastOrderedDate(product);
   const explanation = getProductExplanation(product);
 
@@ -40,13 +40,12 @@ export function ProductCard({ product, compact = false }: ProductCardProps) {
             <span className="rounded-md bg-slate-100 px-2 py-0.5 font-mono text-[10px] text-slate-500">
               {product.sku}
             </span>
-            <span
-              className={`text-[10px] font-medium ${
-                inStock ? "text-emerald-600" : "text-red-500"
-              }`}
-            >
-              {inStock ? formatStock(product.stock) : "Нет в наличии"}
-            </span>
+            <StockBadge
+              stock={product.stock}
+              unit={product.unit}
+              stockStatus={product.stockStatus}
+              compact
+            />
           </div>
           <h3
             className={`font-semibold text-slate-900 line-clamp-2 ${

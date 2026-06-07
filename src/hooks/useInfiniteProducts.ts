@@ -26,6 +26,7 @@ interface UseInfiniteProductsOptions {
   priceMin?: number;
   priceMax?: number;
   inStock?: boolean;
+  includePreorder?: boolean;
   specs?: Record<string, string>;
   featured?: boolean;
   preset?: "seasonal";
@@ -47,6 +48,7 @@ export function useInfiniteProducts({
   priceMin,
   priceMax,
   inStock,
+  includePreorder = true,
   specs,
   featured = false,
   preset,
@@ -87,6 +89,7 @@ export function useInfiniteProducts({
       Number.isFinite(priceMin) ? `priceMin:${priceMin}` : "",
       Number.isFinite(priceMax) ? `priceMax:${priceMax}` : "",
       typeof inStock === "boolean" ? `inStock:${inStock}` : "",
+      includePreorder ? "" : "includePreorder:false",
       specsKey ? `specs:${specsKey}` : "",
       featured ? "featured" : "",
       preset ?? "",
@@ -125,6 +128,7 @@ export function useInfiniteProducts({
           priceMin,
           priceMax,
           inStock,
+          includePreorder,
           specs,
           page: pageNum,
           limit: PAGE_SIZE,
@@ -195,6 +199,7 @@ export function useInfiniteProducts({
       priceMin,
       priceMax,
       inStock,
+      includePreorder,
       specs,
       featured,
       preset,

@@ -1,9 +1,11 @@
 import type { CartItem } from "@/lib/types";
+import { getClientSession } from "@/lib/client-pricing-session";
 
-const LAST_ORDER_KEY = "ultra-svet-last-order";
 export const ORDER_HISTORY_KEY = "orderHistory";
 const LEGACY_ORDER_HISTORY_KEY = "ultra-svet-order-history";
 export const ORDER_HISTORY_KEYS = [ORDER_HISTORY_KEY, LEGACY_ORDER_HISTORY_KEY];
+const CLIENT_LAST_ORDER_PREFIX = "ultra-svet-last-order:";
+const CLIENT_ORDER_HISTORY_PREFIX = "ultra-svet-order-history:";
 const ORDER_HISTORY_EVENT = "ultra-svet-order-history-updated";
 const MAX_HISTORY = 12;
 
@@ -21,6 +23,9 @@ export interface OrderSnapshot {
   date?: string;
   customer?: OrderCustomer;
   total?: number;
+  clientId?: string;
+  clientName?: string;
+  clientPhone?: string;
 }
 
 export interface OrderCustomer {
@@ -41,6 +46,7 @@ export function saveLastOrder(
 ): OrderSnapshot | null {
   if (typeof window === "undefined" || items.length === 0) return null;
 
+  const client = getClientSession();
   const now = new Date().toISOString();
   const orderId = createOrderId();
   const itemDetails = new Map(
@@ -51,6 +57,9 @@ export function saveLastOrder(
     orderId,
     date: now,
     savedAt: now,
+    clientId: client?.id,
+    clientName: client?.name,
+    clientPhone: client?.phone,
     items: items.map((item) => ({
       productId: String(item.productId),
       quantity: item.quantity,
@@ -72,16 +81,20 @@ export function saveLastOrder(
     snapshot.total = Math.max(0, options.total);
   }
 
-  localStorage.setItem(LAST_ORDER_KEY, JSON.stringify(snapshot));
-  saveOrderToHistory(snapshot);
+  if (client) {
+    localStorage.setItem(getClientLastOrderKey(client.id), JSON.stringify(snapshot));
+    saveOrderToHistory(snapshot, client.id);
+  }
   window.dispatchEvent(new Event(ORDER_HISTORY_EVENT));
   return snapshot;
 }
 
 export function loadLastOrder(): OrderSnapshot | null {
   if (typeof window === "undefined") return null;
+  const client = getClientSession();
+  if (!client) return null;
   try {
-    const raw = localStorage.getItem(LAST_ORDER_KEY);
+    const raw = localStorage.getItem(getClientLastOrderKey(client.id));
     if (!raw) return null;
     return normalizeOrder(JSON.parse(raw), 0);
   } catch {
@@ -91,24 +104,24 @@ export function loadLastOrder(): OrderSnapshot | null {
 
 export function loadOrderHistory(): OrderSnapshot[] {
   if (typeof window === "undefined") return [];
+  const client = getClientSession();
+  if (!client) return [];
 
   try {
-    const stored = readStoredOrderHistory();
+    const stored = readStoredOrderHistory(client.id, client.phone);
     if (stored.length > 0) {
-      persistOrderHistory(stored);
+      persistOrderHistory(stored, client.id);
       return stored;
     }
 
     const last = loadLastOrder();
     if (last) {
       const history = dedupeOrders([last]);
-      persistOrderHistory(history);
+      persistOrderHistory(history, client.id);
       return history;
     }
 
-    const seeded = createSeedOrderHistory();
-    persistOrderHistory(seeded);
-    return seeded;
+    return [];
   } catch {
     return [];
   }
@@ -138,10 +151,18 @@ export function getLastOrderedDatesByProduct(
   return dates;
 }
 
-function readStoredOrderHistory(): OrderSnapshot[] {
+export function isOrderHistoryStorageKey(key: string) {
+  return (
+    ORDER_HISTORY_KEYS.includes(key) ||
+    key.startsWith(CLIENT_ORDER_HISTORY_PREFIX) ||
+    key.startsWith(CLIENT_LAST_ORDER_PREFIX)
+  );
+}
+
+function readStoredOrderHistory(clientId: string, clientPhone: string): OrderSnapshot[] {
   const orders: OrderSnapshot[] = [];
 
-  for (const key of ORDER_HISTORY_KEYS) {
+  for (const key of [getClientOrderHistoryKey(clientId), ...ORDER_HISTORY_KEYS]) {
     try {
       const raw = localStorage.getItem(key);
       if (!raw) continue;
@@ -151,6 +172,7 @@ function readStoredOrderHistory(): OrderSnapshot[] {
         ...rawOrders
           .filter((order) => Array.isArray(order?.items) && order.items.length > 0)
           .map(normalizeOrder)
+          .filter((order) => isOrderForClient(order, clientId, clientPhone))
       );
     } catch {
       /* ignore invalid stored history */
@@ -160,20 +182,18 @@ function readStoredOrderHistory(): OrderSnapshot[] {
   return dedupeOrders(orders);
 }
 
-function saveOrderToHistory(snapshot: OrderSnapshot): void {
-  const history = readStoredOrderHistory();
+function saveOrderToHistory(snapshot: OrderSnapshot, clientId: string): void {
+  const history = readStoredOrderHistory(clientId, snapshot.clientPhone ?? "");
   const next = dedupeOrders([normalizeOrder(snapshot, 0), ...history]).slice(
     0,
     MAX_HISTORY
   );
-  persistOrderHistory(next);
+  persistOrderHistory(next, clientId);
 }
 
-function persistOrderHistory(history: OrderSnapshot[]) {
+function persistOrderHistory(history: OrderSnapshot[], clientId: string) {
   const payload = JSON.stringify(history);
-  for (const key of ORDER_HISTORY_KEYS) {
-    localStorage.setItem(key, payload);
-  }
+  localStorage.setItem(getClientOrderHistoryKey(clientId), payload);
 }
 
 function normalizeOrder(order: unknown, index: number): OrderSnapshot {
@@ -187,6 +207,9 @@ function normalizeOrder(order: unknown, index: number): OrderSnapshot {
     orderId: String(value.orderId || id),
     savedAt,
     date: String(value.date || savedAt),
+    clientId: firstString(value.clientId),
+    clientName: firstString(value.clientName),
+    clientPhone: firstString(value.clientPhone),
     items: rawItems.map(normalizeItem).filter((item) => item.productId),
     customer: normalizeCustomer(value.customer),
     total:
@@ -215,25 +238,6 @@ function normalizeItem(item: unknown): OrderHistoryItem {
     sku: firstString(value.sku),
     article: firstString(value.article),
   };
-}
-
-function createSeedOrderHistory(): OrderSnapshot[] {
-  const date = new Date();
-  date.setDate(date.getDate() - 7);
-  const savedAt = date.toISOString();
-
-  return [
-    {
-      id: "demo-order-1",
-      orderId: "demo-order-1",
-      date: savedAt,
-      savedAt,
-      items: [
-        { productId: "1", quantity: 10, minOrder: 1 },
-        { productId: "2", quantity: 5, minOrder: 1 },
-      ],
-    },
-  ];
 }
 
 function dedupeOrders(orders: OrderSnapshot[]): OrderSnapshot[] {
@@ -278,6 +282,24 @@ function firstString(...values: unknown[]) {
 
 function normalizeIdentifier(value: unknown) {
   return firstString(value).trim().toLowerCase();
+}
+
+function getClientLastOrderKey(clientId: string) {
+  return `${CLIENT_LAST_ORDER_PREFIX}${clientId}`;
+}
+
+function getClientOrderHistoryKey(clientId: string) {
+  return `${CLIENT_ORDER_HISTORY_PREFIX}${clientId}`;
+}
+
+function isOrderForClient(order: OrderSnapshot, clientId: string, clientPhone: string) {
+  if (order.clientId) return order.clientId === clientId;
+  const phone = normalizeIdentifier(clientPhone);
+  if (!phone) return false;
+  return (
+    normalizeIdentifier(order.clientPhone) === phone ||
+    normalizeIdentifier(order.customer?.phone) === phone
+  );
 }
 
 function normalizeCustomer(value: unknown): OrderCustomer | undefined {

@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createClientDemoToken } from "@/lib/client-demo-session";
 import {
+  CLIENT_DEMO_SESSION_COOKIE,
   CLIENT_SESSION_COOKIE,
   createClientSessionToken,
   getClientCookieOptions,
@@ -34,11 +36,18 @@ export async function POST(request: NextRequest) {
         id: client.id,
         name: client.name,
         phone: client.phone,
+        active: client.active,
+        discounts: client.discounts,
       },
     });
     response.cookies.set(
       CLIENT_SESSION_COOKIE,
       createClientSessionToken({ ...client, code: code.trim() }),
+      getClientCookieOptions()
+    );
+    response.cookies.set(
+      CLIENT_DEMO_SESSION_COOKIE,
+      createClientDemoToken(client),
       getClientCookieOptions()
     );
     return response;

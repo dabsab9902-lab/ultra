@@ -73,7 +73,9 @@ class ProductCatalog {
     this.basePoolCache.clear();
     this.filterCache.clear();
 
-    this.products = loadCatalogProducts();
+    this.products = loadCatalogProducts().filter(
+      (product) => !product.catalogHidden
+    );
     this.searchIndex.build(this.products);
     this.indexVersion = String(this.products.length);
     this.sourceSignature = sourceSignature;
@@ -229,7 +231,7 @@ class ProductCatalog {
   getCompactSearchIndex(): { version: string; entries: CompactSearchEntry[] } {
     this.init();
     return {
-      version: this.indexVersion,
+      version: `${this.indexVersion}:search-v2`,
       entries: this.searchIndex.getCompactIndex(),
     };
   }
@@ -297,6 +299,7 @@ class ProductCatalog {
       priceMin,
       priceMax,
       inStock,
+      includePreorder = true,
       specs,
       page = 1,
       limit = DEFAULT_LIMIT,
@@ -324,6 +327,7 @@ class ProductCatalog {
       priceMin,
       priceMax,
       inStock,
+      includePreorder,
       specs,
       applyCategoryFilters: Boolean(queryNorm),
     });
@@ -782,6 +786,7 @@ function applyProductFilters(
     | "priceMin"
     | "priceMax"
     | "inStock"
+    | "includePreorder"
     | "specs"
   > & { applyCategoryFilters?: boolean }
 ) {
@@ -797,6 +802,7 @@ function applyProductFilters(
     priceMin,
     priceMax,
     inStock,
+    includePreorder = true,
     specs,
     applyCategoryFilters = false,
   } = params;
@@ -849,6 +855,9 @@ function applyProductFilters(
       const available = product.stock > 0;
       if (inStock !== available) return false;
     }
+    if (!includePreorder && isPreorderProduct(product)) {
+      return false;
+    }
     if (specs && Object.keys(specs).length > 0) {
       for (const [key, value] of Object.entries(specs)) {
         if (!value) continue;
@@ -857,6 +866,13 @@ function applyProductFilters(
     }
     return true;
   });
+}
+
+function isPreorderProduct(product: Product) {
+  return (
+    product.stockStatus === "preorder" ||
+    (product.agentStock !== undefined && product.stock <= 0)
+  );
 }
 
 function buildFilters(products: Product[], activePath: string[] = []): CatalogFilters {

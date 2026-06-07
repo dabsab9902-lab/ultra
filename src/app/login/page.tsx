@@ -1,10 +1,16 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { PageShell } from "@/components/PageShell";
 import { setClientSession } from "@/lib/client-pricing-session";
+import {
+  decodeClientAccess,
+  findLocalClientByLogin,
+  toClientSession,
+  upsertLocalClient,
+} from "@/lib/client-local-store";
 
 export default function ClientLoginPage() {
   const router = useRouter();
@@ -12,6 +18,17 @@ export default function ClientLoginPage() {
   const [code, setCode] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const access = new URLSearchParams(window.location.search).get("access");
+    if (!access) return;
+    const client = decodeClientAccess(access);
+    if (!client) return;
+    setPhone(client.phone);
+    setCode(client.code);
+    setError("");
+    window.history.replaceState(window.history.state, "", "/login");
+  }, []);
 
   const continueWithoutLogin = async () => {
     setClientSession(null);
@@ -40,23 +57,49 @@ export default function ClientLoginPage() {
         body: JSON.stringify({ phone, code }),
       });
 
-      if (!response.ok) {
-        setError("Клиент не найден или код неверный");
-        return;
+      let data = response.ok
+        ? ((await response.json()) as {
+            client?: {
+              id?: string;
+              name?: string;
+              phone?: string;
+              active?: boolean;
+              discounts?: Array<{ brand: string; percent: number }>;
+            };
+          })
+        : null;
+
+      if (!data?.client) {
+        const localClient = findLocalClientByLogin(phone, code);
+        if (!localClient) {
+          setError("Клиент не найден или код неверный");
+          return;
+        }
+        data = { client: toClientSession(localClient) };
       }
 
-      const data = (await response.json()) as {
-        client?: { id?: string; name?: string; phone?: string };
-      };
       if (!data.client?.id || !data.client.name || !data.client.phone) {
         setError("Не удалось получить данные клиента");
         return;
       }
 
+      const now = new Date().toISOString();
+      upsertLocalClient({
+        id: data.client.id,
+        name: data.client.name,
+        phone: data.client.phone,
+        code: code.trim(),
+        active: data.client.active !== false,
+        discounts: data.client.discounts ?? [],
+        createdAt: now,
+        updatedAt: now,
+      });
       setClientSession({
         id: data.client.id,
         name: data.client.name,
         phone: data.client.phone,
+        active: data.client.active !== false,
+        discounts: data.client.discounts ?? [],
       });
       router.replace("/catalog");
       router.refresh();

@@ -16,6 +16,13 @@
     "repair:categories": "node scripts/repair-categories.mjs",
     "import:ultra-svet": "node scripts/import-ultra-svet.mjs",
     "import:urls": "node scripts/import-from-audit-urls.mjs",
+    "import:agentplus-clients": "node scripts/import-agentplus-offline-clients.mjs",
+    "import:agentplus-products": "node scripts/import-agentplus-products.mjs",
+    "import:agentplus-tree": "node scripts/import-agentplus-tree.mjs",
+    "repair:agentplus-prices": "node scripts/repair-agentplus-prices.mjs",
+    "import:mastertool": "node scripts/import-mastertool-agentplus.mjs",
+    "import:mastertool-photos": "node scripts/import-mastertool-photos.mjs",
+    "import:lemanso-photos": "node scripts/import-lemanso-photos.mjs",
     "count:products": "node scripts/audit-product-urls.mjs",
     "audit:products": "node scripts/audit-product-urls.mjs",
     "audit:categories": "node scripts/audit-catalog-categories.mjs"

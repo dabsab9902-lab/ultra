@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "manual-map",
+      "name": "Manual CSV photo map",
+      "enabled": true,
+      "hostnames": [],
+      "searchUrls": []
+    },
+    {
+      "id": "pwa-catalog",
+      "name": "Current PWA catalog by exact article",
+      "enabled": true,
+      "hostnames": [],
+      "searchUrls": []
+    },
+    {
+      "id": "ultra-svet",
+      "name": "Ultra Svet current catalog",
+      "enabled": true,
+      "hostnames": ["ultra-svet.com"],
+      "searchUrls": ["https://ultra-svet.com/ua-search/?search={article}"],
+      "urlIndexFiles": ["data/ultra-svet-product-urls.json"],
+      "productPathHints": [],
+      "priority": 8,
+      "maxProductPages": 4,
+      "timeoutMs": 10000
+    },
+    {
+      "id": "epicentr",
+      "name": "Epicentr catalog",
+      "enabled": true,
+      "hostnames": ["epicentrk.ua"],
+      "searchUrls": ["https://epicentrk.ua/search/?q={article}"],
+      "productPathHints": ["shop"],
+      "priority": 5,
+      "maxProductPages": 4,
+      "timeoutMs": 10000
+    },
+    {
+      "id": "lemanso-official",
+      "name": "Lemanso official catalog",
+      "enabled": true,
+      "hostnames": ["lemanso.com.ua"],
+      "searchUrls": [
+        "https://lemanso.com.ua/search/?search={article}",
+        "https://lemanso.com.ua/index.php?route=product/search&search={article}"
+      ],
+      "productPathHints": ["product", "ua"],
+      "allowInvalidCert": true,
+      "priority": 6,
+      "maxProductPages": 3,
+      "timeoutMs": 10000
+    },
+    {
+      "id": "tdp",
+      "name": "TDP catalog",
+      "enabled": true,
+      "hostnames": ["tdp.com.ua"],
+      "searchUrls": ["https://tdp.com.ua/search/?search={article}"],
+      "productPathHints": ["product"],
+      "allowInvalidCert": true,
+      "priority": 3,
+      "maxProductPages": 2,
+      "timeoutMs": 10000
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "generatedAt": "2026-06-07T14:29:07.140Z",
+  "mode": "configured_sources_strict_article",
+  "scope": "all",
+  "limit": null,
+  "concurrency": 3,
+  "candidateRows": 981,
+  "totalEligibleRows": 981,
+  "alreadyHadPhotoBefore": 415,
+  "fallbackBefore": 566,
+  "processed": 566,
+  "found": 565,
+  "notFound": 1,
+  "skipped": 415,
+  "withPhotoAfter": 980,
+  "remainingFallback": 1,
+  "updatedPwa": 556,
+  "updatedAgent": 565,
+  "sourceStats": {
+    "manual-map": {
+      "searchPages": 0,
+      "productPages": 0,
+      "articleMatches": 0,
+      "imagesFound": 0,
+      "errors": 0
+    },
+    "mastertool-official": {
+      "searchPages": 0,
+      "productPages": 0,
+      "articleMatches": 0,
+      "imagesFound": 0,
+      "errors": 0
+    },
+    "tdp": {
+      "searchPages": 566,
+      "productPages": 384,
+      "articleMatches": 384,
+      "imagesFound": 384,
+      "errors": 0
+    },
+    "epicentr": {
+      "searchPages": 182,
+      "productPages": 180,
+      "articleMatches": 180,
+      "imagesFound": 180,
+      "errors": 0
+    },
+    "ultra-svet": {
+      "searchPages": 2,
+      "productPages": 1,
+      "articleMatches": 1,
+      "imagesFound": 1,
+      "errors": 0
+    },
+    "dekor-bud": {
+      "searchPages": 1,
+      "productPages": 0,
+      "articleMatches": 0,
+      "imagesFound": 0,
+      "errors": 0
+    },
+    "budpostach": {
+      "searchPages": 1,
+      "productPages": 0,
+      "articleMatches": 0,
+      "imagesFound": 0,
+      "errors": 0
+    }
+  },
+  "examplesFound": [
+    {
+      "status": "found",
+      "article": "92-9060",
+      "brand": "ГОСПОДАР",
+      "name": "Трійник цанговий для шланга 3/4\" ГОСПОДАР 92-9060",
+      "agentGuid": "C0598B9A-9EEA-11EB-AE88-BC5FF4F4F2AA",
+      "stock": "5",
+      "imageUrl": "https://tdp.com.ua/images/catalog/70bbttkwE0/1558598461_f3ccd.jpg",
+      "imageSource": "https://tdp.com.ua/product/trojnik-cangovyj-master-tool-dlja-shlanga-34-92-9060.html",
+      "score": 98,
+      "title": "Тройник цанговый MASTER TOOL для шланга 3/4\" (92-9060) купить в Киеве, Коннекторы в каталоге интернет магазина инструментов и садовой техники tdp.com.ua",
+      "reason": "tdp"
+    },
+    {
+      "status": "found",
+      "article": "92-9061",
+      "brand": "ГОСПОДАР",
+      "name": "Трійник цанговий для шланга 1/2\" ГОСПОДАР 92-9061",
+      "agentGuid": "C0598B9C-9EEA-11EB-AE88-BC5FF4F4F2AA",
+      "stock": "6",
+      "imageUrl": "https://cdn.27.ua/sc--media--prod/default/2e/17/5b/2e175b01-4b80-45d3-8d21-301e00c30642.jpg",
+      "imageSource": "https://epicentrk.ua/shop/mplc-trijnik-cangovij-dla-slanga-gospodar-sld-1-2-92-9061-1ee37590-4227-6a66-bef9-196691f8fc48.html",
+      "score": 97,
+      "title": "ᐉ Тройник цанговый для шланга Господар SLD 1/2\" (92-9061) • Купить в Киеве, Украине • Лучшая цена в Эпицентр",
+      "reason": "epicentr"
+    },
+    {
+      "status": "found",
+      "article": "92-9332",
+      "brand": "MASTER TOOL",
+      "name": "Дощувач з голівкою, що обертається \"Вертоліт\" 1/2\",основа Y-типу на коліщатках MASTER TOOL 92-9332",
+      "agentGuid": "7025FB55-2C12-11EC-9962-BC5FF4F4F2AA",
+      "stock": "2",
+      "imageUrl": "https://cdn.27.ua/799/5e/5a/5922394_6.jpeg",
+      "imageSource": "https://epicentrk.ua/shop/dozhdevatel-raspylyayuschiy-mastertool-vertolet-92-9332.html",
+      "score": 97,
+      "title": "ᐉ Дождеватель распыляющий MasterTool Вертолет ½\" (92-9332) • Купить в Киеве, Украине • Лучшая цена в Эпицентр",
+      "reason": "epicentr"
+    },
+    {
+      "status": "found",
+      "article": "92-9326",
+      "brand": "MASTER TOOL",
+      "name": "Дощувач з головкою, що обертається \"Метелик\" 1/2\", 11 метрів MASTER TOOL 92-9326",
+      "agentGuid": "C0598B52-9EEA-11EB-AE88-BC5FF4F4F2AA",
+      "stock": "1",
+      "imageUrl": "https://cdn.27.ua/sc--media--prod/default/4f/ec/4d/4fec4d6b-d526-4d6f-81d8-d968141d53c9.jpg",
+      "imageSource": "https://epicentrk.ua/shop/mplc-zrosuvac-obertovij-mastertool-babocka-1-2-11-m-na-n-p-edestali-92-9326-1f122d04-9337-67d0-8a91-9d437599e454.html",
+      "score": 97,
+      "title": "ᐉ Ороситель вращающийся MasterTool Бабочка 1/2\" 11 м на Н-пьедестале (92-9326) • Купить в Киеве, Украине • Лучшая цена в Эпицентр",
+      "reason": "epicentr"
+    },
+    {
+      "status": "found",
+      "article": "92-9334",
+      "brand": "MASTER TOOL",
+      "name": "Дощувач статичний 1/2\", основа О-типу, 8 режимів, 11 метрів MASTER TOOL 92-9334",
+      "agentGuid": "7025FB59-2C12-11EC-9962-BC5FF4F4F2AA",
+      "stock": "1",
+      "imageUrl": "https://cdn.27.ua/799/5e/60/5922400_5.jpeg",
+      "imageSource": "https://epicentrk.ua/shop/dozhdevatel-raspylyayuschiy-mastertool-8-rezhimov-92-9334.html",
+      "score": 97,
+      "title": "ᐉ Дождеватель распыляющий MasterTool 8 режимов (92-9334) • Купить в Киеве, Украине • Лучшая цена в Эпицентр",
+      "reason": "epicentr"
+    }
+  ],
+  "examplesSkipped": [
+    {
+      "status": "skipped",
+      "article": "92-9041",
+      "brand": "MASTER TOOL",
+      "name": "Адаптер 1/2\"ВР MASTER TOOL 92-9041",
+      "agentGuid": "C0598B82-9EEA-11EB-AE88-BC5FF4F4F2AA",
+      "stock": "15",
+      "imageUrl": "",
+      "imageSource": "",
+      "score": "",
+      "title": "",
+      "reason": "already_has_photo"
+    },
+    {
+      "status": "skipped",
+      "article": "92-9040",
+      "brand": "ГОСПОДАР",
+      "name": "Адаптер 1/2\"НР ГОСПОДАР 92-9040",
+      "agentGuid": "C0598B80-9EEA-11EB-AE88-BC5FF4F4F2AA",
+      "stock": "22",
+      "imageUrl": "",
+      "imageSource": "",
+      "score": "",
+      "title": "",
+      "reason": "already_has_photo"
+    },
+    {
+      "status": "skipped",
+      "article": "92-9042",
+      "brand": "ГОСПОДАР",
+      "name": "Адаптер 3/4\"НР ГОСПОДАР 92-9042",
+      "agentGuid": "C0598B84-9EEA-11EB-AE88-BC5FF4F4F2AA",
+      "stock": "33",
+      "imageUrl": "",
+      "imageSource": "",
+      "score": "",
+      "title": "",
+      "reason": "already_has_photo"
+    },
+    {
+      "status": "skipped",
+      "article": "92-9050",
+      "brand": "ГОСПОДАР",
+      "name": "Конектор для шланга 1/2\" ГОСПОДАР 92-9050",
+      "agentGuid": "C0598B8C-9EEA-11EB-AE88-BC5FF4F4F2AA",
+      "stock": "25",
+      "imageUrl": "",
+      "imageSource": "",
+      "score": "",
+      "title": "",
+      "reason": "already_has_photo"
+    },
+    {
+      "status": "skipped",
+      "article": "92-9053",
+      "brand": "ГОСПОДАР",
+      "name": "Муфта цангова для шланга 1/2\" ГОСПОДАР 92-9053",
+      "agentGuid": "8BC7D0F7-8E64-11EC-BDD9-BC5FF4F4F2AA",
+      "stock": "37",
+      "imageUrl": "",
+      "imageSource": "",
+      "score": "",
+      "title": "",
+      "reason": "already_has_photo"
+    }
+  ],
+  "report": "C:\\Users\\user\\Documents\\ultra svet\\reports\\mastertool-photo-import-report.json",
+  "csv": "C:\\Users\\user\\Documents\\ultra svet\\reports\\mastertool-photo-import-report.csv"
+}

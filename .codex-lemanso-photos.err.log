@@ -1,0 +1,12 @@
+[lemanso] start candidates=256 concurrency=3
+[lemanso] 25/256 done; found=10; skipped=1; notFound=14
+[lemanso] 50/256 done; found=23; skipped=5; notFound=23
+[lemanso] 75/256 done; found=41; skipped=9; notFound=25
+[lemanso] 100/256 done; found=63; skipped=10; notFound=27
+[lemanso] 125/256 done; found=90; skipped=10; notFound=27
+[lemanso] 150/256 done; found=103; skipped=10; notFound=37
+[lemanso] 175/256 done; found=111; skipped=10; notFound=54
+[lemanso] 200/256 done; found=130; skipped=10; notFound=60
+[lemanso] 225/256 done; found=144; skipped=10; notFound=71
+[lemanso] 250/256 done; found=161; skipped=10; notFound=79
+[lemanso] 256/256 done; found=167; skipped=10; notFound=79

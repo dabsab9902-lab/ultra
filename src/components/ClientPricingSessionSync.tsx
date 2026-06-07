@@ -15,7 +15,13 @@ export function ClientPricingSessionSync() {
         const response = await fetch("/api/client/me", { cache: "no-store" });
         if (!response.ok) return;
         const data = (await response.json()) as {
-          client?: { id?: string; name?: string; phone?: string } | null;
+          client?: {
+            id?: string;
+            name?: string;
+            phone?: string;
+            active?: boolean;
+            discounts?: Array<{ brand: string; percent: number }>;
+          } | null;
         };
         if (cancelled) return;
 
@@ -25,13 +31,17 @@ export function ClientPricingSessionSync() {
                 id: data.client.id,
                 name: data.client.name,
                 phone: data.client.phone,
+                active: data.client.active !== false,
+                discounts: data.client.discounts ?? [],
               }
             : null;
         const current = getClientSession();
         if (
           current?.id !== client?.id ||
           current?.name !== client?.name ||
-          current?.phone !== client?.phone
+          current?.phone !== client?.phone ||
+          JSON.stringify(current?.discounts ?? []) !==
+            JSON.stringify(client?.discounts ?? [])
         ) {
           setClientSession(client);
         }

@@ -5,6 +5,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { PageShell } from "@/components/PageShell";
 import { clearAdminSession } from "@/lib/admin-session";
+import {
+  createLocalClient,
+  encodeClientAccess,
+  mergeLocalClients,
+  readLocalClients,
+  upsertLocalClient,
+} from "@/lib/client-local-store";
 import type { ClientDiscount, ClientRecord } from "@/lib/clients";
 
 interface NewClientDraft {
@@ -42,8 +49,19 @@ export default function AdminClientsPage() {
       }
       if (!response.ok) throw new Error("network");
       const data = (await response.json()) as { clients?: ClientRecord[] };
-      setClients(Array.isArray(data.clients) ? data.clients : []);
+      const remoteClients = Array.isArray(data.clients) ? data.clients : [];
+      const merged = mergeLocalClients(remoteClients);
+      setClients(merged);
+      if (remoteClients.length === 0 && merged.length > 0) {
+        void syncLocalClientsToServer(merged);
+      }
     } catch {
+      const localClients = readLocalClients();
+      if (localClients.length > 0) {
+        setClients(localClients);
+        setError("Клиенты загружены из локального демо-хранилища");
+        return;
+      }
       setError("Не удалось загрузить клиентов");
     } finally {
       setLoading(false);
@@ -76,12 +94,22 @@ export default function AdminClientsPage() {
       if (!response.ok) throw new Error("network");
       const data = (await response.json()) as { client?: ClientRecord };
       if (data.client) {
+        upsertLocalClient(data.client);
         setClients((current) => [data.client!, ...current]);
         setAccessText(buildClientAccessText(data.client));
         setCopyStatus("");
         setDraft(EMPTY_CLIENT);
       }
     } catch {
+      const client = createLocalClient({ ...draft, discounts: [] });
+      if (client) {
+        setClients((current) => [client, ...current]);
+        setAccessText(buildClientAccessText(client));
+        setCopyStatus("");
+        setDraft(EMPTY_CLIENT);
+        setError("Клиент сохранен локально для демо");
+        return;
+      }
       setError("Не удалось создать клиента");
     } finally {
       setSavingId("");
@@ -104,11 +132,18 @@ export default function AdminClientsPage() {
       if (!response.ok) throw new Error("network");
       const data = (await response.json()) as { client?: ClientRecord };
       if (data.client) {
+        upsertLocalClient(data.client);
         setClients((current) =>
           current.map((item) => (item.id === client.id ? data.client! : item))
         );
       }
     } catch {
+      upsertLocalClient(client);
+      setClients((current) =>
+        current.map((item) => (item.id === client.id ? client : item))
+      );
+      setError("Клиент сохранен локально для демо");
+      return;
       setError("Не удалось сохранить клиента");
     } finally {
       setSavingId("");
@@ -146,6 +181,12 @@ export default function AdminClientsPage() {
                 className="rounded-lg bg-white px-3 py-2 text-xs font-bold text-slate-700 ring-1 ring-slate-200 active:bg-slate-50"
               >
                 {"\u041f\u0430\u043d\u0435\u043b\u044c"}
+              </Link>
+              <Link
+                href="/admin/offline-clients"
+                className="rounded-lg bg-white px-3 py-2 text-xs font-bold text-slate-700 ring-1 ring-slate-200 active:bg-slate-50"
+              >
+                1С
               </Link>
               <Link
                 href="/admin/orders"
@@ -462,13 +503,28 @@ function ClientCard({
 function buildClientAccessText(client: ClientRecord) {
   const origin =
     typeof window !== "undefined" ? window.location.origin : "http://localhost:3000";
+  const loginUrl = `${origin}/login?access=${encodeClientAccess(client)}`;
 
   return [
     "\u0412\u0430\u0448 \u0434\u043e\u0441\u0442\u0443\u043f \u043a B2B \u043a\u0430\u0442\u0430\u043b\u043e\u0433\u0443 Ultra Svet:",
-    `\u0441\u0441\u044b\u043b\u043a\u0430: ${origin}`,
+    `\u0441\u0441\u044b\u043b\u043a\u0430: ${loginUrl}`,
     `\u0442\u0435\u043b\u0435\u0444\u043e\u043d: ${client.phone}`,
     `\u043a\u043e\u0434 \u0434\u043e\u0441\u0442\u0443\u043f\u0430: ${client.code}`,
   ].join("\n");
+}
+
+async function syncLocalClientsToServer(clients: ClientRecord[]) {
+  for (const client of clients) {
+    try {
+      await fetch("/api/clients", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(client),
+      });
+    } catch {
+      /* Best effort: local demo storage remains the source of truth. */
+    }
+  }
 }
 
 async function copyTextToClipboard(text: string) {

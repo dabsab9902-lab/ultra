@@ -39,6 +39,13 @@ export interface Product {
   unit: string;
   minOrder: number;
   stock: number;
+  stockStatus?: "in_stock" | "preorder" | "unknown" | string;
+  agentGuid?: string;
+  agentPrice?: number;
+  agentStock?: number;
+  agentUnit?: string;
+  agentCategoryPath?: string[];
+  catalogHidden?: boolean;
   image: string;
   sourceUrl?: string;
   categoryUrl?: string;
@@ -71,6 +78,7 @@ export interface CatalogQuery {
   priceMin?: number;
   priceMax?: number;
   inStock?: boolean;
+  includePreorder?: boolean;
   specs?: Record<string, string>;
   page?: number;
   limit?: number;

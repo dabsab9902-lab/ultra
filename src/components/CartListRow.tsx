@@ -27,7 +27,12 @@ export function CartListRow({ product, quantity }: CartListRowProps) {
             {product.name}
           </p>
         </Link>
-        <StockBadge stock={product.stock} unit={product.unit} compact />
+        <StockBadge
+          stock={product.stock}
+          unit={product.unit}
+          stockStatus={product.stockStatus}
+          compact
+        />
       </div>
 
       <div className="mt-2 flex flex-wrap items-center justify-between gap-2">

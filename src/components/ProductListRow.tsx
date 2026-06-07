@@ -9,16 +9,19 @@ import { useCart } from "@/context/CartContext";
 import { ProductImage } from "./ProductImage";
 import { QuickAddButton } from "./QuickAddButton";
 import { FavoriteButton } from "./FavoriteButton";
+import { StockBadge } from "./StockBadge";
 import { OrderedProductBadge, useLastOrderedDate } from "./OrderedProductBadge";
 
 interface ProductListRowProps {
   product: Product;
   returnHref?: string;
+  onOpen?: () => void;
 }
 
 function ProductListRowComponent({
   product,
   returnHref,
+  onOpen,
 }: ProductListRowProps) {
   const lastOrderedAt = useLastOrderedDate(product);
   const { getItemQuantity } = useCart();
@@ -44,6 +47,7 @@ function ProductListRowComponent({
       <div className="flex items-start gap-2">
         <Link
           href={productHref}
+          onClick={onOpen}
           className="flex min-w-0 flex-1 items-start gap-2.5"
         >
           <ProductImage product={product} size="list" />
@@ -88,6 +92,12 @@ function ProductListRowComponent({
               В корзине: {quantityInCart} {product.unit}
             </span>
           )}
+          <StockBadge
+            stock={product.stock}
+            unit={product.unit}
+            stockStatus={product.stockStatus}
+            compact
+          />
         </div>
         <QuickAddButton
           productId={product.id}

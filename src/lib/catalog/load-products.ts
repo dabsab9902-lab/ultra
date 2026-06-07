@@ -9,6 +9,10 @@ import {
   BASE_PRICE_VERSION,
   getBasePriceFromSitePrice,
 } from "@/lib/pricing";
+import {
+  getAgentPlusProductMatch,
+  getAgentPlusProductsSignature,
+} from "@/lib/catalog/agentplus-enrichment";
 import type { CategoryId, Product } from "@/lib/types";
 
 export interface ParsedProductRow {
@@ -29,6 +33,12 @@ export interface ParsedProductRow {
   categoryPath?: string[];
   categoryPathUrls?: string[];
   breadcrumbs?: Array<{ title?: string; url?: string }>;
+  agentGuid?: string;
+  agentPrice?: number;
+  agentStock?: number;
+  agentUnit?: string;
+  agentCategoryPath?: string[];
+  catalogHidden?: boolean;
   url: string;
 }
 
@@ -60,6 +70,12 @@ function readParsedFile(): ParsedProductsFile {
       imageUrl: p.image,
       category: p.specs?.["Категория"] ?? p.specs?.["Категорія"] ?? p.categoryId,
       subcategory: p.subcategory,
+      agentGuid: p.agentGuid,
+      agentPrice: p.agentPrice,
+      agentStock: p.agentStock,
+      agentUnit: p.agentUnit,
+      agentCategoryPath: p.agentCategoryPath,
+      catalogHidden: p.catalogHidden,
       url: p.sourceUrl ?? "",
     })),
   };
@@ -69,12 +85,12 @@ export function getCatalogProductsSignature(): string {
   const rootPath = join(process.cwd(), "products.json");
   if (existsSync(rootPath)) {
     const stat = statSync(rootPath);
-    return `${rootPath}:${stat.mtimeMs}:${stat.size}:${BASE_PRICE_VERSION}`;
+    return `${rootPath}:${stat.mtimeMs}:${stat.size}:${BASE_PRICE_VERSION}:${getAgentPlusProductsSignature()}`;
   }
 
   const fallbackPath = join(process.cwd(), "src", "data", "products.json");
   const stat = statSync(fallbackPath);
-  return `${fallbackPath}:${stat.mtimeMs}:${stat.size}:${BASE_PRICE_VERSION}`;
+  return `${fallbackPath}:${stat.mtimeMs}:${stat.size}:${BASE_PRICE_VERSION}:${getAgentPlusProductsSignature()}`;
 }
 
 export function normalizeProductCategory(categoryLabel?: string): CategoryId {
@@ -178,7 +194,25 @@ export function mapParsedToProducts(rows: ParsedProductRow[]): Product[] {
         : OTHER_SUBCATEGORY;
     const unit = guessUnit(name);
     const minOrder = unit === "м" ? 100 : 10;
-    const stock = pseudoStock(sku, index);
+    const agentMatch = getAgentPlusProductMatch({
+      ...row,
+      name,
+      sku,
+      url: sourceUrl,
+    });
+    const agentPrice = toPositiveNumber(row.agentPrice ?? agentMatch?.agentPrice);
+    const agentStock = toFiniteNumber(row.agentStock ?? agentMatch?.agentStock);
+    const agentUnit = firstString(row.agentUnit, agentMatch?.agentUnit);
+    const agentCategoryPath = normalizeAgentCategoryPath(
+      row.agentCategoryPath ?? agentMatch?.agentCategoryPath
+    );
+    const stock = agentStock !== undefined ? Math.max(0, agentStock) : 0;
+    const stockStatus =
+      agentStock === undefined
+        ? "unknown"
+        : stock > 0
+          ? "in_stock"
+          : "preorder";
     const specs: Record<string, string> = {
       Артикул: sku,
       Бренд: brand,
@@ -203,10 +237,17 @@ export function mapParsedToProducts(rows: ParsedProductRow[]): Product[] {
       brand,
       categoryId,
       subcategory,
-      price: getBasePriceFromSitePrice(row.price),
-      unit,
+      price: agentPrice ?? getBasePriceFromSitePrice(row.price),
+      unit: agentUnit || unit,
       minOrder,
       stock,
+      stockStatus,
+      agentGuid: firstString(row.agentGuid, agentMatch?.agentGuid) || undefined,
+      agentPrice,
+      agentStock,
+      agentUnit: agentUnit || undefined,
+      agentCategoryPath,
+      catalogHidden: Boolean(row.catalogHidden),
       image: resolveProductImageUrl(row),
       sourceUrl,
       description: `${name}. ${categoryId} / ${subcategory}`,
@@ -218,6 +259,32 @@ export function mapParsedToProducts(rows: ParsedProductRow[]): Product[] {
       featured: index < 6,
     };
   });
+}
+
+function normalizeAgentCategoryPath(input: unknown) {
+  if (!Array.isArray(input)) return undefined;
+  const path = input.map((item) => String(item ?? "").trim()).filter(Boolean);
+  return path.length > 0 ? path : undefined;
+}
+
+function firstString(...values: unknown[]) {
+  for (const value of values) {
+    if (typeof value === "string" && value.trim()) return value.trim();
+    if (typeof value === "number") return String(value);
+  }
+  return "";
+}
+
+function toPositiveNumber(value: unknown) {
+  const number = Number(value);
+  if (!Number.isFinite(number) || number <= 0) return undefined;
+  return Math.round((number + Number.EPSILON) * 100) / 100;
+}
+
+function toFiniteNumber(value: unknown) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return undefined;
+  return number;
 }
 
 let cached: Product[] | null = null;

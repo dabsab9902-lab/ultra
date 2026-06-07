@@ -2,6 +2,10 @@ import { mkdir, readFile, writeFile } from "fs/promises";
 import { randomUUID } from "crypto";
 import { dirname } from "path";
 import { normalizeBrandName } from "@/lib/brand-detector";
+import {
+  CLIENT_DEMO_SESSION_COOKIE,
+  parseClientDemoToken,
+} from "@/lib/client-demo-session";
 import { ensureRuntimeDataFile } from "@/lib/server/json-data-store";
 import {
   normalizePhone,
@@ -20,6 +24,7 @@ interface StoredClientsFile {
 }
 
 export const CLIENT_SESSION_COOKIE = "ultra-svet-client-session";
+export { CLIENT_DEMO_SESSION_COOKIE };
 
 export async function readClients(): Promise<ClientRecord[]> {
   const file = await readClientsFile();
@@ -38,6 +43,7 @@ export async function createClient(input: unknown) {
     phone: value.phone,
     code: value.code || value.password,
     active: value.active ?? true,
+    agentPlusClientId: value.agentPlusClientId,
     managerComment: value.managerComment,
     discounts: value.discounts,
     createdAt: now,
@@ -70,6 +76,8 @@ export async function updateClient(id: string, input: unknown) {
     phone: value.phone ?? current.phone,
     code: value.code || value.password || current.code,
     active: typeof value.active === "boolean" ? value.active : current.active,
+    agentPlusClientId:
+      firstString(value.agentPlusClientId) || current.agentPlusClientId,
     managerComment:
       typeof value.managerComment === "string"
         ? value.managerComment
@@ -97,6 +105,64 @@ export async function updateClient(id: string, input: unknown) {
   return updated;
 }
 
+export async function createOrLinkAgentPlusClient(input: {
+  agentPlusClientId: string;
+  name: string;
+  login: string;
+  code: string;
+}) {
+  const agentPlusClientId = firstString(input.agentPlusClientId);
+  const name = firstString(input.name);
+  const login = normalizePhone(firstString(input.login)) || firstString(input.login);
+  const code = firstString(input.code);
+  if (!agentPlusClientId || !name || !login || !code) {
+    throw new Error("invalid_client");
+  }
+
+  const clients = await readClients();
+  const linked = clients.find(
+    (client) => client.agentPlusClientId === agentPlusClientId
+  );
+  if (linked) return { client: linked, created: false };
+
+  const loginMatch = clients.find(
+    (client) => normalizePhone(client.phone) === normalizePhone(login)
+  );
+  if (loginMatch) {
+    const next = clients.map((client) =>
+      client.id === loginMatch.id
+        ? {
+            ...client,
+            agentPlusClientId,
+            updatedAt: new Date().toISOString(),
+          }
+        : client
+    );
+    await writeClientsFile(next);
+    return {
+      client: next.find((client) => client.id === loginMatch.id) ?? loginMatch,
+      created: false,
+    };
+  }
+
+  const now = new Date().toISOString();
+  const client = normalizeStoredClient({
+    id: createClientId(),
+    name,
+    phone: login,
+    code,
+    active: true,
+    agentPlusClientId,
+    discounts: [],
+    createdAt: now,
+    updatedAt: now,
+  });
+  if (!client) throw new Error("invalid_client");
+
+  await writeClientsFile([client, ...clients]);
+  return { client, created: true };
+}
+
 export async function deleteClient(id: string) {
   const clients = await readClients();
   const next = clients.filter((client) => client.id !== id);
@@ -118,12 +184,16 @@ export async function verifyClientLogin(phone: string, code: string) {
 }
 
 export async function getClientBySessionToken(
-  token?: string
+  token?: string,
+  demoToken?: string
 ): Promise<PublicClient | null> {
-  if (!token) return null;
-  const clients = await readClients();
-  const client = clients.find((item) => createClientSessionToken(item) === token);
-  return client?.active ? toPublicClient(client) : null;
+  if (token) {
+    const clients = await readClients();
+    const client = clients.find((item) => createClientSessionToken(item) === token);
+    if (client?.active) return toPublicClient(client);
+  }
+
+  return parseClientDemoToken(demoToken);
 }
 
 export function createClientSessionToken(client: Pick<ClientRecord, "id" | "phone" | "code">) {
@@ -156,6 +226,7 @@ function normalizeStoredClient(input: unknown): ClientRecord | null {
     phone,
     code,
     active: typeof value.active === "boolean" ? value.active : true,
+    agentPlusClientId: firstString(value.agentPlusClientId) || undefined,
     managerComment: firstString(value.managerComment) || undefined,
     discounts: normalizeDiscounts(value.discounts),
     createdAt: firstString(value.createdAt) || now,

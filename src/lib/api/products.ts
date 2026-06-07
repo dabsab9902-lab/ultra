@@ -17,6 +17,7 @@ export interface FetchProductsParams {
   priceMin?: number;
   priceMax?: number;
   inStock?: boolean;
+  includePreorder?: boolean;
   specs?: Record<string, string>;
   page?: number;
   limit?: number;
@@ -53,6 +54,7 @@ export async function fetchProducts(
   if (Number.isFinite(params.priceMin)) sp.set("priceMin", String(params.priceMin));
   if (Number.isFinite(params.priceMax)) sp.set("priceMax", String(params.priceMax));
   if (typeof params.inStock === "boolean") sp.set("inStock", String(params.inStock));
+  if (params.includePreorder === false) sp.set("includePreorder", "false");
   if (params.specs) {
     for (const [key, value] of Object.entries(params.specs)) {
       if (key && value) sp.append("spec", `${key}\u001f${value}`);

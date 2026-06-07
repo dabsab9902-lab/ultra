@@ -1,0 +1,113 @@
+
+> ultra-svet@0.1.0 predev
+> npm run ensure:env && node scripts/clean-pwa-dev.mjs
+
+
+> ultra-svet@0.1.0 ensure:env
+> node scripts/ensure-env.mjs
+
+
+> ultra-svet@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.18
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.107:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ○ (pwa) PWA support is disabled.
+ ✓ Ready in 15.3s
+ ○ Compiling /api/products ...
+ ✓ Compiled /api/products in 5.6s (324 modules)
+ GET /api/products?limit=1 200 in 20912ms
+ GET /api/products?limit=1 200 in 415ms
+ GET /api/products?limit=1 200 in 148ms
+ GET /api/products?category=MASTER%20TOOL&limit=1&includePreorder=false 200 in 487ms
+ GET /api/products?category=MASTER%20TOOL&limit=1&includePreorder=true 200 in 128ms
+ ○ Compiling /product/[id] ...
+ ✓ Compiled /product/[id] in 19.1s (761 modules)
+ ✓ Compiled in 1112ms (287 modules)
+ GET /product/2 200 in 29815ms
+ ○ Compiling /api/client/me ...
+ ✓ Compiled /_not-found in 11.5s (812 modules)
+ GET /api/products?limit=24 200 in 10647ms
+ GET /api/client/me 200 in 12432ms
+ GET /sw.js 404 in 12721ms
+ GET / 200 in 15301ms
+ GET /catalog 200 in 3379ms
+ GET /cart 200 in 15336ms
+ GET /catalog 200 in 15357ms
+ GET /api/products?includePreorder=false&page=1&limit=24&offset=0 200 in 172ms
+ GET /api/products?includePreorder=false&page=1&limit=24&offset=0 200 in 110ms
+ GET /api/products?limit=24 200 in 508ms
+ GET / 200 in 1729ms
+ GET /cart 200 in 1749ms
+ GET /catalog 200 in 1758ms
+ ○ Compiling /agentplus-tree ...
+ ✓ Compiled /agentplus-tree in 3.2s (820 modules)
+ GET /agentplus-tree 200 in 3754ms
+ ○ Compiling /api/agentplus-tree ...
+ ✓ Compiled /api/agentplus-tree in 4.7s (823 modules)
+ GET /api/products?limit=24 200 in 4567ms
+ GET /api/agentplus-tree 200 in 9165ms
+ GET / 200 in 7422ms
+ GET /cart 200 in 7443ms
+ GET /catalog 200 in 7446ms
+ GET /api/agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA&page=1&limit=40 200 in 285ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 700ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 546ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 173ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 161ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 213ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 169ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 165ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 160ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 159ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 164ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 149ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 148ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 240ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 180ms
+ GET /agentplus-tree?groupId=FFFDA36A-8299-11E9-9C39-BC5FF4F4F2AA 200 in 138ms
+ GET /api/agentplus-tree?groupId=FFFDA36C-8299-11E9-9C39-BC5FF4F4F2AA&page=1&limit=40 200 in 124ms
+ GET /agentplus-tree?groupId=FFFDA36C-8299-11E9-9C39-BC5FF4F4F2AA 200 in 255ms
+ GET /agentplus-tree?groupId=FFFDA36C-8299-11E9-9C39-BC5FF4F4F2AA 200 in 141ms
+ GET /agentplus-tree?groupId=FFFDA36C-8299-11E9-9C39-BC5FF4F4F2AA 200 in 138ms
+ GET /agentplus-tree?groupId=FFFDA36C-8299-11E9-9C39-BC5FF4F4F2AA 200 in 135ms
+ GET /agentplus-tree?groupId=FFFDA36C-8299-11E9-9C39-BC5FF4F4F2AA 200 in 143ms
+ GET /api/agentplus-tree?groupId=4B4A6746-82B8-11E9-9C39-BC5FF4F4F2AA&page=1&limit=40 200 in 86ms
+ GET /agentplus-tree?groupId=4B4A6746-82B8-11E9-9C39-BC5FF4F4F2AA 200 in 205ms
+ GET /api/agentplus-tree?groupId=FFFDA36C-8299-11E9-9C39-BC5FF4F4F2AA&page=1&limit=40 200 in 131ms
+ GET /agentplus-tree?groupId=FFFDA36C-8299-11E9-9C39-BC5FF4F4F2AA 200 in 280ms
+ GET /agentplus-tree?groupId=FFFDA36C-8299-11E9-9C39-BC5FF4F4F2AA 200 in 150ms
+ GET /api/agentplus-tree?groupId=7DF05827-20D7-11EA-8BF6-BC5FF4F4F2AA&page=1&limit=40 200 in 173ms
+ GET /agentplus-tree?groupId=7DF05827-20D7-11EA-8BF6-BC5FF4F4F2AA 200 in 972ms
+ GET /agentplus-tree?groupId=7DF05827-20D7-11EA-8BF6-BC5FF4F4F2AA 200 in 149ms
+ GET /agentplus-tree?groupId=7DF05827-20D7-11EA-8BF6-BC5FF4F4F2AA 200 in 140ms
+ GET /api/agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA&page=1&limit=40 200 in 142ms
+ GET /agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA 200 in 291ms
+ GET /agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA 200 in 147ms
+ GET /api/agentplus-tree?groupId=0A6ED62A-300C-11EB-8A7A-BC5FF4F4F2AA&page=1&limit=40 200 in 283ms
+ GET /agentplus-tree?groupId=0A6ED62A-300C-11EB-8A7A-BC5FF4F4F2AA 200 in 423ms
+ ✓ Compiled in 2.8s (495 modules)
+ ✓ Compiled in 9s (800 modules)
+ ✓ Compiled in 2.5s (800 modules)
+ ✓ Compiled in 4.8s (800 modules)
+ ○ Compiling /api/agentplus-tree ...
+ ✓ Compiled /api/agentplus-tree in 4.4s (515 modules)
+ GET /api/agentplus-tree?groupId=300188F6-9D71-11E3-822B-902B34A4365E&limit=3 200 in 5957ms
+ GET /api/agentplus-tree?groupId=A9187603-BB26-11F0-AA2A-BC5FF4F4F2AA&limit=3 200 in 76ms
+ GET /api/agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA&page=1&limit=40 200 in 151ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 6.5s (1153 modules)
+ GET /agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA 500 in 8328ms
+ GET /agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA 500 in 484ms
+ ○ Compiling /~offline ...
+ ✓ Compiled /~offline in 4.7s (1155 modules)
+ GET /~offline 200 in 6317ms
+ GET /agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA 500 in 5212ms
+ GET /agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA 500 in 365ms
+ ○ Compiling / ...
+ ✓ Compiled / in 8.5s (691 modules)
+ GET / 200 in 12054ms

@@ -9,6 +9,7 @@ export interface ClientRecord {
   phone: string;
   code: string;
   active: boolean;
+  agentPlusClientId?: string;
   managerComment?: string;
   discounts: ClientDiscount[];
   createdAt: string;

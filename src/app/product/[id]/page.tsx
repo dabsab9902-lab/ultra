@@ -24,7 +24,10 @@ import {
   getProductAnalogSegments,
   getRelatedProducts,
 } from "@/lib/server/product-recommendations";
-import { CLIENT_SESSION_COOKIE } from "@/lib/server/clients-store";
+import {
+  CLIENT_DEMO_SESSION_COOKIE,
+  CLIENT_SESSION_COOKIE,
+} from "@/lib/server/clients-store";
 import { getClientFromToken } from "@/lib/server/client-pricing";
 import { applyClientPrice, applyClientPrices } from "@/lib/pricing";
 
@@ -75,7 +78,8 @@ export default async function ProductPage({
 
   const cookieStore = await cookies();
   const client = await getClientFromToken(
-    cookieStore.get(CLIENT_SESSION_COOKIE)?.value
+    cookieStore.get(CLIENT_SESSION_COOKIE)?.value,
+    cookieStore.get(CLIENT_DEMO_SESSION_COOKIE)?.value
   );
   const product = applyClientPrice(baseProduct, client);
   const productExplanation = getProductExplanation(product);
@@ -148,7 +152,11 @@ export default async function ProductPage({
             </div>
             <div className="mt-2 flex items-center justify-between gap-2">
               <p className="text-sm text-slate-600">{product.name}</p>
-              <StockBadge stock={product.stock} unit={product.unit} />
+              <StockBadge
+                stock={product.stock}
+                unit={product.unit}
+                stockStatus={product.stockStatus}
+              />
             </div>
             <div className="mt-1 flex flex-wrap gap-3">
               {product.categoryId && (
@@ -240,7 +248,9 @@ function getCatalogBackHref(value: string | string[] | undefined) {
   try {
     const parsed = new URL(raw, "http://ultra-svet.local");
     if (parsed.origin !== "http://ultra-svet.local") return "/catalog";
-    if (parsed.pathname !== "/catalog") return "/catalog";
+    if (!["/catalog", "/agentplus-tree"].includes(parsed.pathname)) {
+      return "/catalog";
+    }
     return `${parsed.pathname}${parsed.search}`;
   } catch {
     return "/catalog";

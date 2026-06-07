@@ -1,5 +1,10 @@
 import { normalizeSku } from "@/lib/search/query";
-import { normalizeProductSearchText } from "@/lib/search/products";
+import {
+  createProductSearchQueryVariants,
+  hasSearchWordPrefix,
+  normalizeProductSearchText,
+  type ProductSearchQueryVariant,
+} from "@/lib/search/products";
 import type { CategoryId, Product } from "@/lib/types";
 
 export interface SearchSuggestion {
@@ -16,6 +21,7 @@ export interface CompactSearchEntry {
   sku: string;
   sn: string;
   name: string;
+  brand: string;
   categoryId: CategoryId;
   subcategory: string;
   price: number;
@@ -56,6 +62,7 @@ export class CatalogSearchIndex {
         sku: product.sku,
         sn: normalizeSku(product.sku),
         name: product.name,
+        brand: product.brand,
         categoryId: product.categoryId,
         subcategory: product.subcategory,
         price: product.price,
@@ -98,13 +105,14 @@ function createIndexedProduct(product: Product): IndexedProduct {
   const codeText = normalizeProductSearchText(
     [product.sku].filter(Boolean).join(" ")
   );
+  const brandText = normalizeProductSearchText(product.brand);
   const categoryText = normalizeProductSearchText(
     [product.categoryId, product.subcategory, ...(product.categoryPath ?? [])]
       .filter(Boolean)
       .join(" ")
   );
   const allText = normalizeProductSearchText(
-    `${nameText} ${codeText} ${categoryText}`
+    `${nameText} ${codeText} ${brandText} ${categoryText}`
   );
 
   return {
@@ -126,18 +134,12 @@ function searchIndexedProducts(
   const normalizedQuery = normalizeProductSearchText(query);
   if (!normalizedQuery) return [];
 
-  const queryTokens = normalizedQuery.split(" ").filter(Boolean);
-  const compactQuery = normalizeSku(normalizedQuery);
+  const queryVariants = createProductSearchQueryVariants(normalizedQuery);
   const scored: ScoredProduct[] = [];
 
   indexed.forEach((entry, index) => {
     if (allowed && !allowed.has(entry.product.id)) return;
-    const score = scoreIndexedProduct(
-      entry,
-      normalizedQuery,
-      queryTokens,
-      compactQuery
-    );
+    const score = getBestIndexedScore(entry, queryVariants);
     if (score !== null) scored.push({ product: entry.product, score, index });
   });
 
@@ -147,6 +149,29 @@ function searchIndexedProducts(
   });
 
   return scored.slice(0, limit).map((item) => item.product);
+}
+
+function getBestIndexedScore(
+  entry: IndexedProduct,
+  queryVariants: ProductSearchQueryVariant[]
+): number | null {
+  let bestScore: number | null = null;
+
+  for (const variant of queryVariants) {
+    const score = scoreIndexedProduct(
+      entry,
+      variant.normalizedQuery,
+      variant.queryTokens,
+      variant.compactQuery
+    );
+    if (score === null) continue;
+    const weightedScore = score + variant.penalty;
+    if (bestScore === null || weightedScore < bestScore) {
+      bestScore = weightedScore;
+    }
+  }
+
+  return bestScore;
 }
 
 function scoreIndexedProduct(
@@ -164,8 +189,8 @@ function scoreIndexedProduct(
   if (entry.codeText.includes(normalizedQuery)) return 3;
   if (entry.nameText === normalizedQuery) return 5;
   if (entry.nameText.startsWith(normalizedQuery)) return 6;
-  if (entry.nameText.includes(normalizedQuery)) return 8;
-  if (entry.allText.includes(normalizedQuery)) return 9;
+  if (hasSearchWordPrefix(entry.nameText, normalizedQuery)) return 8;
+  if (hasSearchWordPrefix(entry.allText, normalizedQuery)) return 9;
   if (
     queryTokens.length > 1 &&
     queryTokens.every((token) => entry.allText.includes(token))
@@ -175,6 +200,8 @@ function scoreIndexedProduct(
   if (compactQuery.length >= 2 && entry.compactAll.includes(compactQuery)) {
     return 11;
   }
+  if (entry.nameText.includes(normalizedQuery)) return 12;
+  if (entry.allText.includes(normalizedQuery)) return 13;
 
   return null;
 }

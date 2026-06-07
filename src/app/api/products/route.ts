@@ -8,6 +8,7 @@ import {
 } from "@/lib/server/admin-auth";
 import { priceProductsForRequest } from "@/lib/server/client-pricing";
 import {
+  CLIENT_DEMO_SESSION_COOKIE,
   CLIENT_SESSION_COOKIE,
   readClients,
 } from "@/lib/server/clients-store";
@@ -36,6 +37,7 @@ export async function GET(request: NextRequest) {
       : searchParams.get("inStock") === "false"
         ? false
         : undefined;
+  const includePreorder = searchParams.get("includePreorder") !== "false";
   const specs = parseSpecFilters(searchParams);
   const page = parsePositiveInt(searchParams.get("page"), 1);
   const limit = parsePositiveInt(searchParams.get("limit"), 20);
@@ -63,6 +65,7 @@ export async function GET(request: NextRequest) {
     priceMin,
     priceMax,
     inStock,
+    includePreorder,
     specs,
     page,
     limit,
@@ -137,6 +140,7 @@ function parseOptionalOffset(value: string | null): number | undefined {
 function getCacheControl(request: NextRequest, clientId: string) {
   const personalized =
     Boolean(clientId) ||
+    Boolean(request.cookies.get(CLIENT_DEMO_SESSION_COOKIE)?.value) ||
     Boolean(request.cookies.get(CLIENT_SESSION_COOKIE)?.value) ||
     Boolean(request.cookies.get(ADMIN_SESSION_COOKIE)?.value);
 

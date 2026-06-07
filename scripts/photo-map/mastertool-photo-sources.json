@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "manual-map",
+      "name": "Manual CSV photo map",
+      "enabled": true,
+      "hostnames": [],
+      "searchUrls": []
+    },
+    {
+      "id": "mastertool-official",
+      "name": "MASTERTOOL official catalog",
+      "enabled": false,
+      "disabledReason": "mastertool.ua returned redirect loops during automated access check",
+      "hostnames": ["mastertool.ua"],
+      "searchUrls": [
+        "https://mastertool.ua/ua/search/?q={article}",
+        "https://mastertool.ua/ua/index.php?route=product/search&search={article}"
+      ],
+      "productPathHints": ["product", "ua"],
+      "priority": 8,
+      "maxProductPages": 3,
+      "timeoutMs": 8000
+    },
+    {
+      "id": "tdp",
+      "name": "TDP catalog",
+      "enabled": true,
+      "hostnames": ["tdp.com.ua"],
+      "searchUrls": ["https://tdp.com.ua/search/?search={article}"],
+      "productPathHints": ["product"],
+      "allowInvalidCert": true,
+      "priority": 6,
+      "maxProductPages": 3,
+      "timeoutMs": 10000
+    },
+    {
+      "id": "epicentr",
+      "name": "Epicentr catalog",
+      "enabled": true,
+      "hostnames": ["epicentrk.ua"],
+      "searchUrls": ["https://epicentrk.ua/search/?q={article}"],
+      "productPathHints": ["shop"],
+      "priority": 5,
+      "maxProductPages": 3,
+      "timeoutMs": 10000
+    },
+    {
+      "id": "ultra-svet",
+      "name": "Ultra Svet current catalog",
+      "enabled": true,
+      "hostnames": ["ultra-svet.com"],
+      "searchUrls": ["https://ultra-svet.com/ua-search/?search={article}"],
+      "urlIndexFiles": ["data/ultra-svet-product-urls.json"],
+      "productPathHints": [],
+      "priority": 7,
+      "maxProductPages": 3,
+      "timeoutMs": 10000
+    },
+    {
+      "id": "dekor-bud",
+      "name": "Dekor Bud catalog",
+      "enabled": true,
+      "hostnames": ["dekor-bud.com"],
+      "searchUrls": ["https://dekor-bud.com/search/?q={article}"],
+      "productPathHints": ["products"],
+      "priority": 4,
+      "maxProductPages": 3,
+      "timeoutMs": 10000
+    },
+    {
+      "id": "budpostach",
+      "name": "Budpostach catalog",
+      "enabled": true,
+      "hostnames": ["budpostach.ua"],
+      "searchUrls": ["https://budpostach.ua/search/?search={article}"],
+      "productPathHints": ["shop", "product"],
+      "priority": 3,
+      "maxProductPages": 3,
+      "timeoutMs": 10000
+    }
+  ]
+}

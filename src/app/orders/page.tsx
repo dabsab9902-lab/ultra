@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { PageShell } from "@/components/PageShell";
 import { useCart } from "@/context/CartContext";
 import { fetchProducts } from "@/lib/api/products";
+import { CLIENT_PRICING_EVENT } from "@/lib/client-pricing-session";
 import { formatPrice } from "@/lib/format";
 import { loadOrderHistory, type OrderSnapshot } from "@/lib/order-history";
 import type { Product } from "@/lib/types";
@@ -36,8 +37,11 @@ export default function OrdersPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setOrders(loadOrderHistory());
+    const refresh = () => setOrders(loadOrderHistory());
+    refresh();
     setLoading(false);
+    window.addEventListener(CLIENT_PRICING_EVENT, refresh);
+    return () => window.removeEventListener(CLIENT_PRICING_EVENT, refresh);
   }, []);
 
   const productIds = useMemo(

@@ -8,6 +8,7 @@ import { useCustomerCabinet } from "@/lib/customer-cabinet";
 const navItems = [
   { href: "/catalog", label: "Поиск", icon: SearchIcon },
   { href: "/categories", label: "Каталог", icon: CatalogIcon },
+  { href: "/agentplus-tree", label: "1С", icon: AgentTreeIcon },
   { href: "/favorites", label: "Избранное", icon: HeartIcon, favoriteBadge: true },
   { href: "/cart", label: "Заказ", icon: CartIcon, cartBadge: true },
   { href: "/account", label: "Кабинет", icon: UserIcon },
@@ -65,6 +66,14 @@ function CatalogIcon({ active }: { active: boolean }) {
     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={active ? 2.25 : 1.75}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5M3.75 12h16.5M3.75 18.75h16.5" />
       <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 5.25v13.5" />
+    </svg>
+  );
+}
+
+function AgentTreeIcon({ active }: { active: boolean }) {
+  return (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={active ? 2.25 : 1.75}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v4.5m0 0H7.5A2.5 2.5 0 0 0 5 10v1m7-3.5h4.5A2.5 2.5 0 0 1 19 10v1M5 11h4v4H5v-4Zm10 0h4v4h-4v-4ZM10 17h4v4h-4v-4Z" />
     </svg>
   );
 }

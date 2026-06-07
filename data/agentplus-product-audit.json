@@ -1,0 +1,321 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-07T15:49:07.801Z",
+  "source": "C:\\Users\\user\\AppData\\Local\\Temp\\ultra-svet-1c-audit\\FromCDB.xml",
+  "warehouse": "Склад основний Ultra Svet",
+  "totalPwaProducts": 13926,
+  "totalAgentProducts": 29093,
+  "matched": 9526,
+  "withPrice": 9525,
+  "withStock": 9526,
+  "unmatched": 4400,
+  "byMethod": {
+    "article": 4583,
+    "name": 1250,
+    "article+name": 391,
+    "guid": 3288,
+    "article+brand": 14
+  },
+  "unmatchedExamples": [
+    {
+      "index": 34,
+      "sku": "MG-890",
+      "name": "Пилосос 1800Вт 250 Вт/2л/система НЕРА/комб. щітка/насадка щілинна, м'яких меблів \"MAGIO\" МG-890",
+      "url": "https://ultra-svet.com/pylesos-1800vt-250-vt-2l-sistema-nera-komb-schetka-nasadka-schelevaya-myagkoj-mebeli-magio-mg-890"
+    },
+    {
+      "index": 46,
+      "sku": "LM1076",
+      "name": "LED панель 18W 1620LM 4500K 85-265V IP20 \"Стелс\" коло \"LEMANSO\" LM1076",
+      "url": "https://ultra-svet.com/led-panel-18w-1620lm-4500k-85-265v-ip20-stels-krug-lemanso-lm1076"
+    },
+    {
+      "index": 53,
+      "sku": "LM1077",
+      "name": "LED панель 24W 2160LM 4500K 85-265V IP20 \"Стелс\" коло \"LEMANSO\" LM1077",
+      "url": "https://ultra-svet.com/led-panel-24w-2160lm-4500k-85-265v-ip20-stels-krug-lemanso-lm1077"
+    },
+    {
+      "index": 54,
+      "sku": "LM1077",
+      "name": "LED панель 24W 2160LM 6500K 85-265V IP20 \"Стелс\" коло \"LEMANSO\" LM1077",
+      "url": "https://ultra-svet.com/led-panel-24w-2160lm-6500k-85-265v-ip20-stels-krug-lemanso-lm1077"
+    },
+    {
+      "index": 69,
+      "sku": "DIN 110",
+      "name": "DIN рейка довжина 110 мм на 6 модулів \"Electro House\" EH-DIN-110",
+      "url": "https://ultra-svet.com/din-rejka-dlinna-110-mm-6-modulej-electro-house-eh-din-110"
+    },
+    {
+      "index": 70,
+      "sku": "DIN 225",
+      "name": "DIN рейка довжина 225 мм на 12 модулів \"Electro House\" EH-DIN-225",
+      "url": "https://ultra-svet.com/din-rejka-dlinna-225-mm-12-modulej-electro-house-eh-din-225"
+    },
+    {
+      "index": 71,
+      "sku": "DIN 45",
+      "name": "DIN рейка довжина 45 мм на 2 модулі \"Electro House\" EH-DIN-45",
+      "url": "https://ultra-svet.com/din-rejka-dlinna-45-mm-2-modulya-electro-house-eh-din-45"
+    },
+    {
+      "index": 72,
+      "sku": "DIN 500",
+      "name": "DIN рейка довжина 500 мм на 24 модулі \"Electro House\" EH-DIN-500",
+      "url": "https://ultra-svet.com/din-rejka-dlinna-500-mm-24-modulya-electro-house-eh-din-500"
+    },
+    {
+      "index": 73,
+      "sku": "DIN 75",
+      "name": "DIN рейка довжина 75 мм на 4 модулі \"Electro House\" EH-DIN-75",
+      "url": "https://ultra-svet.com/din-rejka-dlinna-75-mm-4-modulya-electro-house-eh-din-75"
+    },
+    {
+      "index": 76,
+      "sku": "LMA006",
+      "name": "Ізолента 30 метрів чорна \"LEMANSO\" LMA006",
+      "url": "https://ultra-svet.com/izolenta-30-metrov-chernaya-lemanso-lma006"
+    },
+    {
+      "index": 77,
+      "sku": "PVKH CHERNAYA 10",
+      "name": "Ізолента e.tape.pro.10.black із самозагасаючого ПВХ, чорна (10м) \"E.NEXT\" p0450006",
+      "url": "https://ultra-svet.com/izolenta-etapepro10black-iz-samozatukhayuschego-pvkh-chernaya-10m-enext-p0450006"
+    },
+    {
+      "index": 78,
+      "sku": "PVKH SINYAYA 10",
+      "name": "Ізолента e.tape.pro.10.blue із самозагасаючого ПВХ, синя (10м) \"E.NEXT\" p0450005",
+      "url": "https://ultra-svet.com/izolenta-etapepro10blue-iz-samozatukhayuschego-pvkh-sinyaya-10m-enext-p0450005"
+    },
+    {
+      "index": 79,
+      "sku": "PVKH BELAYA 10",
+      "name": "Ізолента e.tape.pro.10.white із самозагасаючого ПВХ, біла (10м) \"E.NEXT\" p0450004",
+      "url": "https://ultra-svet.com/izolenta-etapepro10white-iz-samozatukhayuschego-pvkh-belaya-10m-enext-p0450004-1"
+    },
+    {
+      "index": 80,
+      "sku": "PVKH ZHELTAYA 10",
+      "name": "Ізолента e.tape.pro.10.yellow із самозагасаючого ПВХ, жовта (10м) \"E.NEXT\" p0450002",
+      "url": "https://ultra-svet.com/izolenta-etapepro10yellow-iz-samozatukhayuschego-pvkh-zheltaya-10m-enext-p0450002-1"
+    },
+    {
+      "index": 81,
+      "sku": "PVKH ZHELTO ZELENAYA 10",
+      "name": "Ізолента e.tape.pro.10.yellow-green із самозагасаючого ПВХ, жовто-зелена (10м) \"E.NEXT\" p0450007",
+      "url": "https://ultra-svet.com/izolenta-etapepro10yellow-green-iz-samozatukhayuschego-pvkh-zhelto-zelenaya-10m-enext-p0450007-1"
+    },
+    {
+      "index": 82,
+      "sku": "PVKH SINYAYA 20",
+      "name": "Ізолента e.tape.pro.20.blue із самозагасаючого ПВХ, синя (20м) \"E.NEXT\" p0450012",
+      "url": "https://ultra-svet.com/izolenta-etapepro20blue-iz-samozatukhayuschego-pvkh-sinyaya-20m-enext-p0450012"
+    },
+    {
+      "index": 83,
+      "sku": "PVKH ZELENYJ 20",
+      "name": "Ізолента e.tape.pro.20.green із самозагасаючого ПВХ, зелений (20м) \"E.NEXT\" p0450010",
+      "url": "https://ultra-svet.com/izolenta-etapepro20green-iz-samozatukhayuschego-pvkh-zelenyj-20m-enext-p0450010"
+    },
+    {
+      "index": 84,
+      "sku": "PVKH KRASNAYA 20",
+      "name": "Ізолента e.tape.pro.20.red із самозагасаючого ПВХ, червона (20м) \"E.NEXT\" p0450008",
+      "url": "https://ultra-svet.com/izolenta-etapepro20red-iz-samozatukhayuschego-pvkh-krasnaya-20m-enext-p0450008"
+    },
+    {
+      "index": 85,
+      "sku": "PVKH BELAYA 20",
+      "name": "Ізолента e.tape.pro.20.white із самозагасаючого ПВХ, біла (20м) \"E.NEXT\" p0450011",
+      "url": "https://ultra-svet.com/izolenta-etapepro20white-iz-samozatukhayuschego-pvkh-belaya-20m-enext-p0450011"
+    },
+    {
+      "index": 86,
+      "sku": "PVKH ZHELTAYA 20",
+      "name": "Ізолента e.tape.pro.20.yellow із самозагасаючого ПВХ, жовта (20м) \"E.NEXT\" p0450009",
+      "url": "https://ultra-svet.com/izolenta-etapepro20yellow-iz-samozatukhayuschego-pvkh-zheltaya-20m-enext-p0450009"
+    },
+    {
+      "index": 87,
+      "sku": "PVKH ZHELTO ZELENAYA 20",
+      "name": "Ізолента e.tape.pro.20.yellow-green із самозагасаючого ПВХ, жовто-зелена (20м) \"E.NEXT\" p0450014",
+      "url": "https://ultra-svet.com/izolenta-etapepro20yellow-green-iz-samozatukhayuschego-pvkh-zhelto-zelenaya-20m-enext-p0450014"
+    },
+    {
+      "index": 134,
+      "sku": "ESS 5/25KWH",
+      "name": "Система інвертор+батарея All-in-One ESS, 5KW hybrid inverter, 25kWh LFP Battery \"LIVOLTEK\" ESS 5/25kWh",
+      "url": "https://ultra-svet.com/systema-invertor-batareya-all-in-one-ess-5kw-hybrid-inverter-25kwh-lfp-battery-livoltek-ess-5-25kwh"
+    },
+    {
+      "index": 135,
+      "sku": "ESS 5/20KWH",
+      "name": "Система інвертор+батарея All-in-One ESS, 5KW hybrid inverter, 20kWh LFP Battery \"LIVOLTEK\" ESS 5/20kWh",
+      "url": "https://ultra-svet.com/systema-invertor-batareya-all-in-one-ess-5kw-hybrid-inverter-20kwh-lfp-battery-livoltel-ess-5-20kwh"
+    },
+    {
+      "index": 136,
+      "sku": "ESS 5/15KWH",
+      "name": "Система інвертор+батарея All-in-One ESS, 5KW hybrid inverter, 15kWh LFP Battery \"LIVOLTEK\" ESS 5/15kWh",
+      "url": "https://ultra-svet.com/systema-invertor-batareya-all-in-one-ess-5kw-hybrid-inverter-15kwh-lfp-battery-livoltek-ess-5-15kwh"
+    },
+    {
+      "index": 137,
+      "sku": "ESS 5/10KWH",
+      "name": "Система інвертор+батарея All-in-One ESS, 5KW hybrid inverter, 10kWh LFP Battery \"LIVOLTEK\" ESS 5/10kWh",
+      "url": "https://ultra-svet.com/systema-invertor-batareya-all-in-one-ess-5kw-hybrid-inverter-10kwh-lfp-battery-livoltek-ess-5-10kwh"
+    },
+    {
+      "index": 138,
+      "sku": "ESS 5/5KWH",
+      "name": "Система інвертор+батарея All-in-One ESS, 5KW hybrid inverter, 5kWh LFP Battery \"LIVOLTEK\" ESS 5/5kWh",
+      "url": "https://ultra-svet.com/systema-invertor-batareya-all-in-one-ess-5kw-hybrid-inverter-5kwh-lfp-battery-livoltek-ess-5-5kwh"
+    },
+    {
+      "index": 147,
+      "sku": "LM484",
+      "name": "LED панель 5W 400LM 4500K коло чорна \"LEMANSO\" LM484",
+      "url": "https://ultra-svet.com/led-panel-5w-400lm-4500k-chernaya-lemanso-lm484"
+    },
+    {
+      "index": 148,
+      "sku": "LM485",
+      "name": "LED панель 5W 400LM 4500K коло чорна \"LEMANSO\" LM485",
+      "url": "https://ultra-svet.com/led-panel-5w-400lm-4500k-chernaya-lemanso-lm485"
+    },
+    {
+      "index": 149,
+      "sku": "LM486",
+      "name": "LED панель 5W 400LM 4500K коло чорна \"LEMANSO\" LM486",
+      "url": "https://ultra-svet.com/led-panel-5w-400lm-4500k-krug-chyornaya-lemanso-lm486"
+    },
+    {
+      "index": 156,
+      "sku": "LM1025",
+      "name": "LED панель 9W 120LM 85-265V 4500K коло Комфорт \"LEMANSO\" LM1025",
+      "url": "https://ultra-svet.com/led-panel-9w-120lm-85-265v-4500k-krug-komfort-lemanso-lm1025"
+    },
+    {
+      "index": 162,
+      "sku": "MAX 414",
+      "name": "LED панель MINI 24W 4200K SQ квадрат \"Q-MAX\" 414",
+      "url": "https://ultra-svet.com/led-panel-mini-24w-4200k-sq-kvadrat-q-max-414"
+    },
+    {
+      "index": 163,
+      "sku": "100169/100690",
+      "name": "LED панель квадрат 3W 4000К \"LedEX\" 100169 / 100690",
+      "url": "https://ultra-svet.com/led-panel-kvadrat-3w-4000k-ledex-100169-100690"
+    },
+    {
+      "index": 164,
+      "sku": "KRUG 3W",
+      "name": "LED панель коло 3W 4000К \"LedEX\" 100683",
+      "url": "https://ultra-svet.com/led-panel-krug-3w-4000k-ledex-100683"
+    },
+    {
+      "index": 226,
+      "sku": "NL12",
+      "name": "Нічний Пінгвін синій \"LEMANSO\" NL12",
+      "url": "https://ultra-svet.com/nochnik-lemanso-pingvin-siniy-nl12"
+    },
+    {
+      "index": 227,
+      "sku": "NL12",
+      "name": "Нічний Пінгвін чорний \"LEMANSO\" NL12",
+      "url": "https://ultra-svet.com/nochnik-lemanso-pingvin-chernyy-nl12"
+    },
+    {
+      "index": 229,
+      "sku": "BELYY 4",
+      "name": "Нічний сонце білий 4 LED \"LEMANSO\" NL8",
+      "url": "https://ultra-svet.com/nochnik-lemanso-solntse-belyy-4-led-nl8"
+    },
+    {
+      "index": 231,
+      "sku": "NL9",
+      "name": "Нічник Кішечка блакитний \"LEMANSO\" NL9",
+      "url": "https://ultra-svet.com/nochnik-lemanso-koshechka-goluboy-nl9"
+    },
+    {
+      "index": 242,
+      "sku": "LED 20W",
+      "name": "Прожектор LED 20w 6500K IP54 2000LM 175-265V з датчиком чорний\"Чарівність\" \"LEMANSO\" LMPS105-20",
+      "url": "https://ultra-svet.com/prozhektor-led-20w-6500k-ip54-2000lm-175-265v-z-datchykom-chornyicharivnist-lemanso-lmps105-20-39974-httpsexamplecomukproduct"
+    },
+    {
+      "index": 245,
+      "sku": "LED 30W",
+      "name": "Прожектор LED 30w 6500K IP54 1800LM 230-240V з датчиком чорний\"Блиск\" \"LEMANSO\" LMPS106-30",
+      "url": "https://ultra-svet.com/prozhektor-led-30w-6500k-ip54-1800lm-230-240v-z-datchykom-chornyj-blysk-lemanso-lmps106-30"
+    },
+    {
+      "index": 246,
+      "sku": "LED 30W",
+      "name": "Прожектор LED 30w 6500K IP54 3000LM 175-265V з датчиком чорний \"Чарівність\" \"LEMANSO\" LMPS105-35",
+      "url": "https://ultra-svet.com/prozhektor-led-30w-6500k-ip54-3000lm-175-265v-z-datchykom-chornyi-charivnist-lemanso-lmps105-35-39976-httpsexamplecomukproduct"
+    },
+    {
+      "index": 271,
+      "sku": "LMA401",
+      "name": "Ізолента ЯпI 20 метрів 0.13x19мм біла \"LEMANSO\" LMA401",
+      "url": "https://ultra-svet.com/izolenta-yapi-20-metrov-013x19mm-belaya-lemanso-lma401-1"
+    },
+    {
+      "index": 272,
+      "sku": "LMA401",
+      "name": "Ізолента ЯпI 20 метрів 0.13x19мм зелена \"LEMANSO\" LMA401",
+      "url": "https://ultra-svet.com/izolenta-yapi-20-metrov-013x19mm-zelyonaya-lemanso-lma401-1"
+    },
+    {
+      "index": 273,
+      "sku": "LMA401",
+      "name": "Ізолента ЯпI 20 метрів 0.13x19мм синя \"LEMANSO\" LMA401",
+      "url": "https://ultra-svet.com/izolenta-yapi-20-metrov-013x19mm-sinyaya-lemanso-lma401-1"
+    },
+    {
+      "index": 274,
+      "sku": "LMA401",
+      "name": "Ізолента ЯпI 20 метрів 0.13x19мм червона \"LEMANSO\" LMA401",
+      "url": "https://ultra-svet.com/izolenta-yapi-20-metrov-013x19mm-krasnaya-lemanso-lma401"
+    },
+    {
+      "index": 277,
+      "sku": "BLACK 10",
+      "name": "Ізольований втулковий наконечник 10-12.black 10,0 кв.мм, чорний \"E.NEXT\" s3036045",
+      "url": "https://ultra-svet.com/izolirovannyj-nakonechnik-vtulochnyj-10-12black-10-0-kvmm-chyornyj-enext-s3036045"
+    },
+    {
+      "index": 278,
+      "sku": "BROWN 10",
+      "name": "Ізольований втулковий наконечник 10-12.brown 10,0 кв.мм, коричневий \"E.NEXT\" s3036051",
+      "url": "https://ultra-svet.com/izolirovannyj-nakonechnik-vtulochnyj-10-12brown-10-0-kvmm-korichnevyj-enext-s3036051"
+    },
+    {
+      "index": 279,
+      "sku": "GREEN 10",
+      "name": "Ізольований втулковий наконечник 10-12.green 10,0 кв.мм, зелений \"E.NEXT\" s3036047",
+      "url": "https://ultra-svet.com/izolirovannyj-nakonechnik-vtulochnyj-10-12green-10-0-kvmm-zelyonyj-enext-s3036047"
+    },
+    {
+      "index": 280,
+      "sku": "RED 10",
+      "name": "Ізольований втулковий наконечник 10-12.red 10,0 кв.мм, червоний \"E.NEXT\" s3036043",
+      "url": "https://ultra-svet.com/izolirovannyj-nakonechnik-vtulochnyj-10-12red-10-0-kvmm-krasnyj-enext-s3036043"
+    },
+    {
+      "index": 281,
+      "sku": "YELLOW 10",
+      "name": "Ізольований втулковий наконечник 10-12.yellow 10,0 кв.мм, жовтий \"E.NEXT\" s3036044",
+      "url": "https://ultra-svet.com/izolirovannyj-nakonechnik-vtulochnyj-10-12yellow-10-0-kvmm-zhyoltyj-enext-s3036044"
+    },
+    {
+      "index": 282,
+      "sku": "BLACK 1",
+      "name": "Ізольований втулковий наконечник 1008.black 1,0 кв.мм, чорний \"E.NEXT\" s3036017",
+      "url": "https://ultra-svet.com/izolirovannyj-nakonechnik-vtulochnyj-1008black-1-0-kvmm-chyornyj-enext-s3036017"
+    }
+  ]
+}

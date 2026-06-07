@@ -1,0 +1,210 @@
+{
+  "generatedAt": "2026-06-07T15:10:53.334Z",
+  "brand": "LEMANSO",
+  "mode": "configured_sources_strict_article",
+  "candidateRows": 256,
+  "totalEligibleRows": 256,
+  "analysis": {
+    "agentRowsInLemansoPathOrBrand": 3602,
+    "actualLemansoAgentRows": 3484,
+    "excludedOtherBrandRowsInLemansoFolder": 118,
+    "missingPhoto": 1866,
+    "missingPhotoInStock": 256,
+    "withArticleOrCode": 3316,
+    "strongArticleCandidates": 242
+  },
+  "processed": 246,
+  "found": 167,
+  "notFound": 79,
+  "skipped": 10,
+  "withPhotoAfter": 167,
+  "remainingFallback": 89,
+  "updatedPwa": 0,
+  "updatedAgent": 167,
+  "sourceStats": {
+    "manual-map": {
+      "searchPages": 0,
+      "productPages": 0,
+      "articleMatches": 0,
+      "brandMatches": 0,
+      "imagesFound": 0,
+      "errors": 0
+    },
+    "pwa-catalog": {
+      "searchPages": 0,
+      "productPages": 0,
+      "articleMatches": 101,
+      "brandMatches": 101,
+      "imagesFound": 101,
+      "errors": 0
+    },
+    "ultra-svet": {
+      "searchPages": 145,
+      "productPages": 48,
+      "articleMatches": 39,
+      "brandMatches": 39,
+      "imagesFound": 39,
+      "errors": 0
+    },
+    "epicentr": {
+      "searchPages": 102,
+      "productPages": 59,
+      "articleMatches": 27,
+      "brandMatches": 27,
+      "imagesFound": 27,
+      "errors": 4
+    },
+    "lemanso-official": {
+      "searchPages": 158,
+      "productPages": 0,
+      "articleMatches": 0,
+      "brandMatches": 0,
+      "imagesFound": 0,
+      "errors": 0
+    },
+    "tdp": {
+      "searchPages": 79,
+      "productPages": 2,
+      "articleMatches": 0,
+      "brandMatches": 0,
+      "imagesFound": 0,
+      "errors": 0
+    }
+  },
+  "examplesFound": [
+    {
+      "status": "found",
+      "article": "LM485",
+      "brand": "LEMANSO",
+      "name": "LED панель 5W 400LM 4500K коло чорний \"LEMANSO\" LM485",
+      "agentGuid": "E97B26A3-CA42-11E4-9DB7-BC5FF4F4F2AA",
+      "stock": "8",
+      "imageUrl": "https://ultra-svet.com/image/catalog/tovari/led-osveshtenie/led-paneli-i-downlight/led-paneli-dekorativnie/779-w-500x500.jpg",
+      "imageSource": "https://ultra-svet.com/led-panel-5w-400lm-4500k-belaya-lemanso-lm485",
+      "score": 98,
+      "title": "LED панель 5W 400LM 4500K коло біла \"LEMANSO\" LM485",
+      "reason": "pwa-catalog"
+    },
+    {
+      "status": "found",
+      "article": "LM486",
+      "brand": "LEMANSO",
+      "name": "LED панель 5W 400LM 4500K коло чорний \"LEMANSO\" LM486",
+      "agentGuid": "410EAE44-CBA7-11E4-841C-BC5FF4F4F2AA",
+      "stock": "10",
+      "imageUrl": "https://ultra-svet.com/image/catalog/tovari/led-osveshtenie/led-paneli-i-downlight/led-paneli-dekorativnie/bel.JPG",
+      "imageSource": "https://ultra-svet.com/led-panel-5w-400lm-4500k-belaya-lemanso-lm486",
+      "score": 98,
+      "title": "LED панель 5W 400LM 4500K коло біла \"LEMANSO\" LM486",
+      "reason": "pwa-catalog"
+    },
+    {
+      "status": "found",
+      "article": "LTL10074",
+      "brand": "LEMANSO",
+      "name": "Викрутка - індикатор напруги AC100-500V 3,0х140мм \"LEMANSO\" LTL10074",
+      "agentGuid": "8CB3E4D7-7907-11E8-B71A-BC5FF4F4F2AA",
+      "stock": "7",
+      "imageUrl": "https://cdn.27.ua/sc--media--prod/default/9f/b7/9b/9fb79b35-15b7-4527-8433-22c57fb6dbf6.jpg",
+      "imageSource": "https://epicentrk.ua/shop/mplc-indikator-naprugi-vikrutka-lemanso-100-500v-3-0x140-mm-ltl10074-1f056a27-5592-63e6-966f-c1b4a8698fb6.html",
+      "score": 107,
+      "title": "ᐉ Индикатор напряжения отвертка LEMANSO 100-500V 3,0x140 мм (LTL10074) • Купить в Киеве, Украине • Лучшая цена в Эпицентр",
+      "reason": "epicentr"
+    },
+    {
+      "status": "found",
+      "article": "LTL10069",
+      "brand": "LEMANSO",
+      "name": "Викрутка - індикатор напруги AC100-500V 3,5х155мм \"LEMANSO\" LTL10069",
+      "agentGuid": "8CB3E4D1-7907-11E8-B71A-BC5FF4F4F2AA",
+      "stock": "13",
+      "imageUrl": "https://cdn.27.ua/sc--media--prod/default/c1/66/2c/c1662c15-9e9a-4405-8a0b-f12473e8c277.jpg",
+      "imageSource": "https://epicentrk.ua/shop/mplc-vikrutka-indikator-naprugi-lemanso-ltl10069-100-500v-3-5x155-mm-8747-1ef9248e-8662-640c-af4a-59abb2f2932b.html",
+      "score": 107,
+      "title": "ᐉ Отвертка-индикатор напряжения Lemanso LTL10069 100-500V 3,5x155 мм (8747) • Купить в Киеве, Украине • Лучшая цена в Эпицентр",
+      "reason": "epicentr"
+    },
+    {
+      "status": "found",
+      "article": "LTL10068",
+      "brand": "LEMANSO",
+      "name": "Викрутка - індикатор напруги AC100-500V 3,5х140мм \"LEMANSO\" LTL10068",
+      "agentGuid": "8CB3E4CF-7907-11E8-B71A-BC5FF4F4F2AA",
+      "stock": "6",
+      "imageUrl": "https://cdn.27.ua/sc--media--prod/default/f3/c3/7a/f3c37a62-6075-4c27-ad44-a37a00833f6b.jpg",
+      "imageSource": "https://epicentrk.ua/shop/mplc-vikrutka-indikator-naprugi-lemanso-ltl10068-100-500v-3-5x140-mm-8746-1ef9248e-8626-6e02-9c9b-59abb2f2932b.html",
+      "score": 107,
+      "title": "ᐉ Отвертка-индикатор напряжения Lemanso LTL10068 100-500V 3,5x140 мм (8746) • Купить в Киеве, Украине • Лучшая цена в Эпицентр",
+      "reason": "epicentr"
+    }
+  ],
+  "examplesSkipped": [
+    {
+      "status": "skipped",
+      "article": "",
+      "brand": "LEMANSO",
+      "name": "Стенд под розетки \"LEMANSO\"",
+      "agentGuid": "2C8CFFBF-FA4B-11E5-9E27-BC5FF4F4F2AA",
+      "stock": "8",
+      "imageUrl": "",
+      "imageSource": "",
+      "score": "",
+      "title": "",
+      "reason": "article_not_found"
+    },
+    {
+      "status": "not_found",
+      "article": "931522",
+      "brand": "LEMANSO",
+      "name": "Ліхтарик LXLL99 \"LEMANSO\" 931522",
+      "agentGuid": "A19CB59C-ADA9-11F0-B106-BC5FF4F4F2AA",
+      "stock": "6",
+      "imageUrl": "",
+      "imageSource": "",
+      "score": "",
+      "title": "",
+      "reason": "no_strict_source_match"
+    },
+    {
+      "status": "not_found",
+      "article": "931516",
+      "brand": "LEMANSO",
+      "name": "Ліхтарик LXLL70 \"LEMANSO\" 931516",
+      "agentGuid": "A19CB59E-ADA9-11F0-B106-BC5FF4F4F2AA",
+      "stock": "10",
+      "imageUrl": "",
+      "imageSource": "",
+      "score": "",
+      "title": "",
+      "reason": "no_strict_source_match"
+    },
+    {
+      "status": "not_found",
+      "article": "LM875",
+      "brand": "LEMANSO",
+      "name": "Блок живлення тонкий метал для LED стрічки 100W 12V Преміум \"LEMANSO\" LM875",
+      "agentGuid": "2BB22B3C-AB31-11F0-8B95-BC5FF4F4F2AA",
+      "stock": "1",
+      "imageUrl": "",
+      "imageSource": "",
+      "score": "",
+      "title": "",
+      "reason": "no_strict_source_match"
+    },
+    {
+      "status": "not_found",
+      "article": "LM885",
+      "brand": "LEMANSO",
+      "name": "Блок живлення метал для LED стрічки 24V 200W 8,3A \"LEMANSO\" LM885",
+      "agentGuid": "789F0667-1C4F-11F1-BCFB-BC5FF4F4F2AA",
+      "stock": "1",
+      "imageUrl": "",
+      "imageSource": "",
+      "score": "",
+      "title": "",
+      "reason": "no_strict_source_match"
+    }
+  ],
+  "report": "C:\\Users\\user\\Documents\\ultra svet\\reports\\lemanso-photo-import-report.json",
+  "csv": "C:\\Users\\user\\Documents\\ultra svet\\reports\\lemanso-photo-import-report.csv"
+}

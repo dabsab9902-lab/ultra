@@ -77,11 +77,10 @@ export default function AccountPage() {
   >({});
 
   useEffect(() => {
-    setOrders(loadOrderHistory());
-  }, []);
-
-  useEffect(() => {
-    const syncClient = () => setClient(getClientSession());
+    const syncClient = () => {
+      setClient(getClientSession());
+      setOrders(loadOrderHistory());
+    };
     syncClient();
     window.addEventListener(CLIENT_PRICING_EVENT, syncClient);
     return () => window.removeEventListener(CLIENT_PRICING_EVENT, syncClient);

@@ -1,0 +1,101 @@
+
+> ultra-svet@0.1.0 predev
+> npm run ensure:env && node scripts/clean-pwa-dev.mjs
+
+
+> ultra-svet@0.1.0 ensure:env
+> node scripts/ensure-env.mjs
+
+
+> ultra-svet@0.1.0 dev
+> next dev -H 0.0.0.0
+
+   ▲ Next.js 15.5.18
+   - Local:        http://localhost:3000
+   - Network:      http://0.0.0.0:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ○ (pwa) PWA support is disabled.
+ ✓ Ready in 9.5s
+ ○ Compiling /api/products ...
+ ✓ Compiled /api/products in 2.7s (324 modules)
+ GET /api/products?q=28-001&limit=1&includeFilters=false 200 in 12450ms
+ GET /api/products?q=28-001&limit=1&includeFilters=false 200 in 124ms
+ ○ Compiling / ...
+ ✓ Compiled / in 7.1s (672 modules)
+ ✓ Compiled in 1596ms (260 modules)
+ GET / 200 in 9052ms
+ ○ Compiling /api/client/me ...
+ ✓ Compiled /api/client/me in 1501ms (684 modules)
+ GET /api/client/me 200 in 2206ms
+ ○ Compiling /categories ...
+ ✓ Compiled /categories in 1362ms (694 modules)
+ GET /categories 200 in 1718ms
+ ○ Compiling /api/products/categories ...
+ ✓ Compiled /api/products/categories in 754ms (696 modules)
+ GET /api/products/categories 200 in 1000ms
+ GET /api/products/categories 200 in 72ms
+ ○ Compiling /agentplus-tree ...
+ ✓ Compiled /agentplus-tree in 2.4s (753 modules)
+ GET /agentplus-tree 200 in 2892ms
+ ○ Compiling /api/agentplus-tree ...
+ ✓ Compiled /api/agentplus-tree in 1151ms (757 modules)
+ GET /api/agentplus-tree 200 in 1462ms
+ GET /agentplus-tree?groupId=300188F6-9D71-11E3-822B-902B34A4365E 200 in 390ms
+ GET /agentplus-tree?groupId=F583F061-2F03-11E7-A733-BC5FF4F4F2AA 200 in 95ms
+ GET /agentplus-tree?groupId=9938007C-0351-11E4-9F08-902B34A4365E 200 in 109ms
+ GET /agentplus-tree?groupId=A794BDC6-1967-11E4-BCCA-08606ED9504B 200 in 99ms
+ GET /agentplus-tree?groupId=6016D1F4-53AC-11E4-AD63-BC5FF4F4F2AA 200 in 101ms
+ GET /agentplus-tree?groupId=00259E9B-CBE5-11E4-841C-BC5FF4F4F2AA 200 in 143ms
+ GET /agentplus-tree?groupId=940BEC70-C999-11E4-9881-BC5FF4F4F2AA 200 in 105ms
+ GET /api/agentplus-tree?groupId=940BEC70-C999-11E4-9881-BC5FF4F4F2AA&page=1&limit=40 200 in 839ms
+ GET /agentplus-tree?groupId=00259E9B-CBE5-11E4-841C-BC5FF4F4F2AA 200 in 829ms
+ GET /agentplus-tree?groupId=00259E9B-CBE5-11E4-841C-BC5FF4F4F2AA 200 in 205ms
+ GET /agentplus-tree?groupId=300188F6-9D71-11E3-822B-902B34A4365E 200 in 97ms
+ GET /agentplus-tree?groupId=B0F03500-2577-11EA-A786-BC5FF4F4F2AA 200 in 98ms
+ GET /agentplus-tree?groupId=02603F0B-8225-11E5-BEE8-BC5FF4F4F2AA 200 in 98ms
+ GET /agentplus-tree?groupId=A823C6B2-60EE-11E5-B381-BC5FF4F4F2AA 200 in 96ms
+ GET /agentplus-tree?groupId=375558D6-860C-11E5-AF27-BC5FF4F4F2AA 200 in 106ms
+ GET /agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA 200 in 116ms
+ GET /api/agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA&page=1&limit=40 200 in 103ms
+ ○ Compiling /cart ...
+ ✓ Compiled /cart in 2.4s (741 modules)
+ GET /cart 200 in 2854ms
+ ○ Compiling /catalog ...
+ ✓ Compiled /catalog in 2.2s (763 modules)
+ GET /catalog 200 in 2571ms
+ GET /agentplus-tree 200 in 148ms
+ ○ Compiling /api/agentplus-tree ...
+ ✓ Compiled /api/agentplus-tree in 686ms (501 modules)
+ GET /api/agentplus-tree 200 in 1209ms
+ GET /agentplus-tree?groupId=300188F6-9D71-11E3-822B-902B34A4365E 200 in 310ms
+ GET /agentplus-tree?groupId=B0F03500-2577-11EA-A786-BC5FF4F4F2AA 200 in 90ms
+ GET /agentplus-tree?groupId=02603F0B-8225-11E5-BEE8-BC5FF4F4F2AA 200 in 92ms
+ GET /agentplus-tree?groupId=A823C6B2-60EE-11E5-B381-BC5FF4F4F2AA 200 in 95ms
+ GET /agentplus-tree?groupId=375558D6-860C-11E5-AF27-BC5FF4F4F2AA 200 in 94ms
+ GET /api/agentplus-tree?groupId=7880ADB7-E56A-11E3-A0C8-902B34A4365E&limit=40 200 in 1310ms
+ GET /api/agentplus-tree?groupId=375558D6-860C-11E5-AF27-BC5FF4F4F2AA&limit=40 200 in 1823ms
+ GET /agentplus-tree?groupId=7880ADB7-E56A-11E3-A0C8-902B34A4365E 200 in 1936ms
+ GET /api/agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA&limit=100 200 in 131ms
+ GET /agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA 200 in 404ms
+ ○ Compiling /api/agentplus-tree ...
+ ✓ Compiled /api/agentplus-tree in 3.2s (486 modules)
+ ✓ Compiled (490 modules)
+ GET /api/client/me 200 in 5485ms
+ GET /api/agentplus-tree 200 in 5315ms
+   ▲ Next.js 15.5.18
+   - Local:        http://localhost:3000
+   - Network:      http://0.0.0.0:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ○ (pwa) PWA support is disabled.
+ ✓ Ready in 11.4s
+ ○ Compiling /api/agentplus-tree ...
+ ✓ Compiled /api/agentplus-tree in 10.7s (324 modules)
+ ○ Compiling /agentplus-tree ...
+ ✓ Compiled /agentplus-tree in 14s (764 modules)
+ GET /agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA 200 in 16029ms
+ ✓ Compiled in 1807ms (286 modules)
+ GET /api/agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA&limit=5 200 in 16867ms

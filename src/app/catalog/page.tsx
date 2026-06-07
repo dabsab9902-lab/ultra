@@ -81,6 +81,7 @@ function CatalogContent() {
   const priceMinParam = searchParams.get("priceMin") ?? "";
   const priceMaxParam = searchParams.get("priceMax") ?? "";
   const inStockParam = searchParams.get("inStock");
+  const showPreorderParam = searchParams.get("showPreorder") === "true";
   const specParamKey = searchParams.getAll("spec").join("\u001e");
   const activeSpecs = useMemo(
     () => parseSpecParamKey(specParamKey),
@@ -123,6 +124,7 @@ function CatalogContent() {
   const [priceMinInput, setPriceMinInput] = useState(priceMinParam);
   const [priceMaxInput, setPriceMaxInput] = useState(priceMaxParam);
   const [inStockOnly, setInStockOnly] = useState(inStockParam === "true");
+  const [showPreorder, setShowPreorder] = useState(showPreorderParam);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [quickProducts, setQuickProducts] = useState<QuickProductsState>({
     orderCount: 0,
@@ -140,13 +142,15 @@ function CatalogContent() {
     return () => window.removeEventListener(CLIENT_PRICING_EVENT, syncClient);
   }, []);
 
-  useEffect(() => {
+  const refreshQuickProducts = useCallback(() => {
     let cancelled = false;
     const orders = loadOrderHistory();
 
     if (orders.length < MIN_QUICK_ORDERS) {
       setQuickProducts({ orderCount: orders.length, productIds: [] });
-      return;
+      return () => {
+        cancelled = true;
+      };
     }
 
     const fallback = buildQuickProductsState(orders);
@@ -169,6 +173,14 @@ function CatalogContent() {
       cancelled = true;
     };
   }, []);
+
+  useEffect(() => refreshQuickProducts(), [refreshQuickProducts]);
+
+  useEffect(() => {
+    window.addEventListener(CLIENT_PRICING_EVENT, refreshQuickProducts);
+    return () =>
+      window.removeEventListener(CLIENT_PRICING_EVENT, refreshQuickProducts);
+  }, [refreshQuickProducts]);
 
   suggestOpenRef.current = suggestOpen && suggestions.length > 0;
   const quickProductsAvailable =
@@ -203,6 +215,7 @@ function CatalogContent() {
     priceMin: parseOptionalNumber(priceMinInput),
     priceMax: parseOptionalNumber(priceMaxInput),
     inStock: inStockOnly ? true : undefined,
+    includePreorder: showPreorder,
     specs: activeSpecsKey ? activeSpecs : undefined,
     featured: activeTab === "promo",
     preset: activePreset,
@@ -241,6 +254,7 @@ function CatalogContent() {
       priceMin: priceMinInput,
       priceMax: priceMaxInput,
       inStock: inStockOnly,
+      showPreorder,
       specs: activeSpecs,
     });
 
@@ -258,6 +272,7 @@ function CatalogContent() {
     activeSpecs,
     activeTab,
     inStockOnly,
+    showPreorder,
     priceMaxInput,
     priceMinInput,
     submittedSearch,
@@ -290,6 +305,7 @@ function CatalogContent() {
           priceMinInput ? `priceMin:${priceMinInput}` : "",
           priceMaxInput ? `priceMax:${priceMaxInput}` : "",
           inStockOnly ? "inStock:true" : "",
+          showPreorder ? "showPreorder:true" : "",
           activeTab === "promo" ? "featured" : "",
           activeTab === "seasonal" ? "seasonal" : "",
           activeTab === "quick" ? `ids:${quickProducts.productIds.join(",")}` : "",
@@ -309,6 +325,7 @@ function CatalogContent() {
       activeSpecsKey,
       activeTab,
       inStockOnly,
+      showPreorder,
       priceMaxInput,
       priceMinInput,
       quickProducts.productIds,
@@ -458,6 +475,10 @@ function CatalogContent() {
     setInStockOnly(inStockParam === "true");
   }, [inStockParam]);
 
+  useEffect(() => {
+    setShowPreorder(showPreorderParam);
+  }, [showPreorderParam]);
+
   const submitSearch = useCallback(() => {
     const normalized = normalizeSearchQuery(inputValue);
     setInputValue(normalized);
@@ -550,6 +571,7 @@ function CatalogContent() {
       priceMin?: string;
       priceMax?: string;
       inStock?: boolean;
+      showPreorder?: boolean;
       spec?: { key: string; value: string };
       categoryPath?: string[];
       clearFilters?: boolean;
@@ -590,6 +612,7 @@ function CatalogContent() {
         setPriceMinInput("");
         setPriceMaxInput("");
         setInStockOnly(false);
+        setShowPreorder(false);
         params.delete("brand");
         params.delete("series");
         params.delete("design");
@@ -598,6 +621,7 @@ function CatalogContent() {
         params.delete("priceMin");
         params.delete("priceMax");
         params.delete("inStock");
+        params.delete("showPreorder");
         params.delete("spec");
       } else {
         if (updates.brand !== undefined) {
@@ -639,6 +663,11 @@ function CatalogContent() {
           setInStockOnly(updates.inStock);
           if (updates.inStock) params.set("inStock", "true");
           else params.delete("inStock");
+        }
+        if (updates.showPreorder !== undefined) {
+          setShowPreorder(updates.showPreorder);
+          if (updates.showPreorder) params.set("showPreorder", "true");
+          else params.delete("showPreorder");
         }
         if (updates.spec) {
           const nextSpecs = { ...activeSpecs };
@@ -713,6 +742,7 @@ function CatalogContent() {
     setPriceMinInput("");
     setPriceMaxInput("");
     setInStockOnly(false);
+    setShowPreorder(false);
     setFiltersOpen(false);
     setActiveTab(tab);
     router.replace(`/catalog?tab=${encodeURIComponent(tab)}`, {
@@ -875,6 +905,7 @@ function CatalogContent() {
     priceMinInput,
     priceMaxInput,
     inStockOnly ? "stock" : "",
+    showPreorder ? "preorder" : "",
     ...Object.values(activeSpecs),
   ].filter(Boolean).length;
 
@@ -1027,6 +1058,17 @@ function CatalogContent() {
               }`}
             >
               Фильтры{activeFilterCount > 0 ? ` · ${activeFilterCount}` : ""}
+            </button>
+            <button
+              type="button"
+              onClick={() => updateCatalogUrl({ showPreorder: !showPreorder })}
+              className={`shrink-0 rounded-md px-2.5 py-1.5 text-xs font-semibold ${
+                showPreorder
+                  ? "bg-amber-500 text-white"
+                  : "bg-white text-slate-600 ring-1 ring-slate-200"
+              }`}
+            >
+              Показывать под заказ
             </button>
           </div>
 
@@ -1238,6 +1280,7 @@ function CatalogContent() {
                 key={product.id}
                 product={product}
                 returnHref={catalogReturnHref}
+                onOpen={commitCatalogStateBeforeProductOpen}
               />
             ))}
           </div>
@@ -1427,6 +1470,7 @@ function appendFilterParams(
     priceMin?: string;
     priceMax?: string;
     inStock?: boolean;
+    showPreorder?: boolean;
     specs?: Record<string, string>;
   }
 ) {
@@ -1453,6 +1497,9 @@ function appendFilterParams(
 
   if (filters.inStock) params.set("inStock", "true");
   else params.delete("inStock");
+
+  if (filters.showPreorder) params.set("showPreorder", "true");
+  else params.delete("showPreorder");
 
   replaceSpecParams(params, filters.specs ?? {});
 }

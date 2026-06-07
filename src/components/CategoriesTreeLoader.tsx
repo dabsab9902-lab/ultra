@@ -60,6 +60,12 @@ export function CategoriesTreeLoader() {
         >
           Поиск
         </Link>
+        <Link
+          href="/agentplus-tree"
+          className="rounded-lg bg-white px-3 py-2 text-xs font-bold text-slate-700 ring-1 ring-slate-200 active:bg-slate-50"
+        >
+          1С
+        </Link>
       </div>
 
       {error ? (
