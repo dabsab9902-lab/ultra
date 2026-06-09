@@ -84,6 +84,7 @@ export interface CatalogQuery {
   limit?: number;
   offset?: number;
   includeFilters?: boolean;
+  sort?: import("@/lib/product-sort").ProductSort;
   featured?: boolean;
   preset?: "seasonal";
   ids?: string[];

@@ -21,6 +21,11 @@ interface NewClientDraft {
   active: boolean;
 }
 
+interface BrandOption {
+  name: string;
+  count: number;
+}
+
 const EMPTY_CLIENT: NewClientDraft = {
   name: "",
   phone: "",
@@ -37,6 +42,7 @@ export default function AdminClientsPage() {
   const [draft, setDraft] = useState(EMPTY_CLIENT);
   const [accessText, setAccessText] = useState("");
   const [copyStatus, setCopyStatus] = useState("");
+  const [brandOptions, setBrandOptions] = useState<BrandOption[]>([]);
 
   const loadClients = useCallback(async () => {
     setLoading(true);
@@ -71,6 +77,23 @@ export default function AdminClientsPage() {
   useEffect(() => {
     loadClients();
   }, [loadClients]);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/products/brands", { cache: "no-store" })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data: { brands?: BrandOption[] } | null) => {
+        if (!cancelled && Array.isArray(data?.brands)) {
+          setBrandOptions(data.brands);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setBrandOptions([]);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const createClient = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -324,6 +347,7 @@ export default function AdminClientsPage() {
               <ClientCard
                 key={client.id}
                 client={client}
+                brandOptions={brandOptions}
                 saving={savingId === client.id}
                 onChange={updateLocalClient}
                 onSave={saveClient}
@@ -338,17 +362,20 @@ export default function AdminClientsPage() {
 
 function ClientCard({
   client,
+  brandOptions,
   saving,
   onChange,
   onSave,
 }: {
   client: ClientRecord;
+  brandOptions: BrandOption[];
   saving: boolean;
   onChange: (client: ClientRecord) => void;
   onSave: (client: ClientRecord) => void;
 }) {
   const [brandDraft, setBrandDraft] = useState("");
   const [percentDraft, setPercentDraft] = useState("");
+  const allBrandOptions = mergeBrandOptions(brandOptions, client.discounts);
 
   const update = (patch: Partial<ClientRecord>) => {
     onChange({ ...client, ...patch });
@@ -435,14 +462,20 @@ function ClientCard({
         <div className="mt-2 space-y-2">
           {client.discounts.map((discount, index) => (
             <div key={`${discount.brand}-${index}`} className="grid grid-cols-[1fr_80px_36px] gap-2">
-              <input
+              <select
                 value={discount.brand}
                 onChange={(event) =>
                   updateDiscount(index, { brand: event.target.value })
                 }
                 className="h-10 rounded-lg border-0 bg-slate-50 px-3 text-sm ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-600"
-                placeholder="Бренд"
-              />
+                aria-label="Бренд скидки"
+              >
+                {allBrandOptions.map((brand) => (
+                  <option key={brand} value={brand}>
+                    {brand}
+                  </option>
+                ))}
+              </select>
               <input
                 value={discount.percent}
                 onChange={(event) =>
@@ -465,12 +498,19 @@ function ClientCard({
         </div>
 
         <div className="mt-2 grid grid-cols-[1fr_80px_72px] gap-2">
-          <input
+          <select
             value={brandDraft}
             onChange={(event) => setBrandDraft(event.target.value)}
             className="h-10 rounded-lg border-0 bg-slate-50 px-3 text-sm ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-600"
-            placeholder="Lemanso"
-          />
+            aria-label="Выберите бренд"
+          >
+            <option value="">Бренд</option>
+            {allBrandOptions.map((brand) => (
+              <option key={brand} value={brand}>
+                {brand}
+              </option>
+            ))}
+          </select>
           <input
             value={percentDraft}
             onChange={(event) => setPercentDraft(event.target.value)}
@@ -511,6 +551,24 @@ function buildClientAccessText(client: ClientRecord) {
     `\u0442\u0435\u043b\u0435\u0444\u043e\u043d: ${client.phone}`,
     `\u043a\u043e\u0434 \u0434\u043e\u0441\u0442\u0443\u043f\u0430: ${client.code}`,
   ].join("\n");
+}
+
+function mergeBrandOptions(
+  brands: BrandOption[],
+  discounts: ClientDiscount[]
+) {
+  const values = new Map<string, string>();
+  for (const brand of brands) {
+    const name = brand.name.trim();
+    if (name) values.set(name.toLocaleLowerCase("ru"), name);
+  }
+  for (const discount of discounts) {
+    const name = discount.brand.trim();
+    if (name) values.set(name.toLocaleLowerCase("ru"), name);
+  }
+  return Array.from(values.values()).sort((a, b) =>
+    a.localeCompare(b, "ru", { numeric: true })
+  );
 }
 
 async function syncLocalClientsToServer(clients: ClientRecord[]) {

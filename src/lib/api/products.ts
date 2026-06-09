@@ -1,4 +1,5 @@
 import type { CatalogPage, Product } from "@/lib/types";
+import type { ProductSort } from "@/lib/product-sort";
 import {
   appendClientPricingCacheBuster,
   isClientPricingActive,
@@ -23,6 +24,7 @@ export interface FetchProductsParams {
   limit?: number;
   offset?: number;
   includeFilters?: boolean;
+  sort?: ProductSort;
   featured?: boolean;
   preset?: "seasonal";
   ids?: string[];
@@ -64,6 +66,7 @@ export async function fetchProducts(
   if (params.limit) sp.set("limit", String(params.limit));
   if (Number.isFinite(params.offset)) sp.set("offset", String(params.offset));
   if (params.includeFilters === false) sp.set("includeFilters", "false");
+  if (params.sort && params.sort !== "default") sp.set("sort", params.sort);
   if (params.featured) sp.set("featured", "true");
   if (params.preset) sp.set("preset", params.preset);
   if (params.ids?.length) sp.set("ids", params.ids.join(","));

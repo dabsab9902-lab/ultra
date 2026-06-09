@@ -57,6 +57,8 @@ export default function AdminClientCardPage() {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [brandQuery, setBrandQuery] = useState("");
+  const [discountBrandDraft, setDiscountBrandDraft] = useState("");
+  const [discountPercentDraft, setDiscountPercentDraft] = useState("");
   const [newCode, setNewCode] = useState("");
   const [line, setLine] = useState(EMPTY_LINE);
   const [proposalLine, setProposalLine] = useState(EMPTY_LINE);
@@ -151,6 +153,19 @@ export default function AdminClientCardPage() {
       (item) => item.brand.toLocaleLowerCase("ru") === brand.toLocaleLowerCase("ru")
     );
     return discount?.percent ? String(discount.percent) : "";
+  };
+
+  const addDiscount = () => {
+    const brand = discountBrandDraft.trim();
+    const percent = Number(discountPercentDraft);
+    if (!brand || !Number.isFinite(percent) || percent <= 0) return;
+    setDiscountPercent(brand, String(percent));
+    setDiscountBrandDraft("");
+    setDiscountPercentDraft("");
+  };
+
+  const removeDiscount = (brand: string) => {
+    setDiscountPercent(brand, "");
   };
 
   const runAction = async (action: string, payload: Record<string, unknown> = {}) => {
@@ -448,6 +463,70 @@ export default function AdminClientCardPage() {
               {draft.discounts.length} активных
             </span>
           </div>
+          <div className="mt-3 grid grid-cols-[1fr_76px_88px] gap-2">
+            <select
+              value={discountBrandDraft}
+              onChange={(event) => setDiscountBrandDraft(event.target.value)}
+              className="h-10 rounded-lg border-0 bg-slate-50 px-2 text-sm font-semibold text-slate-800 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-600"
+              aria-label="Выберите бренд"
+            >
+              <option value="">Бренд</option>
+              {details.brands.map((row) => (
+                <option key={row.brand} value={row.brand}>
+                  {row.brand}
+                </option>
+              ))}
+            </select>
+            <input
+              value={discountPercentDraft}
+              onChange={(event) => setDiscountPercentDraft(event.target.value)}
+              inputMode="decimal"
+              className="h-10 rounded-lg border-0 bg-slate-50 px-2 text-right text-sm font-bold tabular-nums ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-600"
+              placeholder="%"
+              aria-label="Процент скидки"
+            />
+            <button
+              type="button"
+              onClick={addDiscount}
+              className="h-10 rounded-lg bg-slate-900 text-xs font-bold text-white active:bg-slate-700"
+            >
+              Добавить
+            </button>
+          </div>
+
+          {draft.discounts.length > 0 && (
+            <div className="mt-3 space-y-2 rounded-lg bg-slate-50 p-2 ring-1 ring-slate-100">
+              {draft.discounts.map((discount) => (
+                <div
+                  key={discount.brand}
+                  className="grid grid-cols-[1fr_76px_36px] gap-2"
+                >
+                  <div className="min-w-0 rounded-lg bg-white px-3 py-2 ring-1 ring-slate-100">
+                    <p className="truncate text-sm font-bold text-slate-900">
+                      {discount.brand}
+                    </p>
+                  </div>
+                  <input
+                    value={getDraftDiscount(discount.brand)}
+                    onChange={(event) =>
+                      setDiscountPercent(discount.brand, event.target.value)
+                    }
+                    inputMode="decimal"
+                    className="h-10 rounded-lg border-0 bg-white px-2 text-right text-sm font-bold tabular-nums ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-600"
+                    aria-label={`Скидка ${discount.brand}`}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => removeDiscount(discount.brand)}
+                    className="h-10 rounded-lg bg-red-50 text-sm font-bold text-red-600 ring-1 ring-red-100 active:bg-red-100"
+                    aria-label={`Удалить скидку ${discount.brand}`}
+                  >
+                    ×
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
           <input
             value={brandQuery}
             onChange={(event) => setBrandQuery(event.target.value)}

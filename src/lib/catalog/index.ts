@@ -21,6 +21,10 @@ import {
   type CompactSearchEntry,
   type SearchSuggestion,
 } from "@/lib/catalog/search-index";
+import {
+  DEFAULT_PRODUCT_SORT,
+  sortCatalogProducts,
+} from "@/lib/product-sort";
 import { normalizeProductSearchText } from "@/lib/search/products";
 import type {
   CatalogFilters,
@@ -305,6 +309,7 @@ class ProductCatalog {
       limit = DEFAULT_LIMIT,
       offset,
       includeFilters = true,
+      sort = DEFAULT_PRODUCT_SORT,
     } = params;
 
     const safeLimit = Math.min(Math.max(1, limit), MAX_LIMIT);
@@ -332,8 +337,9 @@ class ProductCatalog {
       applyCategoryFilters: Boolean(queryNorm),
     });
 
-    const total = pool.length;
-    const items = pool.slice(safeOffset, safeOffset + safeLimit);
+    const sortedPool = sortCatalogProducts(pool, sort);
+    const total = sortedPool.length;
+    const items = sortedPool.slice(safeOffset, safeOffset + safeLimit);
     const hasMore = safeOffset + items.length < total;
 
     return {
@@ -350,6 +356,49 @@ class ProductCatalog {
           )
         : undefined,
     };
+  }
+
+  queryAll(params: CatalogQuery = {}): Product[] {
+    this.init();
+
+    const {
+      q = "",
+      categoryId = "all",
+      subcategory = "all",
+      categoryPath,
+      brand,
+      series,
+      design,
+      productType,
+      cableMark,
+      priceMin,
+      priceMax,
+      inStock,
+      includePreorder = true,
+      specs,
+      sort = DEFAULT_PRODUCT_SORT,
+    } = params;
+
+    const queryNorm = q.trim();
+    const basePool = this.selectBasePool(params);
+    const pool = applyProductFilters(basePool, {
+      categoryId,
+      subcategory,
+      categoryPath,
+      brand,
+      series,
+      design,
+      productType,
+      cableMark,
+      priceMin,
+      priceMax,
+      inStock,
+      includePreorder,
+      specs,
+      applyCategoryFilters: Boolean(queryNorm),
+    });
+
+    return sortCatalogProducts(pool, sort);
   }
 
   private getCachedFilters(

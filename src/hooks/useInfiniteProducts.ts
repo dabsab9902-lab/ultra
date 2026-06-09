@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { CatalogFilters, Product } from "@/lib/types";
+import type { ProductSort } from "@/lib/product-sort";
 import { fetchProducts } from "@/lib/api/products";
 import { CLIENT_PRICING_EVENT } from "@/lib/client-pricing-session";
 import {
@@ -32,6 +33,7 @@ interface UseInfiniteProductsOptions {
   preset?: "seasonal";
   ids?: string[];
   clientId?: string;
+  sort?: ProductSort;
   enabled?: boolean;
 }
 
@@ -54,6 +56,7 @@ export function useInfiniteProducts({
   preset,
   ids,
   clientId,
+  sort = "default",
   enabled = true,
 }: UseInfiniteProductsOptions) {
   const [items, setItems] = useState<Product[]>([]);
@@ -95,6 +98,7 @@ export function useInfiniteProducts({
       preset ?? "",
       idsKey ? `ids:${idsKey}` : "",
       clientId ? `client:${clientId}` : "",
+      sort !== "default" ? `sort:${sort}` : "",
     ]
       .filter(Boolean)
       .join("|"),
@@ -138,6 +142,7 @@ export function useInfiniteProducts({
           preset,
           ids: idsKey ? idsKey.split(",") : undefined,
           clientId,
+          sort,
           signal: controller.signal,
         });
 
@@ -205,6 +210,7 @@ export function useInfiniteProducts({
       preset,
       idsKey,
       clientId,
+      sort,
       enabled,
       queryKey,
     ]

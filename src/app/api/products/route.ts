@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { catalog } from "@/lib/catalog";
 import { toPublicClient } from "@/lib/clients";
+import {
+  DEFAULT_PRODUCT_SORT,
+  normalizeProductSort,
+  sortCatalogProducts,
+} from "@/lib/product-sort";
 import { applyClientPrices } from "@/lib/pricing";
 import {
   ADMIN_SESSION_COOKIE,
@@ -12,7 +17,7 @@ import {
   CLIENT_SESSION_COOKIE,
   readClients,
 } from "@/lib/server/clients-store";
-import type { Product } from "@/lib/types";
+import type { CatalogQuery, Product } from "@/lib/types";
 
 export const runtime = "nodejs";
 const CATEGORY_PATH_SEPARATOR = "\u001f";
@@ -43,6 +48,7 @@ export async function GET(request: NextRequest) {
   const limit = parsePositiveInt(searchParams.get("limit"), 20);
   const offset = parseOptionalOffset(searchParams.get("offset"));
   const includeFilters = searchParams.get("includeFilters") !== "false";
+  const sort = normalizeProductSort(searchParams.get("sort"));
   const featured = searchParams.get("featured") === "true";
   const preset = searchParams.get("preset") === "seasonal" ? "seasonal" : undefined;
   const idsParam = searchParams.get("ids");
@@ -52,7 +58,7 @@ export async function GET(request: NextRequest) {
     ? idsParam.split(",").map((id) => id.trim()).filter(Boolean).slice(0, 100)
     : undefined;
 
-  const result = catalog.query({
+  const query: CatalogQuery = {
     q,
     categoryId,
     subcategory,
@@ -71,10 +77,47 @@ export async function GET(request: NextRequest) {
     limit,
     offset,
     includeFilters,
+    sort,
     featured,
     preset,
     ids,
-  });
+  };
+
+  if (isPriceSort(sort) && hasPersonalizedPricing(request, clientId)) {
+    const allItems = catalog.queryAll({
+      ...query,
+      sort: DEFAULT_PRODUCT_SORT,
+    });
+    const pricedItems = clientId
+      ? await priceProductsForAdminClient(allItems, request, clientId)
+      : await priceProductsForRequest(allItems, request);
+    const sortedItems = sortCatalogProducts(pricedItems, sort);
+    const safeLimit = Math.min(Math.max(1, limit), 100);
+    const safePage = Math.max(1, page);
+    const safeOffset =
+      offset !== undefined ? offset : (safePage - 1) * safeLimit;
+    const items = sortedItems.slice(safeOffset, safeOffset + safeLimit);
+    const total = sortedItems.length;
+
+    return NextResponse.json(
+      {
+        items,
+        total,
+        page: safePage,
+        limit: safeLimit,
+        hasMore: safeOffset + items.length < total,
+        filters: includeFilters ? catalog.getFilters(query) : undefined,
+        catalogTotal: catalog.getTotalCount(),
+      },
+      {
+        headers: {
+          "Cache-Control": getCacheControl(request, clientId),
+        },
+      }
+    );
+  }
+
+  const result = catalog.query(query);
   const items = clientId
     ? await priceProductsForAdminClient(result.items, request, clientId)
     : await priceProductsForRequest(result.items, request);
@@ -91,6 +134,18 @@ export async function GET(request: NextRequest) {
         "Cache-Control": getCacheControl(request, clientId),
       },
     }
+  );
+}
+
+function isPriceSort(sort: string) {
+  return sort === "price-asc" || sort === "price-desc";
+}
+
+function hasPersonalizedPricing(request: NextRequest, clientId: string) {
+  return (
+    Boolean(clientId) ||
+    Boolean(request.cookies.get(CLIENT_DEMO_SESSION_COOKIE)?.value) ||
+    Boolean(request.cookies.get(CLIENT_SESSION_COOKIE)?.value)
   );
 }
 

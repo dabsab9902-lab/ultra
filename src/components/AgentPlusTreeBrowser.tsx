@@ -7,6 +7,12 @@ import type {
   AgentPlusTreeProductRow,
 } from "@/lib/agentplus-tree";
 import { formatPrice } from "@/lib/format";
+import {
+  DEFAULT_PRODUCT_SORT,
+  PRODUCT_SORT_OPTIONS,
+  normalizeProductSort,
+  type ProductSort,
+} from "@/lib/product-sort";
 import { ProductListRow } from "@/components/ProductListRow";
 import { StockBadge } from "@/components/StockBadge";
 
@@ -44,6 +50,7 @@ export function AgentPlusTreeBrowser({
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const activeGroupId = searchParams.get("groupId") ?? "";
+  const activeSort = normalizeProductSort(searchParams.get("sort"));
   const [roots, setRoots] = useState<AgentPlusTreeNode[]>([]);
   const [items, setItems] = useState<AgentPlusTreeProductRow[]>([]);
   const [treeLoading, setTreeLoading] = useState(true);
@@ -123,14 +130,26 @@ export function AgentPlusTreeBrowser({
 
   const navigateToGroup = useCallback(
     (groupId: string) => {
-      const href = groupId ? groupHref(pathname, groupId) : pathname;
+      const href = groupHref(pathname, groupId, activeSort);
       setItems([]);
       setPage(1);
       setHasMore(false);
       setProductsLoading(false);
       router.push(href, { scroll: true });
     },
-    [pathname, router]
+    [activeSort, pathname, router]
+  );
+
+  const updateSort = useCallback(
+    (value: string) => {
+      const sort = normalizeProductSort(value);
+      setItems([]);
+      setPage(1);
+      setHasMore(false);
+      setProductsLoading(false);
+      router.replace(groupHref(pathname, activeGroupId, sort), { scroll: false });
+    },
+    [activeGroupId, pathname, router]
   );
 
   const goBackLevel = () => {
@@ -148,6 +167,9 @@ export function AgentPlusTreeBrowser({
           page: String(nextPage),
           limit: String(PAGE_LIMIT),
         });
+        if (activeSort !== DEFAULT_PRODUCT_SORT) {
+          params.set("sort", activeSort);
+        }
         const response = await fetch(`/api/agentplus-tree?${params}`, {
           cache: "no-store",
         });
@@ -165,7 +187,7 @@ export function AgentPlusTreeBrowser({
         setProductsLoading(false);
       }
     },
-    []
+    [activeSort]
   );
 
   useEffect(() => {
@@ -190,13 +212,14 @@ export function AgentPlusTreeBrowser({
   }, [
     activeGroupId,
     activeNode,
+    activeSort,
     isProductsView,
     loadGroupProducts,
   ]);
 
   const currentHref = useMemo(
-    () => (activeGroupId ? groupHref(pathname, activeGroupId) : pathname),
-    [activeGroupId, pathname]
+    () => groupHref(pathname, activeGroupId, activeSort),
+    [activeGroupId, activeSort, pathname]
   );
 
   const showMissingGroup =
@@ -222,6 +245,8 @@ export function AgentPlusTreeBrowser({
       )}
 
       <Breadcrumbs items={breadcrumbs} onNavigate={navigateToGroup} />
+
+      <SortControl value={activeSort} onChange={updateSort} />
 
       {activeNode && (
         <button
@@ -265,6 +290,34 @@ export function AgentPlusTreeBrowser({
         />
       )}
     </div>
+  );
+}
+
+function SortControl({
+  value,
+  onChange,
+}: {
+  value: ProductSort;
+  onChange: (value: string) => void;
+}) {
+  return (
+    <label className="block rounded-lg bg-white px-3 py-2 ring-1 ring-slate-200">
+      <span className="text-[11px] font-bold uppercase tracking-wide text-slate-500">
+        Сортировка
+      </span>
+      <select
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+        className="mt-1 h-10 w-full rounded-lg border-0 bg-slate-50 px-2 text-sm font-semibold text-slate-800 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-600"
+        aria-label="Сортировка товаров"
+      >
+        {PRODUCT_SORT_OPTIONS.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </label>
   );
 }
 
@@ -533,8 +586,12 @@ function getNodeChain(
   return chain;
 }
 
-function groupHref(pathname: string, groupId: string) {
-  return `${pathname}?groupId=${encodeURIComponent(groupId)}`;
+function groupHref(pathname: string, groupId: string, sort: ProductSort) {
+  const params = new URLSearchParams();
+  if (groupId) params.set("groupId", groupId);
+  if (sort !== DEFAULT_PRODUCT_SORT) params.set("sort", sort);
+  const qs = params.toString();
+  return qs ? `${pathname}?${qs}` : pathname;
 }
 
 function countLabel(value = 0) {

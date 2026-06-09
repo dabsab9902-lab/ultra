@@ -295,9 +295,17 @@ export function OfflineClientDetailsClient({
               )}
 
               {onlineClient?.agentPlusClientId && (
-                <p className="mt-2 text-xs font-medium text-emerald-700">
-                  Связан с онлайн-клиентом: {onlineClient.name}
-                </p>
+                <div className="mt-2 rounded-lg bg-emerald-50 p-3 ring-1 ring-emerald-100">
+                  <p className="text-xs font-medium text-emerald-700">
+                    Связан с онлайн-клиентом: {onlineClient.name}
+                  </p>
+                  <Link
+                    href={`/admin/clients/${onlineClient.id}`}
+                    className="mt-2 flex min-h-10 items-center justify-center rounded-lg bg-white px-3 text-xs font-bold text-emerald-800 ring-1 ring-emerald-200 active:bg-emerald-100"
+                  >
+                    Настроить скидки по брендам
+                  </Link>
+                </div>
               )}
               {message && (
                 <p className="mt-2 text-xs font-bold text-emerald-700">{message}</p>

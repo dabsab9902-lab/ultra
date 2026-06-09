@@ -99,3 +99,11 @@
  GET /agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA 200 in 16029ms
  ✓ Compiled in 1807ms (286 modules)
  GET /api/agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA&limit=5 200 in 16867ms
+ GET /agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA 200 in 183ms
+ GET /api/agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA&page=1&limit=40 200 in 111ms
+ GET /agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA 200 in 456ms
+ ○ Compiling /api/client/me ...
+ ✓ Compiled /api/client/me in 2.6s (743 modules)
+ GET /api/client/me 200 in 2790ms
+ GET /api/agentplus-tree 200 in 2829ms
+ GET /api/agentplus-tree?groupId=FB4CE32F-8635-11E5-AF27-BC5FF4F4F2AA&page=1&limit=40 200 in 404ms

@@ -23,6 +23,12 @@ import { useCart } from "@/context/CartContext";
 import { fetchProducts } from "@/lib/api/products";
 import { formatPrice } from "@/lib/format";
 import {
+  DEFAULT_PRODUCT_SORT,
+  PRODUCT_SORT_OPTIONS,
+  normalizeProductSort,
+  type ProductSort,
+} from "@/lib/product-sort";
+import {
   loadOrderHistory,
   type OrderSnapshot,
 } from "@/lib/order-history";
@@ -82,6 +88,7 @@ function CatalogContent() {
   const priceMaxParam = searchParams.get("priceMax") ?? "";
   const inStockParam = searchParams.get("inStock");
   const showPreorderParam = searchParams.get("showPreorder") === "true";
+  const sortParam = normalizeProductSort(searchParams.get("sort"));
   const specParamKey = searchParams.getAll("spec").join("\u001e");
   const activeSpecs = useMemo(
     () => parseSpecParamKey(specParamKey),
@@ -125,6 +132,7 @@ function CatalogContent() {
   const [priceMaxInput, setPriceMaxInput] = useState(priceMaxParam);
   const [inStockOnly, setInStockOnly] = useState(inStockParam === "true");
   const [showPreorder, setShowPreorder] = useState(showPreorderParam);
+  const [activeSort, setActiveSort] = useState<ProductSort>(sortParam);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [quickProducts, setQuickProducts] = useState<QuickProductsState>({
     orderCount: 0,
@@ -220,6 +228,7 @@ function CatalogContent() {
     featured: activeTab === "promo",
     preset: activePreset,
     ids: activeIds,
+    sort: activeSort,
   });
 
   const catalogReturnHref = useMemo(() => {
@@ -257,6 +266,7 @@ function CatalogContent() {
       showPreorder,
       specs: activeSpecs,
     });
+    appendSortParam(params, activeSort);
 
     const qs = params.toString();
     return qs ? `/catalog?${qs}` : "/catalog";
@@ -271,6 +281,7 @@ function CatalogContent() {
     activeCableMark,
     activeSpecs,
     activeTab,
+    activeSort,
     inStockOnly,
     showPreorder,
     priceMaxInput,
@@ -309,6 +320,7 @@ function CatalogContent() {
           activeTab === "promo" ? "featured" : "",
           activeTab === "seasonal" ? "seasonal" : "",
           activeTab === "quick" ? `ids:${quickProducts.productIds.join(",")}` : "",
+          activeSort !== DEFAULT_PRODUCT_SORT ? `sort:${activeSort}` : "",
         ]
           .filter(Boolean)
           .join("|"),
@@ -324,6 +336,7 @@ function CatalogContent() {
       activeCableMark,
       activeSpecsKey,
       activeTab,
+      activeSort,
       inStockOnly,
       showPreorder,
       priceMaxInput,
@@ -478,6 +491,10 @@ function CatalogContent() {
   useEffect(() => {
     setShowPreorder(showPreorderParam);
   }, [showPreorderParam]);
+
+  useEffect(() => {
+    setActiveSort(sortParam);
+  }, [sortParam]);
 
   const submitSearch = useCallback(() => {
     const normalized = normalizeSearchQuery(inputValue);
@@ -688,6 +705,19 @@ function CatalogContent() {
     [activeCategoryPath, activeSpecs, router, searchParams]
   );
 
+  const updateSort = useCallback(
+    (value: string) => {
+      const nextSort = normalizeProductSort(value);
+      setActiveSort(nextSort);
+      const params = new URLSearchParams(searchParams.toString());
+      appendSortParam(params, nextSort);
+      const qs = params.toString();
+      router.replace(qs ? `/catalog?${qs}` : "/catalog", { scroll: false });
+      window.scrollTo({ top: 0, behavior: "auto" });
+    },
+    [router, searchParams]
+  );
+
   const commitCatalogStateBeforeProductOpen = useCallback(() => {
     saveCatalogViewState({
       queryKey: currentCatalogViewKey,
@@ -745,11 +775,13 @@ function CatalogContent() {
     setShowPreorder(false);
     setFiltersOpen(false);
     setActiveTab(tab);
-    router.replace(`/catalog?tab=${encodeURIComponent(tab)}`, {
+    const params = new URLSearchParams({ tab });
+    appendSortParam(params, activeSort);
+    router.replace(`/catalog?${params}`, {
       scroll: false,
     });
     window.scrollTo({ top: 0, behavior: "auto" });
-  }, [quickProductsAvailable, router]);
+  }, [activeSort, quickProductsAvailable, router]);
 
   const logout = useCallback(async () => {
     try {
@@ -789,44 +821,46 @@ function CatalogContent() {
     suggestOpen &&
     normalizeSearchQuery(inputValue).length >= 3 &&
     suggestions.length > 0;
+  const hrefFor = (options: CatalogHrefOptions) =>
+    makeCatalogHref({ ...options, sort: activeSort });
   const breadcrumbs: BreadcrumbItem[] = [
     {
       label: "Поиск",
       href: submittedSearch
-        ? makeCatalogHref({ search: submittedSearch })
-        : "/catalog",
+        ? hrefFor({ search: submittedSearch })
+        : hrefFor({}),
     },
   ];
 
   if (submittedSearch) {
     breadcrumbs.push({
       label: `Поиск: ${submittedSearch}`,
-      href: makeCatalogHref({ search: submittedSearch }),
+      href: hrefFor({ search: submittedSearch }),
     });
   } else if (activeTab) {
     breadcrumbs.push({
       label: catalogTabLabel(activeTab),
-      href: makeCatalogHref({ tab: activeTab }),
+      href: hrefFor({ tab: activeTab }),
     });
   } else if (activeCategoryPath.length > 0) {
     activeCategoryPath.forEach((_, index) => {
       const path = activeCategoryPath.slice(0, index + 1);
       breadcrumbs.push({
         label: path[path.length - 1],
-        href: makeCatalogHref({ path }),
+        href: hrefFor({ path }),
       });
     });
   } else {
     if (activeCategory !== "all") {
       breadcrumbs.push({
         label: activeCategory,
-        href: makeCatalogHref({ category: activeCategory }),
+        href: hrefFor({ category: activeCategory }),
       });
     }
     if (activeSubcategory !== "all") {
       breadcrumbs.push({
         label: activeSubcategory,
-        href: makeCatalogHref({
+        href: hrefFor({
           category: activeCategory !== "all" ? activeCategory : undefined,
           subcategory: activeSubcategory,
         }),
@@ -850,13 +884,13 @@ function CatalogContent() {
   if (activeBrand) {
     breadcrumbs.push({
       label: activeBrand,
-      href: makeCatalogHref({ ...scopedCrumbBase, brand: activeBrand }),
+      href: hrefFor({ ...scopedCrumbBase, brand: activeBrand }),
     });
   }
   if (activeSeries) {
     breadcrumbs.push({
       label: activeSeries,
-      href: makeCatalogHref({
+      href: hrefFor({
         ...scopedCrumbBase,
         brand: activeBrand,
         series: activeSeries,
@@ -866,7 +900,7 @@ function CatalogContent() {
   if (activeDesign) {
     breadcrumbs.push({
       label: activeDesign,
-      href: makeCatalogHref({
+      href: hrefFor({
         ...scopedCrumbBase,
         brand: activeBrand,
         series: activeSeries,
@@ -877,7 +911,7 @@ function CatalogContent() {
   if (activeProductType) {
     breadcrumbs.push({
       label: activeProductType,
-      href: makeCatalogHref({
+      href: hrefFor({
         ...scopedCrumbBase,
         brand: activeBrand,
         series: activeSeries,
@@ -889,7 +923,7 @@ function CatalogContent() {
   if (activeCableMark) {
     breadcrumbs.push({
       label: activeCableMark,
-      href: makeCatalogHref({
+      href: hrefFor({
         ...scopedCrumbBase,
         brand: activeBrand,
         cableMark: activeCableMark,
@@ -1059,6 +1093,21 @@ function CatalogContent() {
             >
               Фильтры{activeFilterCount > 0 ? ` · ${activeFilterCount}` : ""}
             </button>
+            <label className="shrink-0">
+              <span className="sr-only">Сортировка товаров</span>
+              <select
+                value={activeSort}
+                onChange={(event) => updateSort(event.target.value)}
+                className="h-[30px] rounded-md border-0 bg-white px-2.5 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-600"
+                aria-label="Сортировка товаров"
+              >
+                {PRODUCT_SORT_OPTIONS.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </label>
             <button
               type="button"
               onClick={() => updateCatalogUrl({ showPreorder: !showPreorder })}
@@ -1415,7 +1464,7 @@ function uniqueStrings(values: string[]) {
   return Array.from(new Set(values.filter(Boolean)));
 }
 
-function makeCatalogHref(options: {
+interface CatalogHrefOptions {
   search?: string;
   tab?: CatalogTab | null;
   path?: string[];
@@ -1426,7 +1475,10 @@ function makeCatalogHref(options: {
   design?: string;
   productType?: string;
   cableMark?: string;
-}) {
+  sort?: ProductSort;
+}
+
+function makeCatalogHref(options: CatalogHrefOptions) {
   const params = new URLSearchParams();
   const path = options.path?.map((entry) => entry.trim()).filter(Boolean) ?? [];
 
@@ -1454,9 +1506,15 @@ function makeCatalogHref(options: {
     productType: options.productType,
     cableMark: options.cableMark,
   });
+  appendSortParam(params, options.sort ?? DEFAULT_PRODUCT_SORT);
 
   const qs = params.toString();
   return qs ? `/catalog?${qs}` : "/catalog";
+}
+
+function appendSortParam(params: URLSearchParams, sort: ProductSort) {
+  if (sort && sort !== DEFAULT_PRODUCT_SORT) params.set("sort", sort);
+  else params.delete("sort");
 }
 
 function appendFilterParams(
