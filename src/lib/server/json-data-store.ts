@@ -17,6 +17,16 @@ export function getRuntimeDataFilePath(fileName: string) {
   return getBundledDataFilePath(fileName);
 }
 
+export function getRuntimeDataStoreInfo(fileName: string) {
+  const vercel = isVercelRuntime();
+
+  return {
+    filePath: getRuntimeDataFilePath(fileName),
+    durable: !vercel,
+    runtime: vercel ? "vercel-tmp" : "local-file",
+  };
+}
+
 export async function ensureRuntimeDataFile(
   fileName: string,
   fallbackContent: string
@@ -41,6 +51,6 @@ export async function ensureRuntimeDataFile(
   return targetPath;
 }
 
-function isVercelRuntime() {
+export function isVercelRuntime() {
   return process.env.VERCEL === "1" || Boolean(process.env.VERCEL_ENV);
 }

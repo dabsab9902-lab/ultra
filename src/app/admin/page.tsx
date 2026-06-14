@@ -6,6 +6,7 @@ import {
   ADMIN_SESSION_COOKIE,
   isValidAdminSession,
 } from "@/lib/server/admin-auth";
+import { AdminDataStoragePanel } from "./AdminDataStoragePanel";
 import { AdminLogoutButton } from "./AdminLogoutButton";
 
 const panelItems = [
@@ -80,6 +81,8 @@ export default async function AdminDashboardPage() {
       </div>
 
       <div className="grid gap-2 px-3 py-3">
+        <AdminDataStoragePanel />
+
         {panelItems.map((item) => (
           <Link
             key={`${item.href}-${item.title}`}

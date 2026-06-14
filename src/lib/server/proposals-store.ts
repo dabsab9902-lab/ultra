@@ -2,7 +2,10 @@ import { mkdir, readFile, writeFile } from "fs/promises";
 import { randomUUID } from "crypto";
 import { dirname } from "path";
 import { catalog } from "@/lib/catalog";
-import { ensureRuntimeDataFile } from "@/lib/server/json-data-store";
+import {
+  ensureRuntimeDataFile,
+  getRuntimeDataStoreInfo,
+} from "@/lib/server/json-data-store";
 import {
   PROPOSAL_STATUS_CLIENT_CHANGED,
   PROPOSAL_STATUS_NEW,
@@ -26,12 +29,33 @@ import type { Product } from "@/lib/types";
 const PROPOSALS_FILE_NAME = "proposals.json";
 const STORE_VERSION = 1;
 
+export interface ProposalsStorageInfo {
+  mode: "local-file" | "vercel-tmp";
+  durable: boolean;
+  backupRequired: boolean;
+  label: string;
+  location: string;
+}
+
 export async function readCommercialProposals(): Promise<CommercialProposal[]> {
   const file = await readProposalsFile();
   return file.proposals
     .map(normalizeStoredProposal)
     .filter((proposal): proposal is CommercialProposal => Boolean(proposal))
     .sort((a, b) => Date.parse(b.updatedAt) - Date.parse(a.updatedAt));
+}
+
+export function getProposalsStorageInfo(): ProposalsStorageInfo {
+  const runtime = getRuntimeDataStoreInfo(PROPOSALS_FILE_NAME);
+  const temporary = runtime.runtime === "vercel-tmp";
+
+  return {
+    mode: temporary ? "vercel-tmp" : "local-file",
+    durable: runtime.durable,
+    backupRequired: temporary,
+    label: temporary ? "Vercel /tmp" : "data/proposals.json",
+    location: runtime.filePath,
+  };
 }
 
 export async function createCommercialProposal(input: unknown) {
@@ -50,6 +74,47 @@ export async function createCommercialProposal(input: unknown) {
   const next = [proposal, ...file.proposals];
   await writeProposalsFile(next);
   return proposal;
+}
+
+export async function importCommercialProposals(input: unknown) {
+  const rawProposals = extractProposals(input);
+  const current = await readCommercialProposals();
+  const next = [...current];
+  let created = 0;
+  let updated = 0;
+  let skipped = 0;
+
+  for (const rawProposal of rawProposals) {
+    const incoming = normalizeStoredProposal(rawProposal);
+    if (!incoming) {
+      skipped += 1;
+      continue;
+    }
+
+    const index = next.findIndex((proposal) =>
+      isSameProposal(proposal, incoming)
+    );
+    if (index >= 0) {
+      next[index] = {
+        ...incoming,
+        id: next[index].id,
+        proposalId: next[index].proposalId,
+      };
+      updated += 1;
+      continue;
+    }
+
+    next.unshift(incoming);
+    created += 1;
+  }
+
+  await writeProposalsFile(next);
+  return {
+    proposals: await readCommercialProposals(),
+    created,
+    updated,
+    skipped,
+  };
 }
 
 export async function updateCommercialProposal(
@@ -332,6 +397,16 @@ function normalizeIncomingProposal(input: unknown): CommercialProposal | null {
 
 function normalizeStoredProposal(input: unknown): CommercialProposal | null {
   return normalizeIncomingProposal(input);
+}
+
+function extractProposals(input: unknown) {
+  if (Array.isArray(input)) return input;
+  const value = asRecord(input);
+  return Array.isArray(value.proposals) ? value.proposals : [];
+}
+
+function isSameProposal(first: CommercialProposal, second: CommercialProposal) {
+  return first.id === second.id || first.proposalId === second.proposalId;
 }
 
 function normalizeProposalItemForClient(

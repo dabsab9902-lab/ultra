@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { PageShell } from "@/components/PageShell";
 import type { AgentPlusOfflineClient } from "@/lib/agentplus-offline-clients";
-import { mergeLocalClients, readLocalClients } from "@/lib/client-local-store";
 import type { ClientRecord } from "@/lib/clients";
 import { AdminLogoutButton } from "../AdminLogoutButton";
 
@@ -208,9 +207,9 @@ async function loadOnlineClients(router: ReturnType<typeof useRouter>) {
     }
     if (!response.ok) throw new Error("clients");
     const data = (await response.json()) as { clients?: ClientRecord[] };
-    return mergeLocalClients(Array.isArray(data.clients) ? data.clients : []);
+    return Array.isArray(data.clients) ? data.clients : [];
   } catch {
-    return readLocalClients();
+    return [];
   }
 }
 

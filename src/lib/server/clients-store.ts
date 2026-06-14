@@ -6,7 +6,10 @@ import {
   CLIENT_DEMO_SESSION_COOKIE,
   parseClientDemoToken,
 } from "@/lib/client-demo-session";
-import { ensureRuntimeDataFile } from "@/lib/server/json-data-store";
+import {
+  ensureRuntimeDataFile,
+  getRuntimeDataStoreInfo,
+} from "@/lib/server/json-data-store";
 import {
   normalizePhone,
   toPublicClient,
@@ -17,10 +20,20 @@ import {
 
 const CLIENTS_FILE_NAME = "clients.json";
 const STORE_VERSION = 1;
+const REMOTE_CLIENTS_STORE_KEY =
+  process.env.CLIENTS_STORE_KEY?.trim() || "ultra-svet:clients:v1";
 
 interface StoredClientsFile {
   version: number;
   clients: ClientRecord[];
+}
+
+export interface ClientsStorageInfo {
+  mode: "remote" | "local-file" | "vercel-tmp";
+  durable: boolean;
+  backupRequired: boolean;
+  label: string;
+  location: string;
 }
 
 export const CLIENT_SESSION_COOKIE = "ultra-svet-client-session";
@@ -34,11 +47,34 @@ export async function readClients(): Promise<ClientRecord[]> {
     .sort((a, b) => a.name.localeCompare(b.name, "ru"));
 }
 
+export function getClientsStorageInfo(): ClientsStorageInfo {
+  if (hasRemoteClientsStore()) {
+    return {
+      mode: "remote",
+      durable: true,
+      backupRequired: false,
+      label: "KV / Upstash Redis",
+      location: REMOTE_CLIENTS_STORE_KEY,
+    };
+  }
+
+  const runtime = getRuntimeDataStoreInfo(CLIENTS_FILE_NAME);
+  const temporary = runtime.runtime === "vercel-tmp";
+
+  return {
+    mode: temporary ? "vercel-tmp" : "local-file",
+    durable: runtime.durable,
+    backupRequired: temporary,
+    label: temporary ? "Vercel /tmp" : "data/clients.json",
+    location: runtime.filePath,
+  };
+}
+
 export async function createClient(input: unknown) {
   const value = asRecord(input);
   const now = new Date().toISOString();
   const client = normalizeStoredClient({
-    id: createClientId(),
+    id: firstString(value.id) || createClientId(),
     name: value.name,
     phone: value.phone,
     code: value.code || value.password,
@@ -61,6 +97,64 @@ export async function createClient(input: unknown) {
 
   await writeClientsFile([client, ...clients]);
   return client;
+}
+
+export async function importClients(input: unknown) {
+  const value = asRecord(input);
+  const rawClients = Array.isArray(input)
+    ? input
+    : Array.isArray(value.clients)
+      ? value.clients
+      : [];
+  const clients = await readClients();
+  const next = [...clients];
+  let created = 0;
+  let updated = 0;
+  let skipped = 0;
+
+  for (const rawClient of rawClients) {
+    const incoming = normalizeStoredClient({
+      ...asRecord(rawClient),
+      id: firstString(asRecord(rawClient).id) || createClientId(),
+    });
+    if (!incoming) {
+      skipped += 1;
+      continue;
+    }
+
+    const existingIndex = next.findIndex((client) =>
+      isSameClient(client, incoming)
+    );
+
+    if (existingIndex >= 0) {
+      const current = next[existingIndex];
+      const merged = normalizeStoredClient({
+        ...current,
+        ...incoming,
+        id: current.id,
+        createdAt: current.createdAt || incoming.createdAt,
+        updatedAt: new Date().toISOString(),
+      });
+      if (!merged) {
+        skipped += 1;
+        continue;
+      }
+      next[existingIndex] = merged;
+      updated += 1;
+      continue;
+    }
+
+    next.unshift(incoming);
+    created += 1;
+  }
+
+  await writeClientsFile(next);
+  return {
+    clients: sortClients(next),
+    created,
+    updated,
+    skipped,
+  };
 }
 
 export async function updateClient(id: string, input: unknown) {
@@ -259,6 +353,19 @@ function normalizeDiscounts(input: unknown): ClientDiscount[] {
 }
 
 async function readClientsFile(): Promise<StoredClientsFile> {
+  if (hasRemoteClientsStore()) {
+    const remote = await readRemoteClientsFile();
+    if (remote) return remote;
+
+    const local = await readLocalClientsFile();
+    await writeRemoteClientsFile(local);
+    return local;
+  }
+
+  return readLocalClientsFile();
+}
+
+async function readLocalClientsFile(): Promise<StoredClientsFile> {
   try {
     const filePath = await getClientsFilePath();
     const raw = await readFile(filePath, "utf-8");
@@ -276,11 +383,20 @@ async function readClientsFile(): Promise<StoredClientsFile> {
 }
 
 async function writeClientsFile(clients: ClientRecord[]) {
+  const payload: StoredClientsFile = {
+    version: STORE_VERSION,
+    clients: sortClients(clients),
+  };
+
+  if (await writeRemoteClientsFile(payload)) {
+    return;
+  }
+
   const filePath = await getClientsFilePath();
   await mkdir(dirname(filePath), { recursive: true });
   await writeFile(
     filePath,
-    `${JSON.stringify({ version: STORE_VERSION, clients }, null, 2)}\n`,
+    `${JSON.stringify(payload, null, 2)}\n`,
     "utf-8"
   );
 }
@@ -296,6 +412,99 @@ function asRecord(value: unknown): Record<string, unknown> {
   return value && typeof value === "object"
     ? (value as Record<string, unknown>)
     : {};
+}
+
+function sortClients(clients: ClientRecord[]) {
+  return [...clients].sort((a, b) => a.name.localeCompare(b.name, "ru"));
+}
+
+function isSameClient(first: ClientRecord, second: ClientRecord) {
+  if (first.id && first.id === second.id) return true;
+  if (
+    first.agentPlusClientId &&
+    second.agentPlusClientId &&
+    first.agentPlusClientId === second.agentPlusClientId
+  ) {
+    return true;
+  }
+  return normalizePhone(first.phone) === normalizePhone(second.phone);
+}
+
+function hasRemoteClientsStore() {
+  const config = getRemoteClientsStoreConfig();
+  return Boolean(config.url && config.token);
+}
+
+async function readRemoteClientsFile(): Promise<StoredClientsFile | null> {
+  const config = getRemoteClientsStoreConfig();
+  if (!config.url || !config.token) return null;
+
+  try {
+    const response = await fetch(config.url, {
+      method: "POST",
+      headers: getRemoteStoreHeaders(config.token),
+      body: JSON.stringify(["GET", REMOTE_CLIENTS_STORE_KEY]),
+      cache: "no-store",
+    });
+    if (!response.ok) return null;
+
+    const payload = (await response.json()) as { result?: unknown };
+    if (typeof payload.result !== "string" || !payload.result.trim()) {
+      return null;
+    }
+
+    const parsed = JSON.parse(payload.result) as StoredClientsFile | ClientRecord[];
+    if (Array.isArray(parsed)) {
+      return { version: STORE_VERSION, clients: parsed };
+    }
+    return {
+      version: parsed.version ?? STORE_VERSION,
+      clients: Array.isArray(parsed.clients) ? parsed.clients : [],
+    };
+  } catch {
+    return null;
+  }
+}
+
+async function writeRemoteClientsFile(file: StoredClientsFile) {
+  const config = getRemoteClientsStoreConfig();
+  if (!config.url || !config.token) return false;
+
+  try {
+    const response = await fetch(config.url, {
+      method: "POST",
+      headers: getRemoteStoreHeaders(config.token),
+      body: JSON.stringify([
+        "SET",
+        REMOTE_CLIENTS_STORE_KEY,
+        JSON.stringify(file),
+      ]),
+      cache: "no-store",
+    });
+    return response.ok;
+  } catch {
+    return false;
+  }
+}
+
+function getRemoteClientsStoreConfig() {
+  return {
+    url:
+      process.env.KV_REST_API_URL?.trim() ||
+      process.env.UPSTASH_REDIS_REST_URL?.trim() ||
+      "",
+    token:
+      process.env.KV_REST_API_TOKEN?.trim() ||
+      process.env.UPSTASH_REDIS_REST_TOKEN?.trim() ||
+      "",
+  };
+}
+
+function getRemoteStoreHeaders(token: string) {
+  return {
+    Authorization: `Bearer ${token}`,
+    "Content-Type": "application/json",
+  };
 }
 
 function firstString(...values: unknown[]) {

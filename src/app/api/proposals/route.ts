@@ -21,6 +21,7 @@ import {
   appendProposalHistory,
   createCommercialProposal,
   filterProposalsForClient,
+  getProposalsStorageInfo,
   isProposalForClient,
   markProposalViewed,
   mergeClientProposalItems,
@@ -52,7 +53,7 @@ export async function GET(request: NextRequest) {
     : filterProposalsForClient(proposals, client!);
 
   return NextResponse.json(
-    { proposals: visible },
+    { proposals: visible, storage: getProposalsStorageInfo() },
     {
       headers: {
         "Cache-Control": "no-store",

@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import { PageShell } from "@/components/PageShell";
 import type { AgentPlusOfflineClient } from "@/lib/agentplus-offline-clients";
 import {
-  createLocalClient,
   encodeClientAccess,
   readLocalClients,
   upsertLocalClient,
@@ -61,7 +60,15 @@ export function OfflineClientDetailsClient({
       const localLinked =
         readLocalClients().find((client) => client.agentPlusClientId === id) ??
         null;
-      const linkedClient = localLinked ?? data.onlineClient ?? null;
+      let linkedClient = data.onlineClient ?? null;
+
+      if (!linkedClient && localLinked) {
+        const importResult = await importClientsToServer([localLinked]);
+        linkedClient =
+          importResult?.clients.find(
+            (client) => client.agentPlusClientId === id
+          ) ?? null;
+      }
 
       setOfflineClient(data.client ?? null);
       setOnlineClient(linkedClient);
@@ -91,17 +98,6 @@ export function OfflineClientDetailsClient({
     setError("");
     setMessage("");
 
-    const existingLocal = readLocalClients().find(
-      (client) => client.agentPlusClientId === offlineClient.id
-    );
-    if (existingLocal) {
-      setOnlineClient(existingLocal);
-      setAccessText(buildAccessText(existingLocal));
-      setMessage("Онлайн-доступ уже создан");
-      setSaving(false);
-      return;
-    }
-
     try {
       const response = await fetch(
         `/api/offline-clients/${encodeURIComponent(offlineClient.id)}/make-online`,
@@ -124,23 +120,9 @@ export function OfflineClientDetailsClient({
       setAccessText(buildAccessText(data.client));
       setMessage(data.created ? "Онлайн-профиль создан" : "Онлайн-доступ уже был создан");
     } catch {
-      const localClient = createLocalClient({
-        name: offlineClient.name,
-        phone: offlineClient.phone || buildFallbackLogin(offlineClient.id),
-        code: createAccessCode(),
-        active: true,
-        agentPlusClientId: offlineClient.id,
-        discounts: [],
-      });
-
-      if (!localClient) {
-        setError("Не удалось создать онлайн-доступ");
-        return;
-      }
-
-      setOnlineClient(localClient);
-      setAccessText(buildAccessText(localClient));
-      setMessage("Онлайн-профиль сохранен локально для демо");
+      setError(
+        "Не удалось создать онлайн-доступ в общем хранилище. Локальный профиль не создан, чтобы клиент не пропал на другом устройстве."
+      );
     } finally {
       setSaving(false);
     }
@@ -342,15 +324,18 @@ function buildAccessText(client: ClientRecord) {
   ].join("\n");
 }
 
-function buildFallbackLogin(id: string) {
-  const digits = id.replace(/\D/g, "").slice(0, 9).padEnd(9, "0");
-  return `900${digits}`;
-}
-
-function createAccessCode() {
-  const letters = "ABCDEFGHJKLMNPQRSTUVWXYZ";
-  const prefix = letters[Math.floor(Math.random() * letters.length)] ?? "U";
-  return `${prefix}${Math.floor(1000 + Math.random() * 9000)}`;
+async function importClientsToServer(clients: ClientRecord[]) {
+  try {
+    const response = await fetch("/api/clients/import", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ clients }),
+    });
+    if (!response.ok) return null;
+    return (await response.json()) as { clients: ClientRecord[] };
+  } catch {
+    return null;
+  }
 }
 
 async function copyTextToClipboard(text: string) {

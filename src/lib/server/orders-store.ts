@@ -1,6 +1,9 @@
 import { mkdir, readFile, writeFile } from "fs/promises";
 import { dirname } from "path";
-import { ensureRuntimeDataFile } from "@/lib/server/json-data-store";
+import {
+  ensureRuntimeDataFile,
+  getRuntimeDataStoreInfo,
+} from "@/lib/server/json-data-store";
 import {
   isOrderStatus,
   type ManagerOrder,
@@ -17,12 +20,33 @@ interface StoredOrdersFile {
   orders: ManagerOrder[];
 }
 
+export interface OrdersStorageInfo {
+  mode: "local-file" | "vercel-tmp";
+  durable: boolean;
+  backupRequired: boolean;
+  label: string;
+  location: string;
+}
+
 export async function readManagerOrders(): Promise<ManagerOrder[]> {
   const file = await readOrdersFile();
   return file.orders
     .map(normalizeStoredOrder)
     .filter((order): order is ManagerOrder => Boolean(order))
     .sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
+}
+
+export function getOrdersStorageInfo(): OrdersStorageInfo {
+  const runtime = getRuntimeDataStoreInfo(ORDERS_FILE_NAME);
+  const temporary = runtime.runtime === "vercel-tmp";
+
+  return {
+    mode: temporary ? "vercel-tmp" : "local-file",
+    durable: runtime.durable,
+    backupRequired: temporary,
+    label: temporary ? "Vercel /tmp" : "data/orders.json",
+    location: runtime.filePath,
+  };
 }
 
 export async function createManagerOrder(input: unknown): Promise<ManagerOrder> {
@@ -43,6 +67,45 @@ export async function createManagerOrder(input: unknown): Promise<ManagerOrder> 
   const next = [order, ...file.orders];
   await writeOrdersFile(next);
   return order;
+}
+
+export async function importManagerOrders(input: unknown) {
+  const rawOrders = extractOrders(input);
+  const current = await readManagerOrders();
+  const next = [...current];
+  let created = 0;
+  let updated = 0;
+  let skipped = 0;
+
+  for (const rawOrder of rawOrders) {
+    const incoming = normalizeStoredOrder(rawOrder);
+    if (!incoming) {
+      skipped += 1;
+      continue;
+    }
+
+    const index = next.findIndex((order) => isSameOrder(order, incoming));
+    if (index >= 0) {
+      next[index] = {
+        ...incoming,
+        id: next[index].id,
+        orderId: next[index].orderId,
+      };
+      updated += 1;
+      continue;
+    }
+
+    next.unshift(incoming);
+    created += 1;
+  }
+
+  await writeOrdersFile(next);
+  return {
+    orders: await readManagerOrders(),
+    created,
+    updated,
+    skipped,
+  };
 }
 
 export async function updateManagerOrderStatus(
@@ -112,6 +175,16 @@ function normalizeStoredOrder(input: unknown): ManagerOrder | null {
     createdAt,
     updatedAt,
   };
+}
+
+function extractOrders(input: unknown) {
+  if (Array.isArray(input)) return input;
+  const value = asRecord(input);
+  return Array.isArray(value.orders) ? value.orders : [];
+}
+
+function isSameOrder(first: ManagerOrder, second: ManagerOrder) {
+  return first.id === second.id || first.orderId === second.orderId;
 }
 
 function normalizeCustomer(input: unknown): ManagerOrderCustomer {

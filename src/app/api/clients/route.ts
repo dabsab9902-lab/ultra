@@ -6,6 +6,7 @@ import {
 import {
   createClient,
   deleteClient,
+  getClientsStorageInfo,
   readClients,
   updateClient,
 } from "@/lib/server/clients-store";
@@ -16,7 +17,10 @@ export const dynamic = "force-dynamic";
 export async function GET(request: NextRequest) {
   if (!hasAdminSession(request)) return unauthorized();
   const clients = await readClients();
-  return NextResponse.json({ clients });
+  return NextResponse.json({
+    clients,
+    storage: getClientsStorageInfo(),
+  });
 }
 
 export async function POST(request: NextRequest) {
@@ -24,7 +28,10 @@ export async function POST(request: NextRequest) {
 
   try {
     const client = await createClient(await request.json());
-    return NextResponse.json({ client }, { status: 201 });
+    return NextResponse.json(
+      { client, storage: getClientsStorageInfo() },
+      { status: 201 }
+    );
   } catch (error) {
     return NextResponse.json(
       { error: error instanceof Error ? error.message : "invalid_client" },
@@ -46,7 +53,7 @@ export async function PATCH(request: NextRequest) {
     if (!client) {
       return NextResponse.json({ error: "not_found" }, { status: 404 });
     }
-    return NextResponse.json({ client });
+    return NextResponse.json({ client, storage: getClientsStorageInfo() });
   } catch (error) {
     return NextResponse.json(
       { error: error instanceof Error ? error.message : "invalid_client" },

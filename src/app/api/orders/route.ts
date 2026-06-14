@@ -10,6 +10,7 @@ import {
 } from "@/lib/server/clients-store";
 import {
   createManagerOrder,
+  getOrdersStorageInfo,
   readManagerOrders,
   updateManagerOrderStatus,
 } from "@/lib/server/orders-store";
@@ -24,7 +25,7 @@ export async function GET(request: NextRequest) {
 
   const orders = await readManagerOrders();
   return NextResponse.json(
-    { orders },
+    { orders, storage: getOrdersStorageInfo() },
     {
       headers: {
         "Cache-Control": "no-store",

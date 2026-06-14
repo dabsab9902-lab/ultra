@@ -1,16 +1,15 @@
 "use client";
 
-import { FormEvent, useCallback, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { PageShell } from "@/components/PageShell";
 import { clearAdminSession } from "@/lib/admin-session";
 import {
-  createLocalClient,
   encodeClientAccess,
-  mergeLocalClients,
   readLocalClients,
   upsertLocalClient,
+  writeLocalClients,
 } from "@/lib/client-local-store";
 import type { ClientDiscount, ClientRecord } from "@/lib/clients";
 
@@ -26,6 +25,14 @@ interface BrandOption {
   count: number;
 }
 
+interface ClientsStorageInfo {
+  mode: "remote" | "local-file" | "vercel-tmp";
+  durable: boolean;
+  backupRequired: boolean;
+  label: string;
+  location: string;
+}
+
 const EMPTY_CLIENT: NewClientDraft = {
   name: "",
   phone: "",
@@ -39,14 +46,19 @@ export default function AdminClientsPage() {
   const [loading, setLoading] = useState(true);
   const [savingId, setSavingId] = useState("");
   const [error, setError] = useState("");
+  const [serverBacked, setServerBacked] = useState(true);
   const [draft, setDraft] = useState(EMPTY_CLIENT);
   const [accessText, setAccessText] = useState("");
   const [copyStatus, setCopyStatus] = useState("");
   const [brandOptions, setBrandOptions] = useState<BrandOption[]>([]);
+  const [importing, setImporting] = useState(false);
+  const [storageInfo, setStorageInfo] = useState<ClientsStorageInfo | null>(null);
+  const [syncStatus, setSyncStatus] = useState("");
 
   const loadClients = useCallback(async () => {
     setLoading(true);
     setError("");
+    setSyncStatus("");
     try {
       const response = await fetch("/api/clients", { cache: "no-store" });
       if (response.status === 401) {
@@ -54,21 +66,50 @@ export default function AdminClientsPage() {
         return;
       }
       if (!response.ok) throw new Error("network");
-      const data = (await response.json()) as { clients?: ClientRecord[] };
+      const data = (await response.json()) as {
+        clients?: ClientRecord[];
+        storage?: ClientsStorageInfo;
+      };
       const remoteClients = Array.isArray(data.clients) ? data.clients : [];
-      const merged = mergeLocalClients(remoteClients);
-      setClients(merged);
-      if (remoteClients.length === 0 && merged.length > 0) {
-        void syncLocalClientsToServer(merged);
+      if (data.storage) setStorageInfo(data.storage);
+      let nextClients = remoteClients;
+      const localClients = readLocalClients();
+      const localOnlyClients = localClients.filter(
+        (client) => !remoteClients.some((remote) => sameClient(remote, client))
+      );
+
+      if (localOnlyClients.length > 0) {
+        const importResult = await importClientsToServer(localOnlyClients);
+        if (importResult?.clients) {
+          nextClients = importResult.clients;
+          if (importResult.storage) setStorageInfo(importResult.storage);
+          setSyncStatus(
+            `В общий список восстановлено локальных клиентов: ${
+              importResult.created + importResult.updated
+            }`
+          );
+        } else {
+          setError(
+            "Есть локальные клиенты, которых нет в общем хранилище. Используйте экспорт/импорт или проверьте серверное сохранение."
+          );
+        }
       }
+
+      writeLocalClients(nextClients);
+      setServerBacked(true);
+      setClients(nextClients);
     } catch {
       const localClients = readLocalClients();
       if (localClients.length > 0) {
         setClients(localClients);
-        setError("Клиенты загружены из локального демо-хранилища");
+        setServerBacked(false);
+        setError(
+          "Сервер клиентов недоступен. Показана только локальная резервная копия этого браузера; карточки и вход с другого устройства могут быть недоступны."
+        );
         return;
       }
-      setError("Не удалось загрузить клиентов");
+      setServerBacked(false);
+      setError("Не удалось загрузить клиентов из общего хранилища");
     } finally {
       setLoading(false);
     }
@@ -115,25 +156,24 @@ export default function AdminClientsPage() {
         return;
       }
       if (!response.ok) throw new Error("network");
-      const data = (await response.json()) as { client?: ClientRecord };
+      const data = (await response.json()) as {
+        client?: ClientRecord;
+        storage?: ClientsStorageInfo;
+      };
+      if (data.storage) setStorageInfo(data.storage);
       if (data.client) {
         upsertLocalClient(data.client);
-        setClients((current) => [data.client!, ...current]);
+        setClients((current) =>
+          [data.client!, ...current.filter((item) => !sameClient(item, data.client!))]
+        );
         setAccessText(buildClientAccessText(data.client));
         setCopyStatus("");
         setDraft(EMPTY_CLIENT);
       }
     } catch {
-      const client = createLocalClient({ ...draft, discounts: [] });
-      if (client) {
-        setClients((current) => [client, ...current]);
-        setAccessText(buildClientAccessText(client));
-        setCopyStatus("");
-        setDraft(EMPTY_CLIENT);
-        setError("Клиент сохранен локально для демо");
-        return;
-      }
-      setError("Не удалось создать клиента");
+      setError(
+        "Не удалось сохранить клиента в общем хранилище. Клиент не создан локально, чтобы он не пропал на другом устройстве."
+      );
     } finally {
       setSavingId("");
     }
@@ -153,7 +193,11 @@ export default function AdminClientsPage() {
         return;
       }
       if (!response.ok) throw new Error("network");
-      const data = (await response.json()) as { client?: ClientRecord };
+      const data = (await response.json()) as {
+        client?: ClientRecord;
+        storage?: ClientsStorageInfo;
+      };
+      if (data.storage) setStorageInfo(data.storage);
       if (data.client) {
         upsertLocalClient(data.client);
         setClients((current) =>
@@ -161,13 +205,9 @@ export default function AdminClientsPage() {
         );
       }
     } catch {
-      upsertLocalClient(client);
-      setClients((current) =>
-        current.map((item) => (item.id === client.id ? client : item))
+      setError(
+        "Не удалось сохранить изменения в общем хранилище. Локальная копия не обновлена, чтобы не разойтись с сервером."
       );
-      setError("Клиент сохранен локально для демо");
-      return;
-      setError("Не удалось сохранить клиента");
     } finally {
       setSavingId("");
     }
@@ -186,6 +226,61 @@ export default function AdminClientsPage() {
       clearAdminSession();
       router.replace("/admin/login");
       router.refresh();
+    }
+  };
+
+  const exportClients = () => {
+      const payload = {
+        version: 1,
+        exportedAt: new Date().toISOString(),
+        storage: storageInfo,
+        clients,
+      };
+    const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], {
+      type: "application/json;charset=utf-8",
+    });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `ultra-svet-clients-${new Date()
+      .toISOString()
+      .slice(0, 10)}.json`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
+  const importClientsFile = async (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+
+    setImporting(true);
+    setError("");
+    try {
+      const parsed = JSON.parse(await file.text()) as
+        | { clients?: ClientRecord[] }
+        | ClientRecord[];
+      const importedClients = Array.isArray(parsed) ? parsed : parsed.clients;
+      if (!Array.isArray(importedClients) || importedClients.length === 0) {
+        throw new Error("empty");
+      }
+
+      const result = await importClientsToServer(importedClients);
+      if (!result?.clients) throw new Error("network");
+
+      if (result.storage) setStorageInfo(result.storage);
+      writeLocalClients(result.clients);
+      setServerBacked(true);
+      setClients(result.clients);
+      setSyncStatus(
+        `Импорт клиентов завершен: добавлено ${result.created}, обновлено ${result.updated}, пропущено ${result.skipped}`
+      );
+    } catch {
+      setError("Не удалось импортировать клиентов. Проверьте JSON-файл и серверное хранилище.");
+    } finally {
+      setImporting(false);
     }
   };
 
@@ -240,6 +335,95 @@ export default function AdminClientsPage() {
           <div className="mb-3 rounded-lg bg-red-50 px-3 py-2 text-xs font-medium text-red-700 ring-1 ring-red-200">
             {error}
           </div>
+        )}
+
+        {syncStatus && (
+          <div className="mb-3 rounded-lg bg-emerald-50 px-3 py-2 text-xs font-medium text-emerald-700 ring-1 ring-emerald-200">
+            {syncStatus}
+          </div>
+        )}
+
+        {!serverBacked && (
+          <div className="mb-3 rounded-lg bg-amber-50 px-3 py-2 text-xs font-medium text-amber-800 ring-1 ring-amber-200">
+            Сейчас общий список клиентов недоступен. Новых клиентов лучше не создавать, пока не восстановится серверное хранилище.
+          </div>
+        )}
+
+        <section className="mb-3 rounded-lg bg-white p-3 ring-1 ring-slate-200">
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0">
+              <p className="text-xs font-bold text-slate-700">
+                {"\u0425\u0440\u0430\u043d\u0435\u043d\u0438\u0435 \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432"}
+              </p>
+              <p className="mt-1 text-[11px] leading-relaxed text-slate-500">
+                {getStorageDescription(storageInfo)}
+              </p>
+            </div>
+            <span
+              className={`shrink-0 rounded-md px-2 py-1 text-[10px] font-bold ring-1 ${getStorageBadgeClass(storageInfo)}`}
+            >
+              {getStorageBadgeText(storageInfo)}
+            </span>
+          </div>
+          {storageInfo?.location && (
+            <p className="mt-2 truncate rounded-md bg-slate-50 px-2 py-1.5 text-[10px] font-medium text-slate-500 ring-1 ring-slate-100">
+              {storageInfo.location}
+            </p>
+          )}
+          <div className="mt-3 grid grid-cols-2 gap-2">
+            <button
+              type="button"
+              onClick={exportClients}
+              disabled={clients.length === 0}
+              className="rounded-lg bg-slate-100 px-3 py-2.5 text-xs font-bold text-slate-700 ring-1 ring-slate-200 active:bg-slate-200 disabled:text-slate-400"
+            >
+              {"\u042d\u043a\u0441\u043f\u043e\u0440\u0442 \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432"}
+            </button>
+            <label className="flex cursor-pointer items-center justify-center rounded-lg bg-slate-900 px-3 py-2.5 text-xs font-bold text-white active:bg-slate-700">
+              {importing
+                ? "\u0418\u043c\u043f\u043e\u0440\u0442..."
+                : "\u0418\u043c\u043f\u043e\u0440\u0442 \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432"}
+              <input
+                type="file"
+                accept="application/json,.json"
+                onChange={importClientsFile}
+                disabled={importing}
+                className="sr-only"
+              />
+            </label>
+          </div>
+          <p className="mt-2 text-[11px] leading-relaxed text-slate-500">
+            {"\u042d\u043a\u0441\u043f\u043e\u0440\u0442 \u0441\u043e\u0445\u0440\u0430\u043d\u044f\u0435\u0442 \u0444\u0430\u0439\u043b \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432; \u0438\u043c\u043f\u043e\u0440\u0442 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442 \u0438\u0445 \u0432 \u043e\u0431\u0449\u0435\u0435 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435."}
+          </p>
+        </section>
+
+        {false && (
+        <section className="mb-3 rounded-lg bg-white p-3 ring-1 ring-slate-200">
+          <p className="text-xs font-bold text-slate-700">Резерв клиентов</p>
+          <div className="mt-2 grid grid-cols-2 gap-2">
+            <button
+              type="button"
+              onClick={exportClients}
+              disabled={clients.length === 0}
+              className="rounded-lg bg-slate-100 px-3 py-2.5 text-xs font-bold text-slate-700 ring-1 ring-slate-200 active:bg-slate-200 disabled:text-slate-400"
+            >
+              Экспорт
+            </button>
+            <label className="flex cursor-pointer items-center justify-center rounded-lg bg-slate-900 px-3 py-2.5 text-xs font-bold text-white active:bg-slate-700">
+              {importing ? "Импорт..." : "Импорт"}
+              <input
+                type="file"
+                accept="application/json,.json"
+                onChange={importClientsFile}
+                disabled={importing}
+                className="sr-only"
+              />
+            </label>
+          </div>
+          <p className="mt-2 text-[11px] leading-relaxed text-slate-500">
+            Для демо это страховка: экспорт сохраняет общий список в файл, импорт восстанавливает его в серверное хранилище.
+          </p>
+        </section>
         )}
 
         <form
@@ -349,6 +533,7 @@ export default function AdminClientsPage() {
                 client={client}
                 brandOptions={brandOptions}
                 saving={savingId === client.id}
+                serverBacked={serverBacked}
                 onChange={updateLocalClient}
                 onSave={saveClient}
               />
@@ -364,12 +549,14 @@ function ClientCard({
   client,
   brandOptions,
   saving,
+  serverBacked,
   onChange,
   onSave,
 }: {
   client: ClientRecord;
   brandOptions: BrandOption[];
   saving: boolean;
+  serverBacked: boolean;
   onChange: (client: ClientRecord) => void;
   onSave: (client: ClientRecord) => void;
 }) {
@@ -419,12 +606,18 @@ function ClientCard({
           <p className="text-sm font-bold text-slate-900">{client.name}</p>
           <p className="text-xs text-slate-500">{client.phone}</p>
         </div>
-        <Link
-          href={`/admin/clients/${client.id}`}
-          className="shrink-0 rounded-lg bg-slate-900 px-3 py-2 text-xs font-bold text-white active:bg-slate-700"
-        >
-          Карточка
-        </Link>
+        {serverBacked ? (
+          <Link
+            href={`/admin/clients/${client.id}`}
+            className="shrink-0 rounded-lg bg-slate-900 px-3 py-2 text-xs font-bold text-white active:bg-slate-700"
+          >
+            Карточка
+          </Link>
+        ) : (
+          <span className="shrink-0 rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-400 ring-1 ring-slate-200">
+            Только копия
+          </span>
+        )}
         <label className="flex shrink-0 items-center gap-2 text-xs font-bold text-slate-700">
           <input
             type="checkbox"
@@ -531,7 +724,7 @@ function ClientCard({
       <button
         type="button"
         onClick={() => onSave(client)}
-        disabled={saving}
+        disabled={saving || !serverBacked}
         className="mt-3 w-full rounded-lg bg-brand-600 py-3 text-sm font-bold text-white active:bg-brand-700 disabled:bg-slate-300"
       >
         {saving ? "Сохраняем..." : "Сохранить клиента"}
@@ -571,18 +764,72 @@ function mergeBrandOptions(
   );
 }
 
-async function syncLocalClientsToServer(clients: ClientRecord[]) {
-  for (const client of clients) {
-    try {
-      await fetch("/api/clients", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(client),
-      });
-    } catch {
-      /* Best effort: local demo storage remains the source of truth. */
-    }
+function getStorageDescription(storage: ClientsStorageInfo | null) {
+  if (!storage) {
+    return "\u041f\u0440\u043e\u0432\u0435\u0440\u044f\u0435\u043c, \u0433\u0434\u0435 \u0441\u0435\u0439\u0447\u0430\u0441 \u0445\u0440\u0430\u043d\u044f\u0442\u0441\u044f \u043a\u043b\u0438\u0435\u043d\u0442\u044b.";
   }
+
+  if (storage.mode === "remote") {
+    return "\u0412\u043a\u043b\u044e\u0447\u0435\u043d\u043e \u043f\u043e\u0441\u0442\u043e\u044f\u043d\u043d\u043e\u0435 KV/Upstash-\u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435: \u043a\u043b\u0438\u0435\u043d\u0442\u044b \u0441\u043e\u0445\u0440\u0430\u043d\u044f\u0442\u0441\u044f \u043f\u043e\u0441\u043b\u0435 redeploy \u0438 cold start.";
+  }
+
+  if (storage.mode === "vercel-tmp") {
+    return "\u0414\u0435\u043c\u043e \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u0447\u0435\u0440\u0435\u0437 Vercel /tmp: \u043f\u043e\u0441\u043b\u0435 redeploy \u0438 cold start \u043d\u0443\u0436\u0435\u043d \u0438\u043c\u043f\u043e\u0440\u0442 \u0444\u0430\u0439\u043b\u0430-\u0440\u0435\u0437\u0435\u0440\u0432\u0430.";
+  }
+
+  return "\u041b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0439 data/clients.json: \u043a\u043b\u0438\u0435\u043d\u0442\u044b \u0436\u0438\u0432\u0443\u0442 \u043c\u0435\u0436\u0434\u0443 \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u043c\u0438 \u043d\u0430 \u044d\u0442\u043e\u043c \u0441\u0435\u0440\u0432\u0435\u0440\u0435.";
+}
+
+function getStorageBadgeText(storage: ClientsStorageInfo | null) {
+  if (!storage) return "\u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430";
+  return storage.durable
+    ? "\u041f\u043e\u0441\u0442\u043e\u044f\u043d\u043d\u043e"
+    : "\u041d\u0443\u0436\u0435\u043d \u0440\u0435\u0437\u0435\u0440\u0432";
+}
+
+function getStorageBadgeClass(storage: ClientsStorageInfo | null) {
+  if (!storage) return "bg-slate-50 text-slate-600 ring-slate-200";
+  return storage.durable
+    ? "bg-emerald-50 text-emerald-700 ring-emerald-200"
+    : "bg-amber-50 text-amber-800 ring-amber-200";
+}
+
+interface ClientImportResult {
+  clients: ClientRecord[];
+  created: number;
+  updated: number;
+  skipped: number;
+  storage?: ClientsStorageInfo;
+}
+
+async function importClientsToServer(clients: ClientRecord[]) {
+  try {
+    const response = await fetch("/api/clients/import", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ clients }),
+    });
+    if (!response.ok) return null;
+    return (await response.json()) as ClientImportResult;
+  } catch {
+    return null;
+  }
+}
+
+function sameClient(first: ClientRecord, second: ClientRecord) {
+  if (first.id && first.id === second.id) return true;
+  if (
+    first.agentPlusClientId &&
+    second.agentPlusClientId &&
+    first.agentPlusClientId === second.agentPlusClientId
+  ) {
+    return true;
+  }
+  return normalizeClientPhone(first.phone) === normalizeClientPhone(second.phone);
+}
+
+function normalizeClientPhone(value: string) {
+  return value.replace(/[^\d+]/g, "").trim();
 }
 
 async function copyTextToClipboard(text: string) {

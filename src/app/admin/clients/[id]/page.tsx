@@ -325,11 +325,14 @@ export default function AdminClientCardPage() {
         <AdminHeader onLogout={logout} />
         <div className="px-4 py-10 text-center">
           <p className="text-sm font-bold text-slate-900">Клиент не найден</p>
+          <p className="mt-2 text-xs leading-relaxed text-slate-500">
+            Клиента нет в общем серверном хранилище. Вернитесь к списку и проверьте, был ли он импортирован или сохранен на сервере.
+          </p>
           <Link
             href="/admin/clients"
             className="mt-4 inline-flex rounded-lg bg-slate-900 px-4 py-3 text-sm font-bold text-white"
           >
-            К списку клиентов
+            Вернуться к списку клиентов
           </Link>
         </div>
       </PageShell>
